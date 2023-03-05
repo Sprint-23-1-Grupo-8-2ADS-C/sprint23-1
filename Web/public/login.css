@@ -1,0 +1,43 @@
+.bannerLog {
+    background-image: url('../assets/SVG/bgLogin.svg');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerBannerLog {
+    margin-left: 80px;
+    text-align: left;
+    display: flex;
+    width: 650px;
+    height: 350px;
+}
+
+.containerLeftLog {
+    width: 30%;
+    background-image: url('../assets/SVG/bgCardLog.svg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerRightLog {
+    width: 70%;
+    height: 340px;
+    box-shadow: 10px 10px 10px  black;;
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerLeftLog p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #505050;
+}
