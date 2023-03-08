@@ -2,4 +2,123 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--background-color);
+    margin-top: -10px;
+    z-index: -1;
+}
+
+.contentFluxo{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.titleEsteira{
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+.title h2{
+    color: #505050;
+    font-weight: 700;
+    font-size: 48px;
+
+    width: 500px;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+
+.esteiraInteira{
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+}
+.esteira{
+    border-top: 170px solid #657B88;
+    border-right: 170px solid #657B88;
+    height: 100%;
+    border-radius: 0 200px 0 0;
+
+    position: relative;
+}
+.esteiraDentro{
+    position: absolute;
+    right: -150px;
+    top: -150px;
+
+    border-top: 120px solid #7B909B;
+    border-right: 120px solid #7B909B;
+    width: 150%;
+    height: 150%;
+
+    border-radius: 0 200px 0 0;
+}
+
+.imgSeta{
+    height: 100px;
+    width: 120px;
+
+    position: absolute;
+    top: -110px;
+    left: 25%;
+    /* animation: animacaoSeta 1s infinite; */
+}
+@keyframes animacaoSeta {
+    to{
+        left: 10px;
+    }
+}
+
+.imgMala{
+    width: 200px;
+    height: 200px;
+
+    position: absolute;
+    bottom: -30%;
+    right: -20%;
+}
+#imgMala03{
+    width: 300px;
+
+    animation: mala03 12s infinite;
+    transition: rotate 1s;
+}
+@keyframes mala03 {
+    0%{
+        display: inline;
+    }
+    50%{
+        bottom: 70%;
+    }
+    51%{
+        rotate: 0deg;
+        bottom: 70%;
+    }
+    60%{
+        rotate: -80deg;
+        right: -20%;
+        bottom: 90%;
+    }
+    65%{
+        rotate: -90deg;
+    }
+    90%{
+        rotate: -90deg;
+        right: 70%;
+        display: none;
+        bottom: 90%;
+    }
+    99%{
+        filter: opacity(1);
+    }
+    100%{
+        filter: opacity(0);
+    }
+}
+.textoFluxo{
+    width: 40%;
+    height: 100%;
 }
