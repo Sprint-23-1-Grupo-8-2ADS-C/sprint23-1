@@ -18,6 +18,9 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     background-color: #78A8D7;
 }
+body{
+    background-color: var(--background-color);
+}
 
 
 .header {
@@ -28,6 +31,8 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-around;
     background-color: transparent;
     position: absolute;
+
+    z-index: 1;
 }
 
 .logonavbar {
@@ -73,7 +78,7 @@ ul a:hover {
 }
 
 .banner {
-    background-image: url('../../assets/SVG/bgHome.svg');
+    background-image: url('../../assets/PNG/bgFundo.png');
     background-size: 100vw;
     background-position: center;
     width: 100vw;
@@ -85,6 +90,7 @@ ul a:hover {
     justify-content: center;
     flex-direction: column;
 }
+
 
 .contentBanner {
     margin-left: 80px;

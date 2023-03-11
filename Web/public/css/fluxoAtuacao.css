@@ -1,8 +1,12 @@
+h2, p{
+    color: #505050;
+}
+
 .fluxoAtuacao{
     width: 100vw;
     height: 100vh;
     background-color: var(--background-color);
-    margin-top: -10px;
+    margin-top: 150px;
     z-index: -1;
 }
 
@@ -15,7 +19,7 @@
 }
 
 .titleEsteira{
-    width: 60%;
+    width: 50%;
     height: 100%;
 
     display: flex;
@@ -27,8 +31,10 @@
     font-size: 48px;
 
     width: 500px;
-    margin-left: 150px;
+    margin-left: 75px;
     margin-top: 40px;
+    margin-bottom: 20px;
+
 }
 
 .esteiraInteira{
@@ -64,61 +70,119 @@
     position: absolute;
     top: -110px;
     left: 25%;
-    /* animation: animacaoSeta 1s infinite; */
+    animation: animacaoSeta 3s infinite;
 }
 @keyframes animacaoSeta {
-    to{
-        left: 10px;
+    100%{
+        left: 1px;
     }
 }
 
 .imgMala{
+    display: none;
+}
+.animacaoMala{
+    width: 300px;
+    height: 200px;
+
+    position: absolute;
+    bottom: -30%;
+    right: -200px;
+
+    display: block;
+    animation: mala 12s;
+    transition: rotate 3s;
+}
+@keyframes mala {
+    0%{
+        display: inline;
+    }
+    30%{
+        rotate: 0deg;
+    }
+    50%{
+        bottom: 90%;
+        right: -200px;
+    }
+    55%{
+        rotate: -90deg;
+    }
+    100%{
+        rotate: -90deg;
+        right: 90%;
+        bottom: 90%;
+    }
+    
+}
+
+.animacaoMalaSozinha{
     width: 200px;
     height: 200px;
 
     position: absolute;
     bottom: -30%;
-    right: -20%;
-}
-#imgMala03{
-    width: 300px;
+    right: -140px;
 
-    animation: mala03 12s infinite;
-    transition: rotate 1s;
+    display: block;
+    animation: malaSozinha 12s;
+    transition: rotate 3s;
 }
-@keyframes mala03 {
+@keyframes malaSozinha {
     0%{
         display: inline;
     }
-    50%{
-        bottom: 70%;
-    }
-    51%{
+    30%{
         rotate: 0deg;
-        bottom: 70%;
+    }
+    50%{
+        bottom: 85%;
+        right: -140px;
     }
     60%{
-        rotate: -80deg;
-        right: -20%;
-        bottom: 90%;
-    }
-    65%{
         rotate: -90deg;
-    }
-    90%{
-        rotate: -90deg;
-        right: 70%;
-        display: none;
-        bottom: 90%;
-    }
-    99%{
-        filter: opacity(1);
     }
     100%{
-        filter: opacity(0);
+        rotate: -90deg;
+        right: 90%;
+        bottom: 85%;
     }
+    
 }
 .textoFluxo{
     width: 40%;
     height: 100%;
+    padding-bottom: 25px;
+
+    margin-left: 80px;
+    align-self: center;
+
+    overflow:auto; 
+    overflow-x: hidden;
+}
+
+.textoFluxo::-webkit-scrollbar-track {
+    background-color: #00000000;
+}
+
+.textoFluxo::-webkit-scrollbar {
+    width: 0;
+}
+.divTextoPrimeiroFluxo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.divImgFluxo img{
+    width: 400px;
+    height: 400px;
+}
+.divComTextoFluxo{
+    width: 80%;
+}
+.divComTextoFluxo h2{
+    margin-bottom: 10px;
+}
+
+.divSetaFluxo{
+    margin: 20px 0;
 }
