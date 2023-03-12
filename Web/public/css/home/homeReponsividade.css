@@ -1,0 +1,74 @@
+@media only screen and (max-width: 1000px) {
+    body{
+        width: 100%;
+    }
+    
+    /* HEADER */
+    .header ul, .header li{
+        display: none;
+    }
+
+    /* BANNER */
+    .banner{
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+    .contentBanner{
+        margin-top: 80px;
+        margin-left: 10px;
+    }
+    .titlePage{
+        font-size: 40px;
+        width: 100%;
+    }
+    .textPage {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    /* PARALLAX */
+    .imgPessoaMala{
+        right: inherit;
+        width: 450px;
+        right: 10px;
+    }
+    .imgPlanta, .imgTabela{
+        display: none;
+    }
+
+    /* FLUXO DO PROJETO */
+    .titleEsteira{
+        display: none;
+    }
+    .textoFluxo{
+        width: auto;
+        margin-left: 10px;
+        align-self: center;
+    }
+    .titleFluxo{
+        display: block;
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .contentFluxo{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .divImgFluxo img{
+        width: 350px;
+        height: 350px;
+        margin-left: -20px;
+    }
+    .divComTextoFluxo{
+        width: 80%;
+    }
+
+
+    /* FOOTER */
+    .footer{
+        height: auto;
+    }
+}
