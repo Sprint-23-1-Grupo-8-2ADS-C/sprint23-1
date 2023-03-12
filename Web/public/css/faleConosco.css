@@ -1,0 +1,136 @@
+.bannerSpeak {
+    background-image: url('../../assets/PNG/group19.png');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerBannerSpeak {
+    display: flex;
+    justify-content: center;
+    width: 750px;
+    height: 450px;
+}
+
+.containerLeftSpeak {
+    width: 50%;
+    background-image: url('../../assets/SVG/Group4.svg');
+    border-radius: 20px 20px 20px 20px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLeftSpeak label{
+    color: #505050;
+    font-size: 16px;
+}
+
+.containerLeftSpeak select {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(52, 107, 209);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    display: flex;
+    align-self: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.containerLeftSpeak select:focus {
+    outline: none;
+    background-color: rgba(123, 159, 231, 0.2);
+    border-bottom: 2px solid cornflowerblue;
+}
+
+.inputSpeak {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerLeftSpeak input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(52, 107, 209);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    display: flex;
+    align-self: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.containerLeftSpeak input:focus {
+    outline: none;
+    background-color: rgba(123, 159, 231, 0.2);
+    border-bottom: 2px solid cornflowerblue;
+}
+
+.btnSpeak {
+    width: 120px;
+    height: 30px;
+    color: #2e2e2e;
+    margin-top: 30px;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnSpeak:hover {
+    border-bottom: 3px solid rgb(50, 117, 241);
+    background-color: rgb(137, 173, 240);
+}
+
+.containerRightSpeak {
+    margin-top: 15px;
+    width: 30%;
+    height: 425px;
+    background-color: whitesmoke;
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerRightSpeak h1 {
+    width: 200px;
+    color: #505050;
+    font-weight: 600;
+    font-size: 24px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid cornflowerblue ;
+}
+
+.containerRightSpeak p {
+        font-size: 16px;
+        margin-top: 24px;
+        font-weight: 400;
+        color: #505050;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+}
