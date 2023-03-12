@@ -4,10 +4,11 @@ h2, p{
 
 .fluxoAtuacao{
     width: 100vw;
-    height: 100vh;
     background-color: var(--background-color);
     margin-top: 150px;
     z-index: -1;
+
+    position: relative;
 }
 
 .contentFluxo{
@@ -16,6 +17,8 @@ h2, p{
 
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
 .titleEsteira{
@@ -24,6 +27,10 @@ h2, p{
 
     display: flex;
     flex-direction: column;
+    position: fixed;
+    bottom: -1000px;
+    /* top: 20px; */
+    left: 0;
 }
 .title h2{
     color: #505050;
@@ -151,13 +158,13 @@ h2, p{
 .textoFluxo{
     width: 40%;
     height: 100%;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
 
     margin-left: 80px;
     align-self: center;
-
-    overflow:auto; 
-    overflow-x: hidden;
+}
+.titleFluxo{
+    display: none;
 }
 
 .textoFluxo::-webkit-scrollbar-track {
@@ -167,11 +174,12 @@ h2, p{
 .textoFluxo::-webkit-scrollbar {
     width: 0;
 }
-.divTextoPrimeiroFluxo{
+.divTextoFluxo{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .divImgFluxo img{
     width: 400px;
     height: 400px;
