@@ -71,4 +71,52 @@
     .footer{
         height: auto;
     }
+
+    
+    /* navBar responsivel aqui! */
+
+    .navBarResp{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        margin-left: 25%;
+    }
+    .navBarResp h3{
+        color: #505050;
+    }
+    .navBarResp .home img{
+        width: 8vh;
+    }
+    .navBarResp .home h3{
+        margin-left: 10%;
+    }
+    .navBarResp .project img{
+        margin-left: 10%;
+        width: 6vh;
+    }
+    .navBarResp .log img{
+        width: 7vh;
+    }
+    .navBarResp .log h3{
+        margin-left: 10%;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    .navBarResp .home, .project, .log{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .navBarResp .log{
+        padding: 2%;
+        border-bottom: 2px solid black;
+    }
+    .navBarResp h3{
+        margin-top: 15%;
+        font-size: 20px;
+    }
 }
