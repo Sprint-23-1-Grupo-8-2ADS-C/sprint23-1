@@ -28,11 +28,7 @@ body {
 }
 
 .containerLeftSpeak {
-<<<<<<< HEAD
-    width: 38%;
-=======
     width: 35%;
->>>>>>> 61fd7a5af56fd8710487ee89b47b30cb1a042d8e
     background-image: url('../../assets/SVG/Group4.svg');
     border-radius: 40px 40px 40px 40px;
     background-size: cover;
