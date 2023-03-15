@@ -1,0 +1,82 @@
+@media only screen and (max-width: 1000px) {
+    body{
+        width: 100%;
+        /* background-image: url("../../../assets/PNG/bgFundo.png");
+        background-size: 300vh; */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .header{
+        display:none;
+    }
+
+    .bannerSpeak{
+        display: flex;
+        width: 138%;
+        height: 170vh;
+    }
+    .containerBannerSpeak{
+        margin-top: -15%;
+        margin-left: 38%;
+    }
+
+
+
+    .footer{
+        display: none;
+    }
+    .navBarResp{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 250%;
+        margin-left: 25%;
+        position: absolute;
+    }
+    .navBarResp h3{
+        color: #505050;
+    }
+    .navBarResp .home img{
+        width: 8vh;
+    }
+    .navBarResp .home h3{
+        margin-left: 10%;
+    }
+    .navBarResp .project img{
+        margin-left: 10%;
+        width: 6vh;
+    }
+    .navBarResp .log img{
+        width: 7vh;
+    }
+    .navBarResp .log h3{
+        margin-left: 10%;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    .navBarResp .home, .project, .log{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .navBarResp .log{
+        padding: 2%;
+        border-bottom: 2px solid black;
+    }
+    .navBarResp h3{
+        margin-top: 15%;
+        font-size: 20px;
+    }
+
+    .imgLog{
+        display: flex;
+        margin-left: 130%;
+        margin-top: 281%;
+        position: absolute;
+    }
+}
