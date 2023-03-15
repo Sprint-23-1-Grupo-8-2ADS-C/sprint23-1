@@ -34,17 +34,22 @@
     }
 
     .containerRightLog{
-        background-image: url("../../../assets/SVG/Group5.svg");
+        background-image: url("../../../assets/PNG/Group5.png");
         background-size: 100vw;
         background-size: cover;
 
         background-position: center;
         margin-top: 20px;
         height: 60vh;
-        border: 2px solid rgb(52, 107, 209);
+        border-radius:none;
+        border: none;
+        background-color: #B0D6F0;
+        ;
+        ;
+        /* border: 1px solid rgb(52, 107, 209); */
         border-radius: 5%;
 
-        box-shadow: 0px 20px 10px 0px #464545;
+         box-shadow: 0px 20px 10px 0px #464545;  
     }
     .containerRightLog h1{
         font-size: 28px;
