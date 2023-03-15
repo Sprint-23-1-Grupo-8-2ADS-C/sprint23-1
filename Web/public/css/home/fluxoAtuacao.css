@@ -191,6 +191,10 @@ h2, p{
     margin-bottom: 10px;
 }
 
+.divComTextoFluxo p {
+    text-align: justify;
+}
+
 .divSetaFluxo{
     margin: 20px 0;
 }
