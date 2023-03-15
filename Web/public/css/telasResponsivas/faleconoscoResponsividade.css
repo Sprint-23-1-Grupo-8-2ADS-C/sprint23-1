@@ -26,20 +26,23 @@
         flex-direction: column-reverse !important;
         justify-content: center;
         align-items: center;
-        
+        width: 69px;
+        width: 440px;
         columns: 1px solid red;
+        margin-left: 11%;
+        margin-top: 20%;
     }
 
     .containerLeftSpeak{
         padding-top: 20px;
         padding-bottom: 20px;
-        width: 450px;
+        width: 350px;
         columns: 1px solid red;
 
         border-radius: 0 0 40px 40px !important;
     }
     .containerRightSpeak{
-        width: 450px;
+        width: 300px;
         height: 180px;
         margin-bottom: -20px;
         border-radius: 40px 40px 0 0;
@@ -54,7 +57,7 @@
         display: none;
     }
     .navBarResp{
-        width: 100vw;
+        width: 109vw;
         padding-top: 4px;
 
         display: flex;
