@@ -202,7 +202,7 @@ ul a:hover {
 .footer-col .social-links a:hover{
     transition: all 0.5s ease;
     background-color: #ffffff;
-    
+    color: #81BCE4;
 }
 
 .footer-col .social-links a {
