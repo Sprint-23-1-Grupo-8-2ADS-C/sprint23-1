@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/home/style.css">
     <link rel="stylesheet" href="./css/telasResponsivas/loginResponsividade.css">
+    <script src="./js/login.js"></script>
 
     <title>Login</title>
 
@@ -51,12 +52,12 @@
 
                 <div class="Input">
                 
-                <input type="text" placeholder="Email" class="in_email">
+                <input type="text" placeholder="Email" class="in_email" id="iptEmail">
                 
-                <input type="password" placeholder="Senha" class="in_password">
+                <input type="password" placeholder="Senha" class="in_password" id="iptSenha">
                 </div>
 
-                <button class="btnAcess">
+                <button class="btnAcess" onclick="entrar()">
                     Acessar
                 </button>
 
