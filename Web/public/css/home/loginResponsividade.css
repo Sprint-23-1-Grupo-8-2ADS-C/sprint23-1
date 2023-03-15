@@ -1,0 +1,120 @@
+@media only screen and (max-width: 1000px){
+    body{
+        width: 100%;
+        background-image: url("../../../assets/PNG/bgFundo.png");
+        background-size: 300vh;
+    }
+
+    .header{
+        display: none;
+    }
+
+    .bannerLog{
+        /* background-image: url("../../../assets/PNG/bgFundo.png");
+        background-position: center; */
+
+        background-image: none;
+
+        width: 100%;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .containerBannerLog{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .iconLog{
+        display: flex;
+        margin-top: 5%;
+    }
+
+    .containerRightLog{
+        background-image: url("../../../assets/PNG/Group5.png");
+        background-size: 100vw;
+        background-size: cover;
+
+        background-position: center;
+        margin-top: 20px;
+        height: 60vh;
+        border-radius:none;
+        border: none;
+        background-color: #B0D6F0;
+        ;
+        ;
+        /* border: 1px solid rgb(52, 107, 209); */
+        border-radius: 5%;
+
+         box-shadow: 0px 20px 10px 0px #464545;  
+    }
+    .containerRightLog h1{
+        font-size: 28px;
+    }
+    .containerRightLog button{
+        margin-top: -10%;
+    }
+
+    .containerLeftLog{
+        display: none;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .navBarResp{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        margin-left: 25%;
+    }
+    .navBarResp h3{
+        color: #505050;
+    }
+    .navBarResp .home img{
+        width: 8vh;
+    }
+    .navBarResp .home h3{
+        margin-left: 10%;
+    }
+    .navBarResp .project img{
+        margin-left: 10%;
+        width: 6vh;
+    }
+    .navBarResp .log img{
+        width: 7vh;
+    }
+    .navBarResp .log h3{
+        margin-left: 10%;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    .navBarResp .home, .project, .log{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .navBarResp .log{
+        padding: 2%;
+        border-bottom: 2px solid black;
+    }
+    .navBarResp h3{
+        margin-top: 15%;
+        font-size: 20px;
+    }
+
+    .imgLog{
+        display: flex;
+        margin-left: 120%;
+        margin-top: -8.5%;
+    }
+
+}

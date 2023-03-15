@@ -37,6 +37,9 @@
     justify-content: center;
     border-bottom: 3px solid cornflowerblue ;
 }
+.iconLog{
+    display: none;
+}
 
 .Input {
     margin-top: 40px;
@@ -121,4 +124,8 @@
 .btnAcess:hover {
     border-bottom: 3px solid rgb(50, 117, 241);
     background-color: rgb(137, 173, 240);
+}
+
+.navBarResp , .imgLog{
+    display: none;
 }
