@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="css/home/style.css">
-    <link rel="stylesheet" href="css/home/parallaxHome.css">
     <link rel="stylesheet" href="css/home/fluxoAtuacao.css">
-    <link rel="stylesheet" href="css/home/homeReponsividade.css">
+    <link rel="stylesheet" href="css/home/parallaxHome.css">
+    <link rel="stylesheet" href="css/telasResponsivas/homeReponsividade.css">
 
     <title>Airplane Solutions</title>
 </head>
@@ -24,7 +25,7 @@
             <img src='../assets/SVG/logo.svg' alt="">
             <ul>
                 <li> <a href="#">HOME</a></li>
-                <li> <a href="#">PROJETO</a></li>
+                <li> <a href="#textoFluxo">PROJETO</a></li>
                 <li> <a href="./faleConosco.html">CONTATO</a></li>
                 <li> <a href="./login.html">LOGIN</a></li>
                 
@@ -32,19 +33,42 @@
         </div>
     </div>
 
+    <div class="navBarResp">
+        <div class="home">
+            <a href="index.html">
+                <img src="../assets/PNG/home.png" alt="">
+                <h3>Home</h3>
+            </a>
+        </div>
+        <div class="project">
+            <a href="faleConosco.html">
+                <img src="../assets/PNG/project.png" alt="">
+                <h3>Fale Conosco</h3>
+            </a>
+        </div>
+        <div class="log">
+            <a href="login.html">
+                <img src="../assets/PNG/user.png" alt="">
+                <h3>Login</h3>
+            </a>
+        </div>
+    </div>
+
+    
+
     <div class="banner">
         <div class="contentBanner">
             <h1 class="titlePage">Airplane Solutions</h1><br>
-            <p class="textPage">Monitoramento de desktops na logística de<br>
-            bagagens de aeroportos usado por <br>
-            funcionários internos com a finalidade de<br>
-            evitar downtimes e paralisações internas</p>
+            <p class="textPage">Monitoramento dos TOTENS DE CHECK-IN <br>
+                gerenciado pela companhias aéreas com a <br> 
+                finalidade de evitar paralisações e atrasos <br>
+                nos atendimentos iniciais. 
         </div>
         <img src="../assets/PNG/pessoaLevandMala.png" class="imgPessoaMala" id="imgPessoaMala">
         <img src="../assets/PNG/planta.png" class="imgPlanta" id="imgPlanta">
         <img src="../assets/PNG/tabela.png"  class="imgTabela" id="imgTabela">
     </div>
-    <div class="fluxoAtuacao">
+    <div class="fluxoAtuacao" id="fluxoAtuacao">
         <div class="contentFluxo">
             <div class="titleEsteira" id="esteira">
                 <div class="title">
@@ -61,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="textoFluxo">
+            <div class="textoFluxo" id="textoFluxo">
                 <h2 class="titleFluxo">Fluxo de atuação do projeto</h2>
 
                 <div class="divTextoFluxo">
@@ -69,8 +93,8 @@
                         <img src="../assets/PNG/fluxo01.png" alt="">
                     </div>
                     <div class="divComTextoFluxo">
-                        <h2>Titulo do fluxo 01</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <h2>Primeiro contato</h2>
+                        <p>O primeiro contato é feito por você por meio da página "Contato", lá a sua empresa nos dá a categoria do problema, algumas informações e uma mensagem mais detalhada sobre o empecilho.</p>
                     </div>
                     <div class="divSetaFluxo">
                         <img src="../assets/PNG/caminhoFluxo01.png" alt="">
@@ -82,8 +106,8 @@
                         <img src="../assets/PNG/fluxo02.png" alt="">
                     </div>
                     <div class="divComTextoFluxo">
-                        <h2>Titulo do fluxo 02</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <h2>Retorno</h2>
+                        <p>Entramos em contato após ser feita a análise do seu problema e mandamos uma proposta contratual, para que você analise nosso serviço por completo, descrevendo os nossos benefícios e premissas dos nossos serviços.</p>
                     </div>
                     <div class="divSetaFluxo">
                         <img src="../assets/PNG/caminhoFluxo02.png" alt="">
@@ -95,8 +119,8 @@
                         <img src="../assets/PNG/fluxo03.png" alt="">
                     </div>
                     <div class="divComTextoFluxo">
-                        <h2>Titulo do fluxo 03</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <h2>Disponibilizando Serviços</h2>
+                        <p>Por último e mais importante, vamos até o local onde os totens de check-in estão instalados e os nossos profissionais irão configurar e instalar nossa aplicação para o monitoramento dos mesmos, após isso você poderá ter acesso completo aos dados que estão sendo capturados no nosso site, dessa forma ser mais efetivo na resolução de DownTimes e no planejamento de soluções prévias.</p>
                     </div>
                 </div>
             </div>
@@ -106,24 +130,40 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="row">
-                <div class="footerPrimeirParte">
-                    <div class="footer-col">
-                        <h4> Recursos </h4>
-                        <ul>
-                            <li><a href="#"> Aplicação </a> </li>
-                            <li><a href="#"> Documentação </a> </li>
-                            <li><a href="https://thermodata-help.freshdesk.com/support/home" target="_blank"> FAQ </a> </li>
-                        </ul>
-                    </div>
+    
+                <div class="footer-col">
+                    <h4> Recursos </h4>
+                    <ul>
+                        <li><a href="#"> Aplicação </a> </li>
+                        <li><a href="#"> Documentação </a> </li>
+                        <li><a href="#"> FAQ </a> </li>
+                    </ul>
                 </div>
     
-                <div class="footerSegundaParte">
-                    <div class="footer-col">
-                        <h4> Privacidade </h4>
-                        <ul>
-                            <li><a href="#"> Política de Privacidade </a> </li>
-                            <li><a href="#"> Política de Cookies </a> </li>
-                        </ul>
+                <div class="footer-col">
+                    <h4> Companhia </h4>
+                    <ul>
+                        <li><a href="#"> Sobre Nós </a> </li>
+    
+                    </ul>
+                </div>
+    
+    
+                <div class="footer-col">
+                    <h4> Privacidade </h4>
+                    <ul>
+                        <li><a href="#"> Política de Privacidade </a> </li>
+                        <li><a href="#"> Política de Cookies </a> </li>
+                    </ul>
+                </div>
+    
+    
+                <div class="footer-col">
+                    <h4> Redes Sociais </h4>
+                    <div class="social-links">
+                        <a href="#"> <i class="fa fa-github"></i> </a>
+                        <a href="#"> <i class="fa fa-instagram"></i> </a>
+                        <a href="#"> <i class="fa fa-whatsapp"></i> </a>
                     </div>
                 </div>
             </div>
@@ -134,6 +174,9 @@
     
         </div>
     </footer>
+
+
+
 </body>
 <script src="js/animacaoEsteira.js"></script>
 <script src="js/parallaxHome.js"></script>

@@ -18,7 +18,7 @@ window.addEventListener('scroll', function(){
     console.log(valor);
     
     // PESSOA MOVER PARA DIREITA
-    if(largura < 400){
+    if(largura < 700){
         pessoaMala.style.right = (10+ ((valor * 0.4) * -1))  + 'px';
     }
     else{

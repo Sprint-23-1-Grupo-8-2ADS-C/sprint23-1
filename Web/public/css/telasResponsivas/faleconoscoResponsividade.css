@@ -1,0 +1,113 @@
+@media only screen and (max-width: 1000px) {
+    body{
+        width: 100vw;
+        height: 100vh;
+        /* background-image: url("../../../assets/PNG/bgFundo.png");
+        background-size: 300vh; */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .header{
+        display:none;
+    }
+
+    .bannerSpeak{
+        height: auto;
+
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+    .containerBannerSpeak{
+        flex-direction: column-reverse !important;
+        justify-content: center;
+        align-items: center;
+        width: 69px;
+        width: 440px;
+        columns: 1px solid red;
+        margin-left: 11%;
+        margin-top: 20%;
+    }
+
+    .containerLeftSpeak{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 350px;
+        columns: 1px solid red;
+
+        border-radius: 0 0 40px 40px !important;
+    }
+    .containerRightSpeak{
+        width: 300px;
+        height: 180px;
+        margin-bottom: -20px;
+        border-radius: 40px 40px 0 0;
+        padding: 0 20px;
+    }
+
+
+
+
+
+    .footer{
+        display: none;
+    }
+    .navBarResp{
+        width: 109vw;
+        padding-top: 4px;
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+
+        position: fixed;
+        bottom: 0;
+        z-index: 20;
+
+        background-color: rgba(255, 255, 255, 0.363);
+        backdrop-filter: blur(10px);
+    }
+    .navBarResp img{
+        width: 20px;
+    }
+    .navBarResp h3{
+        text-decoration: none;
+        color: #505050;
+    }
+
+    .navBarResp a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    .navBarResp .home, .project, .log{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .navBarResp .project{
+        padding: 2%;
+        border-bottom: 2px solid black;
+    }
+    .navBarResp h3{
+        margin-top: 15%;
+        font-size: 20px;
+    }
+
+    .imgLog{
+        display: flex;
+        margin-left: 130%;
+        margin-top: 281%;
+        position: absolute;
+    }
+
+}

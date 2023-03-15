@@ -5,26 +5,37 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator erd {
+  provider = "prisma-erd-generator"
+}
+
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider = "mysql"
+  url      = "mysql://root:M@27v!21@localhost:3306/testeprisma"
 }
 
 model Funcionario {
   id    String @id @default(uuid())
   nome  String
   email String
+  senha String
   tel   String
   cargo String
 
+  companhia CompanhiaAerea @relation(fields: [companhia_id], references: [id])
+
+  companhia_id Int
+
+  @@unique([email])
   @@map("funcionario")
 }
 
 model CompanhiaAerea {
-  id    Int    @id @default(autoincrement())
-  nome  String
-  cnpj  String
-  email String
+  id           Int           @id @default(autoincrement())
+  nome         String
+  cnpj         String
+  email        String
+  funcionarios Funcionario[]
 
   @@map("companhiaAerea")
 }

@@ -1,27 +1,40 @@
-.bannerSpeak {
+body {
     background-image: url('../../assets/PNG/group19.png');
-    width: 100vw;
-    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bannerSpeak {
+    width: 100%;
+    height: auto;
+
     background-size: cover;
     background-position: center;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
+.navBarResp{
+    display: none;
+}
+
 .containerBannerSpeak {
-    display: flex;
-    justify-content: center;
     width: 750px;
     height: 450px;
+    margin-top: 60px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .containerLeftSpeak {
-    width: 38%;
+    width: 350px;
+
     background-image: url('../../assets/SVG/Group4.svg');
-    border-radius: 40px 40px 40px 40px;
     background-size: cover;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,11 +115,11 @@
 }
 
 .containerRightSpeak {
-    margin-top: 15px;
-    width: 28%;
-    height: 425px;
+    width: 300px;
+
     background-color: whitesmoke;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 0 40px 40px 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,14 +127,17 @@
 
 .containerRightSpeak h1 {
     width: 200px;
-    color: #505050;
-    font-weight: 600;
+    margin-top: 20px;
     font-size: 24px;
     padding-top: 20px;
+    
+    color: #505050;
+    font-weight: 600;
+    border-bottom: 3px solid cornflowerblue ;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 3px solid cornflowerblue ;
 }
 
 .containerRightSpeak p {

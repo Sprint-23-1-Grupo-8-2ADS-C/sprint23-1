@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/faleConosco.css">
     <link rel="stylesheet" href="./css/home/style.css">
+    <link rel="stylesheet" href="css/telasResponsivas/faleconoscoResponsividade.css">
     
 </head>
 <body>
@@ -19,7 +20,7 @@
             <img src='../assets/SVG/logo.svg' alt="">
             <ul>
                 <li> <a href="./index.html">HOME</a></li>
-                <li> <a href="#">PROJETO</a></li>
+                <li> <a href="./index.html#textoFluxo">PROJETO</a></li>
                 <li> <a href="#">CONTATO</a></li>
                 <li> <a href="./login.html">LOGIN</a></li>
                 
@@ -34,7 +35,11 @@
                 <div class="inputSpeak">
 
                     <label for="">Selecione uma categoria:</label><br>
-                    <select name="CategoriaSpeak" id=""></select>
+                    <select name="CategoriaSpeak" id="">
+                        <option disabled selected>----</option>
+                        <option>Dúvidas</option>
+                        <option>Contratação</option>
+                    </select>
 
                     <input type="text" placeholder="Nome" class="in_nome">
 
@@ -51,19 +56,38 @@
 
             <div class="containerRightSpeak">
                 <h1>Fale conosco</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                <p>Utilize esse canal para se tirar suas dúvidas e se comunicar com a nossa equipe</p>
 
-            <div class="contact">
-                <i class="fa fa-envelope-o"><Span>  email.teste@gmail.com</Span></i>
-                <i class="fa fa-phone"><Span>  +55 (11)91234-5678</Span></i>
-            </div>
+                <div class="contact">
+                    <i class="fa fa-envelope-o"><Span>  email.teste@gmail.com</Span></i>
+                    <i class="fa fa-phone"><Span>  +55 (11)91234-5678</Span></i>
+                </div>
             
             </div>
             
+        </div>
+
+            <div class="navBarResp">
+                <div class="home">
+                    <a href="index.html">
+                        <img src="../assets/PNG/home.png" alt="">
+                        <h3>Home</h3>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="faleConosco.html">
+                        <img src="../assets/PNG/project.png" alt="">
+                        <h3>Fale Conosco</h3>
+                    </a>
+                </div>
+                <div class="log">
+                    <a href="login.html">
+                        <img src="../assets/PNG/user.png" alt="">
+                        <h3>Login</h3>
+                    </a>
+                </div>
             </div>
-
-    </div>
-
+        </div>
     
 </body>
 
