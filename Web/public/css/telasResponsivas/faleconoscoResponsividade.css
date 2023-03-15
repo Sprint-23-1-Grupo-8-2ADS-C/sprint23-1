@@ -7,7 +7,7 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-
+    
     .header{
         display:none;
     }
@@ -54,7 +54,8 @@
         display: none;
     }
     .navBarResp{
-        width: 100%;
+        width: 100vw;
+        padding-top: 4px;
 
         display: flex;
         justify-content: space-around;
@@ -62,9 +63,13 @@
 
         position: fixed;
         bottom: 0;
+        z-index: 20;
+
+        background-color: rgba(255, 255, 255, 0.363);
+        backdrop-filter: blur(10px);
     }
     .navBarResp img{
-        width: 30px;
+        width: 20px;
     }
     .navBarResp h3{
         text-decoration: none;
@@ -86,7 +91,7 @@
         align-items: center;
         justify-content: center;
     }
-    .navBarResp .log{
+    .navBarResp .project{
         padding: 2%;
         border-bottom: 2px solid black;
     }
@@ -101,4 +106,5 @@
         margin-top: 281%;
         position: absolute;
     }
+
 }

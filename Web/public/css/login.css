@@ -1,9 +1,13 @@
-.bannerLog {
+body{
     background-image: url('../../assets/PNG/group19.png');
-    width: 100vw;
-    height: 100vh;
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bannerLog {
+    width: 100vw;
+    padding-top: 150px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,10 +15,10 @@
 }
 
 .containerBannerLog {
-    text-align: left;
     display: flex;
     width: 650px;
-    height: 350px;
+    height: 450px;
+    margin-bottom: 20px;
 }
 
 .containerRightLog {
@@ -74,13 +78,13 @@
 }
 
 .containerLeftLog {
-    width: 40%;
+    width: 60%;
     background-image: url('../../assets/SVG/bgCardLog.svg');
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding: 100px 20px 0;
 }
 
 .containerLeftLog h1 {
@@ -111,18 +115,20 @@
 }
 
 .btnAcess {
-    width: 120px;
-    height: 30px;
-    color: #2e2e2e;
+    width: 200px;
+    height: 50px;
     margin-top: -30px;
+    
+    color: #2e2e2e;
     background-color: cornflowerblue;
     border: none;
     border-radius: 10px;
+
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 .btnAcess:hover {
-    border-bottom: 3px solid rgb(50, 117, 241);
     background-color: rgb(137, 173, 240);
 }
 
