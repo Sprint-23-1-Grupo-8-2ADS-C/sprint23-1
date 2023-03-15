@@ -82,7 +82,7 @@ ul a:hover {
 
 .banner {
     background-image: url("../../../assets/PNG/bgFundo.png");
-    background-size: 100vw;
+    background-size: 100%;
     background-size: cover;
     background-position: center;
 
