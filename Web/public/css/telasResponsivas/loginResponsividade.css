@@ -65,32 +65,28 @@
     .footer{
         display: none;
     }
-
     .navBarResp{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
         width: 100%;
-        margin-left: 25%;
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+
+        position: fixed;
+        bottom: 0;
+    }
+    .navBarResp img{
+        width: 30px;
     }
     .navBarResp h3{
+        text-decoration: none;
         color: #505050;
     }
-    .navBarResp .home img{
-        width: 8vh;
-    }
-    .navBarResp .home h3{
-        margin-left: 10%;
-    }
-    .navBarResp .project img{
-        margin-left: 10%;
-        width: 6vh;
-    }
-    .navBarResp .log img{
-        width: 7vh;
-    }
-    .navBarResp .log h3{
-        margin-left: 10%;
+
+    .navBarResp a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     a{
@@ -113,8 +109,9 @@
 
     .imgLog{
         display: flex;
-        margin-left: 120%;
-        margin-top: -8.5%;
+        margin-left: 130%;
+        margin-top: 281%;
+        position: absolute;
     }
 
 }
