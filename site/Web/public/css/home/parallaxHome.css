@@ -1,0 +1,30 @@
+
+.banner{
+    position: relative;
+}
+
+.banner img{
+    position: absolute;
+}
+
+.imgPessoaMala{
+    width: 550px;
+    bottom: 12px;
+    right: 220px;
+    z-index: 2;
+    transition: right 0.1s;
+}
+.imgPlanta{
+    width: 300px;
+    right: -70px;
+    bottom: -70px;
+    z-index: 3;
+    transition: right 0.1s;
+
+}
+.imgTabela{
+    width: 350px;
+    top: 0;
+    right: 400px;
+    transition: right 0.4s;
+}
