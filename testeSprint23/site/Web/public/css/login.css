@@ -135,3 +135,19 @@ body{
 .navBarResp , .imgLog{
     display: none;
 }
+
+.campos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.loading-div{
+    display: none;
+}
+.loading-div img{
+    height: 20%;
+    
+}

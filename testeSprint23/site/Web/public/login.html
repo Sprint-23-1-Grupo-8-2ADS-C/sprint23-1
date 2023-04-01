@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +12,13 @@
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/home/style.css">
     <link rel="stylesheet" href="./css/telasResponsivas/loginResponsividade.css">
-    <script src="./js/login.js"></script>
+    <!-- <script src="./js/login.js"></script> -->
+    <script src="./js/funcoes.js"></script>
 
     <title>Login</title>
 
 </head>
+
 <body>
 
     <div class="header">
@@ -26,13 +29,14 @@
                 <li> <a href="./index.html#textoFluxo">PROJETO</a></li>
                 <li> <a href="./faleConosco.html">CONTATO</a></li>
                 <li> <a href="#">LOGIN</a></li>
-                
+
             </ul>
         </div>
     </div>
 
     <div class="bannerLog">
         <div class="containerBannerLog">
+
 
             <div class="containerLeftLog">
                 <h1>Olá, amigo(a)</h1>
@@ -41,7 +45,7 @@
                     <img src="../assets/PNG/airPlane.png" alt="" style="display: flex; align-items: center;">
                 </div>
             </div>
-            
+
             <div class="containerRightLog">
                 <div class="iconLog">
                     <img src="../assets/PNG/airPlane.png" alt="">
@@ -51,13 +55,36 @@
                 </h1>
 
                 <div class="Input">
+
+                    <input type="text" placeholder="Email" class="in_email" id="iptEmail">
+
+                    <input type="password" placeholder="Senha" class="in_password" id="iptSenha">
+
+                    <div class="campos">
+
+                        <div id="div_aguardar" class="loading-div">
+                            <img src="../assets/PNG/circle-loading.gif" id="loading-gif">
+                        </div>
+
+                        <div id="div_erros_login">
+
+                        </div>
+
+                        <div class="alerta_erro">
+                            <div class="card_erro" id="cardErro">
                 
-                <input type="text" placeholder="Email" class="in_email" id="iptEmail">
+                                <span id="mensagem_erro"></span>
                 
-                <input type="password" placeholder="Senha" class="in_password" id="iptSenha">
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <button class="btnAcess" onclick="entrar()">
+
+
+
+                <button class="btnAcess" onclick="validar()">
                     Acessar
                 </button>
 
@@ -86,7 +113,7 @@
             </a>
         </div>
     </div>
-    
+
 
 </body>
 
@@ -139,3 +166,78 @@
 </footer>
 
 </html>
+
+<script>
+    function validar() {
+        aguardar();
+
+        var emailVar = iptEmail.value;
+        var senhaVar = iptSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Todos os campos precisam ser preenchidos";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+
+        cardErro.style.display = "none"
+
+    }
+
+
+</script>
