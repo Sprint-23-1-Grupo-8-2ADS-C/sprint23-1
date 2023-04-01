@@ -1,7 +1,11 @@
 # IGNORANDO A PASTA node_modules
 site/node_modules
 
+airplane_solutions_rest/node_modules
+
 #IGNORANDO O ARQUIVO package-lock.json
 site/package-lock.json
+
+airplane_solutions_rest/package-lock.json
 
 
