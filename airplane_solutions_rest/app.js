@@ -1,6 +1,7 @@
 // process.env.AMBIENTE_PROCESSO = "desenvolvimento";
 process.env.AMBIENTE_PROCESSO = "producao";
 
+// COLOCANDO UM COMENTÁRIO DE TESTE
 var express = require("express");
 var cors = require("cors");
 var PORTA = process.env.AMBIENTE_PROCESSO == "desenvolvimento" ? 3000 : 8000;
