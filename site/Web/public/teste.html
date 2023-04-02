@@ -14,9 +14,10 @@
 <script>    
 
     async function getLista() {
-        const response = await fetch("http://localhost:8000/teste/14");
+        const response = await fetch("http://localhost:8000/usuario/listarUsuario/1");
         const lista = await response.json();
         
+        console.log(lista)
         lista.payload.forEach(function(usuario) {
             body.innerHTML = usuario.nome;
         });
