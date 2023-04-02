@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "scripts": {
+    "start": "concurrently \"cd site && npm run dev\" \"cd airplane_solutions_rest && npm run dev\""
+  }
+}

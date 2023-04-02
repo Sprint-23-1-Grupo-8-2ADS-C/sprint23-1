@@ -1,7 +1,5 @@
 var database = require("../database/config");
 
-
-
 function listar(){
     var lista = {
         payload:{

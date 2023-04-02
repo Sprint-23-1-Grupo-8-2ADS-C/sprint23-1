@@ -18,7 +18,7 @@
         const lista = await response.json();
         
         lista.payload.forEach(function(usuario) {
-            body.innerHTML = usuario.idUsuario;
+            body.innerHTML = usuario.nome;
         });
     }
 

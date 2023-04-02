@@ -19,5 +19,5 @@ app.use(cors());
 
 
 app.listen(PORTA, () => {
-    console.log(`Servidor está rodando na porta ${PORTA}`)
+    console.log(`O servidor da airplane_solutions_rest está rodando na porta: http://localhost:${PORTA}`);
 });

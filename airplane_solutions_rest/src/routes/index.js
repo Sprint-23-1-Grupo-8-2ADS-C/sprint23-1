@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-var teste = requier("../controllers/testeController");
+var teste = require("../controllers/testeController");
 
 router.get("/:idUsuario", function (req, res) {
     teste.listarTest(req, res);
