@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
 *{
+    font-family: 'ABeeZee', sans-serif;
     margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #111b4f;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: #0783ad;
 }
 
 body {
@@ -47,3 +60,39 @@ li a{
     border-left: 2px solid white;
 }
 
+.containerFooter {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: transparent;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: solid 4px #111b4f;
+}
+
+.containerFooter h1 {
+    display: flex;
+    font-size: 48px;
+    color: white;
+}
+
+.containerFooter p {
+    display: flex;
+    font-size: 24px;
+    color: white;
+}
+
+.containerImgFooter {
+    height: 80px;
+    width: 80px;
+    display: flex;
+}
+
+.footerIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 140px;
+}
