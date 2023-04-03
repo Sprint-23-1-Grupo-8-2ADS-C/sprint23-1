@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    box-shadow: inset -10px 10px 100px 30px rgba(0, 32, 74, 0.7);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin-top: 32px;
+    background-color: transparent;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgLogo img{
+    width: 70px;
+    height: 70px;
+    margin-left: 32px;
+}
+
+nav ul {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 32px;
+}
+
+li a{
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.loginBar a {
+    border-left: 2px solid white;
+}
+
