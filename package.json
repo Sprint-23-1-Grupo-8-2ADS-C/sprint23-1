@@ -3,6 +3,6 @@
     "concurrently": "^8.0.1"
   },
   "scripts": {
-    "start": "concurrently \"cd site && npm i && npm run dev\" \"cd airplane_solutions_rest && npm i && npm run dev\""
+    "start": "concurrently \"cd site && npm i && npm run dev\" \"cd AirplaneSolutionsRest && npm i && npm run dev\""
   }
 }

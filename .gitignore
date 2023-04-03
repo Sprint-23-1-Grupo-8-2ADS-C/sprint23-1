@@ -3,13 +3,13 @@ node_modules
 
 site/node_modules
 
-airplane_solutions_rest/node_modules
+AirplaneSolutionsRest/node_modules
 
 #IGNORANDO O ARQUIVO package-lock.json
 package-lock.json
 
 site/package-lock.json
 
-airplane_solutions_rest/package-lock.json
+AirplaneSolutionsRest/package-lock.json
 
 

@@ -19,5 +19,5 @@ app.use("/usuario", usuarioRouter);
 app.use("/teste", indexRouter);
 
 app.listen(PORTA, () => {
-    console.log(`O servidor da airplane_solutions_rest está rodando na porta: http://localhost:${PORTA}`);
+    console.log(`O servidor da AirplaneSolutionsRest está rodando na porta: http://localhost:${PORTA}`);
 });
