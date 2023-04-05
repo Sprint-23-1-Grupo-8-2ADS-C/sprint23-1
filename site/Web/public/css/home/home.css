@@ -1,5 +1,5 @@
 .containerHome {
-    margin-top: 32px;
+    margin-top: 5%;
     background-color: transparent;
     width: 100%;
     height: 100%;
@@ -10,6 +10,7 @@
 }
 
 .containerTextHome {
+    margin-right: 5%;
     color: white;
     display: flex;
     align-items: center;
@@ -20,17 +21,15 @@
 .containerTextHome h1 {
     font-size: 80px;
     text-align: center;
-    margin: 0 32px;
 }
 
 .containerTextHome p {
     font-size: 32px;
     text-align: justify;
-    margin: 0 32px;
 }
 
 .containerHome img {
-    margin-left: 124px;
+    margin-left: 10%;
     width: 473px;
     height: 581px;
 }
@@ -40,7 +39,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 140px;
+    margin-top: 10%;
 }
 
 .containerTextPerformanceFlow1 {
@@ -66,7 +65,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 140px;
+    margin-top: 10%;
 }
 
 .containerTextPerformanceFlow2 {
@@ -92,7 +91,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 140px;
+    margin-top: 10%;
 }
 
 .containerTextPerformanceFlow3 {
@@ -111,4 +110,16 @@
 .containerPerformanceFlow3 p {
     font-size: 32px;
     text-align: justify;
+}
+
+@keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-30px)
+	}
+}
+.effectFlutuant {
+     animation: float 2s ease-in-out infinite;
 }
