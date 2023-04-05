@@ -6,12 +6,12 @@
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 1rem;
     background-color: #111b4f;
 }
 
 ::-webkit-scrollbar-thumb {
-    width: 10px;
+    width: 1rem;
     background-color: #0783ad;
 }
 
@@ -23,9 +23,9 @@ body {
 }
 
 header {
-    margin-top: 32px;
+    margin-top: 2rem;
     background-color: transparent;
-    height: 100px;
+    height: 40%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -34,37 +34,47 @@ header {
 }
 
 .imgLogo img{
-    width: 70px;
-    height: 70px;
-    margin-left: 32px;
+    width: 5rem;
+    height: 5rem;
+    margin-left: 4rem;
 }
 
 nav ul {
-    gap: 20px;
     display: flex;
     flex-direction: row;
     list-style: none;
     justify-content: space-around;
     align-items: center;
-    margin-right: 32px;
+    margin-right: 4rem;
 }
 
-li a{
-    display: inline-block;
-    padding: 10px;
-    color: white;
+a.animatedBorder {
     text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 1rem;
+    display: inline-block;
+    font-family: arial, sans-serif;
+    position: relative;
 }
-
-.loginBar a {
-    border-left: 2px solid white;
+a.animatedBorder:after {
+    content: '';
+    position: absolute;
+    border-bottom: solid 5px #0873AD;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    transition: all 500ms;
+}
+a.animatedBorder:hover:after {
+    right: 0;
 }
 
 .containerFooter {
     width: 100%;
     overflow-x: hidden;
     background-color: transparent;
-    height: 300px;
+    height: 10%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,23 +86,64 @@ li a{
     display: flex;
     font-size: 48px;
     color: white;
+    justify-content: center;
 }
 
 .containerFooter p {
     display: flex;
     font-size: 24px;
     color: white;
+    justify-content: center;
+    text-align: center;
 }
 
 .containerImgFooter {
-    height: 80px;
-    width: 80px;
+    margin-left: 100px;
+    height: 25rem;
+    width: 25rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.2rem;
+    margin-right: 8rem;
 }
 
 .footerIcon {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 140px;
+    flex-direction: column;
+    margin-top: 10%;
 }
+
+.footerIcon h4 {
+    color: white;
+    font-size: 24px;
+    margin-right: 1.2rem;
+}
+
+.footerIcon a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    color: white;
+    background-color: #024A96;
+    margin: 0rem 1.2rem 1.2rem 0rem;
+    line-height: 2.4rem;
+    border-radius: 50%;
+}
+
+.footerIcon a:hover{
+    transition: all 0.5s ease;
+    background-color: #ffffff;
+    color: #21359c;
+}
+
