@@ -99,15 +99,22 @@
     }
 
     .containerPerformanceFlow1,
-    .containerPerformanceFlow2,
     .containerPerformanceFlow3 {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        margin-top: 10%;
         margin-bottom: 10%;
     }
+
+    .containerPerformanceFlow2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+
     .containerTextPerformanceFlow1,
     .containerTextPerformanceFlow2,
     .containerTextPerformanceFlow3 { 
@@ -163,15 +170,22 @@
     }
 
     .containerPerformanceFlow1,
-    .containerPerformanceFlow2,
     .containerPerformanceFlow3 {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        margin-top: 10%;
         margin-bottom: 10%;
     }
+
+    .containerPerformanceFlow2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+
     .containerTextPerformanceFlow1,
     .containerTextPerformanceFlow2,
     .containerTextPerformanceFlow3 { 
@@ -204,10 +218,18 @@
         justify-content: center;
     }
     .containerTextHome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin-right: 0%;
         margin-top: 5%;
     }
     .containerTextHome h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         font-size: 80px;
     }
     .containerTextHome p {
@@ -227,15 +249,22 @@
     }
 
     .containerPerformanceFlow1,
-    .containerPerformanceFlow2,
     .containerPerformanceFlow3 {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        margin-top: 10%;
         margin-bottom: 10%;
     }
+
+    .containerPerformanceFlow2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+
     .containerTextPerformanceFlow1,
     .containerTextPerformanceFlow2,
     .containerTextPerformanceFlow3 { 
@@ -269,7 +298,7 @@
     }
     .containerTextHome {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-right: 0%;
@@ -299,15 +328,22 @@
     }
 
     .containerPerformanceFlow1,
-    .containerPerformanceFlow2,
     .containerPerformanceFlow3 {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        margin-top: 10%;
         margin-bottom: 10%;
     }
+
+    .containerPerformanceFlow2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+
     .containerTextPerformanceFlow1,
     .containerTextPerformanceFlow2,
     .containerTextPerformanceFlow3 { 
@@ -370,15 +406,22 @@
     }
 
     .containerPerformanceFlow1,
-    .containerPerformanceFlow2,
     .containerPerformanceFlow3 {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        margin-top: 10%;
         margin-bottom: 10%;
     }
+
+    .containerPerformanceFlow2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+
     .containerTextPerformanceFlow1,
     .containerTextPerformanceFlow2,
     .containerTextPerformanceFlow3 { 
