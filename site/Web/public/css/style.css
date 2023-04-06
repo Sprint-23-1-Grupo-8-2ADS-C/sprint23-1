@@ -135,10 +135,9 @@ a.animatedBorder:hover:after {
 }
 
 .footerIcon a{
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    padding-top: 2%;
+    text-align: center;
     height: 60px;
     width: 60px;
     color: white;
@@ -161,9 +160,8 @@ a.animatedBorder:hover:after {
     }
 
     nav a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
+        text-align: center;
         height: 50px;
         width: 50px;
         color: white;
@@ -172,6 +170,7 @@ a.animatedBorder:hover:after {
     }
 
     body {
+        overflow-x: hidden;
         width: 100%;
         flex-direction: column;
         box-shadow: inset -8px 8px 100px 10px rgba(0, 32, 74, 0.7);
@@ -198,10 +197,6 @@ a.animatedBorder:hover:after {
         text-align: center;
         margin-right: 0rem;
     }
-    .footerIcon a{
-        display: flex;
-        justify-content: space-around;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -210,9 +205,8 @@ a.animatedBorder:hover:after {
     }
 
     nav a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
+        text-align: center;
         height: 50px;
         width: 50px;
         color: white;
@@ -249,10 +243,7 @@ a.animatedBorder:hover:after {
         text-align: center;
         margin-right: 0rem;
     }
-    .footerIcon a{
-        display: flex;
-        justify-content: space-around;
-    }
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -284,10 +275,6 @@ a.animatedBorder:hover:after {
         text-align: center;
         margin-right: 0rem;
     }
-    .footerIcon a{
-        display: flex;
-        justify-content: space-around;
-    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -317,10 +304,6 @@ a.animatedBorder:hover:after {
     .footerIcon h4 {
         text-align: center;
         margin-right: 0rem;
-    }
-    .footerIcon a{
-        display: flex;
-        justify-content: space-around;
     }
 }
 
@@ -352,8 +335,5 @@ a.animatedBorder:hover:after {
         text-align: center;
         margin-right: 0rem;
     }
-    .footerIcon a{
-        display: flex;
-        justify-content: space-around;
-    }
+
 }
