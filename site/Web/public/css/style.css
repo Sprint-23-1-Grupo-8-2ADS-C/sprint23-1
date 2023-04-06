@@ -92,6 +92,7 @@ a.animatedBorder:hover:after {
     font-size: 48px;
     color: white;
     justify-content: center;
+    text-align: center;
 }
 
 .containerFooter p {
@@ -298,8 +299,8 @@ a.animatedBorder:hover:after {
     .Icons {
         margin-right: 0rem;
     }
-    .footerIcon {
-        margin-top: 0%;
+    .footerIcon a{
+        padding-top: 3%;
     }
     .footerIcon h4 {
         text-align: center;
@@ -328,8 +329,8 @@ a.animatedBorder:hover:after {
     .Icons {
         margin-right: 0rem;
     }
-    .footerIcon {
-        margin-top: 0%;
+    .footerIcon a{
+        padding-top: 3%;
     }
     .footerIcon h4 {
         text-align: center;
