@@ -33,68 +33,20 @@
     height: 593px;
 }
 
-.containerPerformanceFlow1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 10%;
-}
-
-.containerTextPerformanceFlow1 {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-.containerTextPerformanceFlow1 h1{
-    font-size: 40px;
-    text-align: center;
-}
-
-.containerPerformanceFlow1 p {
-    font-size: 32px;
-    text-align: justify;
-}
-
-.containerPerformanceFlow2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 10%;
-}
-
-.containerTextPerformanceFlow2 {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-.containerTextPerformanceFlow2 h1{
-    font-size: 40px;
-    text-align: center;
-}
-
-.containerPerformanceFlow2 p {
-    font-size: 32px;
-    text-align: justify;
-}
-
+.containerPerformanceFlow1,
+.containerPerformanceFlow2,
 .containerPerformanceFlow3 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 10%;
     margin-bottom: 10%;
 }
 
-.containerTextPerformanceFlow3 {
+.containerTextPerformanceFlow1,
+.containerTextPerformanceFlow2,
+.containerTextPerformanceFlow3 { 
     color: white;
     display: flex;
     align-items: center;
@@ -102,14 +54,353 @@
     flex-direction: column;
 }
 
+.containerTextPerformanceFlow1 h1,
+.containerTextPerformanceFlow2 h1,
 .containerTextPerformanceFlow3 h1{
     font-size: 40px;
     text-align: center;
 }
 
+.containerPerformanceFlow1 p,
+.containerPerformanceFlow2 p,
 .containerPerformanceFlow3 p {
     font-size: 32px;
     text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+    .containerHome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .containerTextHome {
+        margin-right: 0%;
+        margin-top: 5%;
+    }
+    .containerTextHome h1 {
+        font-size: 80px;
+    }
+    .containerTextHome p {
+        font-size: 24px;
+        text-align: justify;
+    }
+    .containerHome img {
+        margin-left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .containerPerformanceFlow {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .containerPerformanceFlow1,
+    .containerPerformanceFlow2,
+    .containerPerformanceFlow3 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .containerTextPerformanceFlow1,
+    .containerTextPerformanceFlow2,
+    .containerTextPerformanceFlow3 { 
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .containerTextPerformanceFlow1 h1,
+    .containerTextPerformanceFlow2 h1,
+    .containerTextPerformanceFlow3 h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .containerPerformanceFlow1 p,
+    .containerPerformanceFlow2 p,
+    .containerPerformanceFlow3 p {
+        font-size: 32px;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .containerHome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .containerTextHome {
+        margin-right: 0%;
+        margin-top: 5%;
+    }
+    .containerTextHome h1 {
+        font-size: 80px;
+    }
+    .containerTextHome p {
+        font-size: 24px;
+        text-align: justify;
+    }
+    .containerHome img {
+        margin-left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .containerPerformanceFlow {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .containerPerformanceFlow1,
+    .containerPerformanceFlow2,
+    .containerPerformanceFlow3 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .containerTextPerformanceFlow1,
+    .containerTextPerformanceFlow2,
+    .containerTextPerformanceFlow3 { 
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .containerTextPerformanceFlow1 h1,
+    .containerTextPerformanceFlow2 h1,
+    .containerTextPerformanceFlow3 h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .containerPerformanceFlow1 p,
+    .containerPerformanceFlow2 p,
+    .containerPerformanceFlow3 p {
+        font-size: 32px;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .containerHome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .containerTextHome {
+        margin-right: 0%;
+        margin-top: 5%;
+    }
+    .containerTextHome h1 {
+        font-size: 80px;
+    }
+    .containerTextHome p {
+        font-size: 24px;
+        text-align: justify;
+    }
+    .containerHome img {
+        margin-left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .containerPerformanceFlow {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .containerPerformanceFlow1,
+    .containerPerformanceFlow2,
+    .containerPerformanceFlow3 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .containerTextPerformanceFlow1,
+    .containerTextPerformanceFlow2,
+    .containerTextPerformanceFlow3 { 
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .containerTextPerformanceFlow1 h1,
+    .containerTextPerformanceFlow2 h1,
+    .containerTextPerformanceFlow3 h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .containerPerformanceFlow1 p,
+    .containerPerformanceFlow2 p,
+    .containerPerformanceFlow3 p {
+        font-size: 32px;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .containerHome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .containerTextHome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0%;
+        margin-top: 5%;
+    }
+    .containerTextHome h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 80px;
+    }
+    .containerTextHome p {
+        font-size: 24px;
+        text-align: justify;
+    }
+    .containerHome img {
+        margin-left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .containerPerformanceFlow {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .containerPerformanceFlow1,
+    .containerPerformanceFlow2,
+    .containerPerformanceFlow3 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .containerTextPerformanceFlow1,
+    .containerTextPerformanceFlow2,
+    .containerTextPerformanceFlow3 { 
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .containerTextPerformanceFlow1 h1,
+    .containerTextPerformanceFlow2 h1,
+    .containerTextPerformanceFlow3 h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .containerPerformanceFlow1 p,
+    .containerPerformanceFlow2 p,
+    .containerPerformanceFlow3 p {
+        font-size: 32px;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 1750px){
+    .containerHome {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .containerTextHome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    .containerTextHome h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 80px;
+    }
+    .containerTextHome p {
+        font-size: 24px;
+        text-align: justify;
+    }
+    .containerHome img {
+        margin-left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .containerPerformanceFlow {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .containerPerformanceFlow1,
+    .containerPerformanceFlow2,
+    .containerPerformanceFlow3 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .containerTextPerformanceFlow1,
+    .containerTextPerformanceFlow2,
+    .containerTextPerformanceFlow3 { 
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .containerTextPerformanceFlow1 h1,
+    .containerTextPerformanceFlow2 h1,
+    .containerTextPerformanceFlow3 h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .containerPerformanceFlow1 p,
+    .containerPerformanceFlow2 p,
+    .containerPerformanceFlow3 p {
+        font-size: 32px;
+        text-align: justify;
+    }
 }
 
 @keyframes float{
