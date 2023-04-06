@@ -36,6 +36,7 @@
 .containerPerformanceFlow1,
 .containerPerformanceFlow2,
 .containerPerformanceFlow3 {
+    gap: 8%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -127,14 +128,14 @@
     .containerTextPerformanceFlow1 h1,
     .containerTextPerformanceFlow2 h1,
     .containerTextPerformanceFlow3 h1{
-        font-size: 40px;
+        font-size: 24px;
         text-align: center;
     }
     
     .containerPerformanceFlow1 p,
     .containerPerformanceFlow2 p,
     .containerPerformanceFlow3 p {
-        font-size: 32px;
+        font-size: 18px;
         text-align: justify;
     }
 }
@@ -198,14 +199,14 @@
     .containerTextPerformanceFlow1 h1,
     .containerTextPerformanceFlow2 h1,
     .containerTextPerformanceFlow3 h1{
-        font-size: 40px;
+        font-size: 24px;
         text-align: center;
     }
     
     .containerPerformanceFlow1 p,
     .containerPerformanceFlow2 p,
     .containerPerformanceFlow3 p {
-        font-size: 32px;
+        font-size: 18px;
         text-align: justify;
     }
 }
