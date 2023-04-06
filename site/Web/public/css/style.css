@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
 
+:root {
+    --backgroundColorBlueMidnight: #111b4f;
+    --colorScrollBar: #0783ad;
+    --backgroundColor: #262323;
+    --colorWhite: #fff;
+    --colorAnimatedBtn: #0873AD;
+    --colorBackgroundIcons: #024A96;
+}
+
 *{
     box-sizing: border-box;
     font-family: 'ABeeZee', sans-serif;
@@ -8,16 +17,16 @@
 
 ::-webkit-scrollbar {
     width: 1rem;
-    background-color: #111b4f;
+    background-color: var(--backgroundColorBlueMidnight);
 }
 
 ::-webkit-scrollbar-thumb {
     width: 1rem;
-    background-color: #0783ad;
+    background-color: var(--colorScrollBar);
 }
 
 body {
-    background-color: #262323;
+    background-color: var(--backgroundColor);
     box-shadow: inset -10px 10px 180px 80px rgba(0, 32, 74, 0.7);
     display: flex;
     flex-direction: column;
@@ -38,6 +47,7 @@ header {
     width: 5rem;
     height: 5rem;
     margin-left: 4rem;
+    cursor: pointer;
 }
 
 nav ul {
@@ -56,7 +66,7 @@ nav a {
 a.animatedBorder {
     text-decoration: none;
     background-color: transparent;
-    color: #fff;
+    color: var(--colorWhite);
     padding: 1rem;
     display: inline-block;
     font-family: arial, sans-serif;
@@ -65,7 +75,7 @@ a.animatedBorder {
 a.animatedBorder:after {
     content: '';
     position: absolute;
-    border-bottom: solid 5px #0873AD;
+    border-bottom: solid 5px var(--colorAnimatedBtn);
     bottom: 0;
     left: 0;
     right: 100%;
@@ -84,13 +94,13 @@ a.animatedBorder:hover:after {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-top: solid 4px #111b4f;
+    border-top: solid 4px var(--backgroundColorBlueMidnight);
 }
 
 .containerFooter h1 {
     display: flex;
     font-size: 48px;
-    color: white;
+    color: var(--colorWhite);
     justify-content: center;
     text-align: center;
 }
@@ -98,7 +108,7 @@ a.animatedBorder:hover:after {
 .containerFooter p {
     display: block;
     font-size: 24px;
-    color: white;
+    color: var(--colorWhite);
     justify-content: center;
     text-align: center;
 }
@@ -130,7 +140,7 @@ a.animatedBorder:hover:after {
 
 .footerIcon h4 {
     text-align: center;
-    color: white;
+    color: var(--colorWhite);
     font-size: 24px;
     margin-right: 1.2rem;
 }
@@ -141,8 +151,8 @@ a.animatedBorder:hover:after {
     text-align: center;
     height: 60px;
     width: 60px;
-    color: white;
-    background-color: #024A96;
+    color: var(--colorWhite);
+    background-color: var(--colorBackgroundIcons);
     margin: 0rem 1.2rem 0rem 1.2rem;
     line-height: 2.4rem;
     border-radius: 50%;
@@ -150,8 +160,8 @@ a.animatedBorder:hover:after {
 
 .footerIcon a:hover{
     transition: all 0.5s ease;
-    background-color: #ffffff;
-    color: #21359c;
+    background-color: var(--colorWhite);
+    color: var(--colorBackgroundIcons);
 }
 
 @media only screen and (max-width: 600px){
@@ -165,8 +175,7 @@ a.animatedBorder:hover:after {
         text-align: center;
         height: 50px;
         width: 50px;
-        color: white;
-        background-color: #024A96;
+        color: var(--colorWhite);
         border-radius: 50%;
     }
 
