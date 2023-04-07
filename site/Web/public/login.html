@@ -1,83 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="stylesheet" href="css/login/login.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <title>Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Airplane Solutions</title>
 </head>
-
 <body>
-
-  <header>
-    <a href="index.html"><img src="../assets/SVG/logo.svg" class="imgLogo" alt="" /></a>
-    <a href="javascript:void(0);" class="menu" onclick="exibirModal()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </header>
-
-  <div class="containerRightLog">
-    <div class="iconLog">
-      <img src="../assets/PNG/airPlane.png" alt="">
+    <div class="efeito-blur">
+        <div class="lado esquerdo">
+            <div class="blur"></div>
+        </div>
     </div>
-    <h1>
-      Entrar
-    </h1>
 
-    <div class="Input">
+    <header>
+        <div class="imgLogo" id="imgLogo">
+            <img src="../assets/SVG/logo.svg" alt="">
+        </div>
+        <nav>
+            <a class="optionsNav"><i class="fa-solid fa-bars"></i></a>
+            <ul>
+                <li style="display: block;"><a class="animatedBorder" href="index.html">Home</a></li>
+                <li style="display: block;"><a class="animatedBorder" href="index.html#containerImgPerformanceFlow1">Projetos</a></li>
+                <li style="display: block;"><a class="animatedBorder" href="contact.html">Contatos</a></li>
+                <li style="display: block;"><a class="animatedBorder" href="contact.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <input type="text" placeholder="Email" class="in_email" id="iptEmail">
+    <div class="containerLogin">
+        <div class="containerLeftLogin">
+            <h1><span>Seja</span><br>Bem-Vindo!</h1>
 
-      <input type="password" placeholder="Senha" class="in_password" id="iptSenha">
+            <input type="text" placeholder="E-mail"><br>
+            <input type="text" placeholder="E-mail"><br>
 
-      <div class="campos">
+            <p>Forget Password</p>
 
-        <div id="div_aguardar" class="loading-div">
-          <img src="../assets/PNG/circle-loading.gif" id="loading-gif">
+            <button class="btnAcess">Acesse</button>
         </div>
 
-        <div id="div_erros_login">
-
-        </div>
-
-        <div class="alerta_erro">
-          <div class="card_erro" id="cardErro">
-
-            <span id="mensagem_erro"></span>
-
+        <div class="containerRightLogin">
+            <h1>Airplane<br> <span>Solutions</span></h1>
+            
+            <div class="imgLogin" id="imgLogin">
+              <img src="../assets/SVG/logo.svg" alt="">
           </div>
+            
         </div>
-
-      </div>
     </div>
-
-
-
-
-    <button class="btnAcess" onclick="validar()">
-      Acessar
-    </button>
-
-  </div>
-
-
-  <nav id="navOptions">
-    <ul>
-      <li>
-        <a href="">Produtos</a>
-      </li>
-      <li>
-        <a href="">Contato</a>
-      </li>
-    </ul>
-  </nav>
 
 </body>
-
 </html>
+
+
 
 <script>
   function exibirModal() {
