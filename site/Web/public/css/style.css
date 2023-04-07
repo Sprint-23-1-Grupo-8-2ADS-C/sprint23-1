@@ -3,10 +3,11 @@
 :root {
     --backgroundColorBlueMidnight: #111b4f;
     --colorScrollBar: #0783ad;
-    --backgroundColor: #262323;
+    --backgroundColor: #000A17;
     --colorWhite: #fff;
     --colorAnimatedBtn: #0873AD;
     --colorBackgroundIcons: #024A96;
+    --colorBlur: rgb(6, 82, 182);;
 }
 
 *{
@@ -27,9 +28,58 @@
 
 body {
     background-color: var(--backgroundColor);
-    box-shadow: inset -10px 10px 180px 80px rgba(0, 32, 74, 0.7);
     display: flex;
     flex-direction: column;
+}
+
+.efeito-blur {
+    width: 100%;
+    max-width: 1920px;
+    position: absolute;
+    z-index: -1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+
+}
+
+.lado {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50rem;
+}
+
+.blur {
+    position: relative;
+    opacity: .5;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(200px);
+    background-color: var(--colorBlur);
+}
+
+.lado.direito {
+    padding-top: 40rem;
+}
+
+.lado.esquerdo .blur:nth-child(1),
+.lado.esquerdo .blur:nth-child(2),
+.lado.esquerdo .blur:nth-child(3) {
+    right: 10rem;
+    bottom: 10rem;
+}
+
+.lado.direito .blur:nth-child(1),
+.lado.direito .blur:nth-child(2),
+.lado.direito .blur:nth-child(3) {
+    position: relative;
+    bottom: 10rem;
+    left: 10rem;
 }
 
 header {
@@ -183,7 +233,6 @@ a.animatedBorder:hover:after {
         overflow-x: hidden;
         width: 100%;
         flex-direction: column;
-        box-shadow: inset -8px 8px 100px 10px rgba(0, 32, 74, 0.7);
     }
 
     .containerFooter {
@@ -229,7 +278,6 @@ a.animatedBorder:hover:after {
     body {
         width: 100%;
         flex-direction: column;
-        box-shadow: inset -8px 8px 100px 10px rgba(0, 32, 74, 0.7);
     }
 
     .containerFooter {
@@ -260,7 +308,6 @@ a.animatedBorder:hover:after {
     body {
         width: 100%;
         flex-direction: column;
-        box-shadow: inset -8px 8px 100px 10px rgba(0, 32, 74, 0.7);
     }
 
     .containerFooter {
@@ -291,7 +338,6 @@ a.animatedBorder:hover:after {
     body {
         width: 100%;
         flex-direction: column;
-        box-shadow: inset -8px 8px 100px 10px rgba(0, 32, 74, 0.7);
     }
 
     .containerFooter {
@@ -321,7 +367,6 @@ a.animatedBorder:hover:after {
     body {
         width: 100%;
         flex-direction: column;
-        box-shadow: inset -8px 8px 100px 10px rgba(0, 32, 74, 0.7);
     }
 
     .containerFooter {
