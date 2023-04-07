@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+:root {
+    --backgroundColorBlueMidnight: #111b4f;
+    --colorScrollBar: #0783ad;
+    --backgroundColor: #262323;
+    --colorWhite: #fff;
+    --colorAnimatedBtn: #0873AD;
+    --colorBackgroundIcons: #024A96;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "ABeeZee", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  box-shadow: inset -8px 8px 100px 10px rgba(0, 32, 74, 0.7);
+}
+
+header {
+  margin: 1rem;
+  padding: 0.3rem;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgLogo {
+  width: 4rem;
+}
+
+.menu {
+  color: #fff;
+  font-size: 32px;
+}
+
+.menu i:hover {
+  color: #888;
+}
+
+nav {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}

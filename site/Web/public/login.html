@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/login/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Login</title>
+  </head>
+
+  <body>
+
+    <header>
+      <a href="index.html"><img src="../assets/SVG/logo.svg" class="imgLogo" alt="" /></a>
+      <a href="javascript:void(0);" class="menu" onclick="exibirModal()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </header>
+    
+    
+    <nav id="navOptions">
+      <ul>
+        <li>
+          <a href="">Produtos</a>
+        </li>
+        <li>
+          <a href="">Contato</a>
+        </li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>
+
+<script>
+  function exibirModal() {
+    const navOptions = document.getElementById("navOptions")
+
+    if (navOptions.style.display === "block") {
+      navOptions.style.display = "none";
+    } else {
+      navOptions.style.display = "block";
+    }
+  }
+</script>
