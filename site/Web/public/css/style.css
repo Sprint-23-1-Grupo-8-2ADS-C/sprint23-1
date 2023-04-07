@@ -139,11 +139,8 @@ a.animatedBorder:hover:after {
     width: 100%;
     overflow-x: hidden;
     background-color: transparent;
-    height: 10%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     border-top: solid 4px var(--backgroundColorBlueMidnight);
 }
 
@@ -185,7 +182,6 @@ a.animatedBorder:hover:after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
 }
 
 .footerIcon h4 {
@@ -237,7 +233,7 @@ a.animatedBorder:hover:after {
 
     .containerFooter {
         flex-direction: column;
-        height: 20%;
+        
     }
     .containerImgFooter p {
         display: none;
@@ -282,7 +278,7 @@ a.animatedBorder:hover:after {
 
     .containerFooter {
         flex-direction: column;
-        height: 20%;
+        
     }
     .containerImgFooter p {
         display: none;
@@ -312,7 +308,7 @@ a.animatedBorder:hover:after {
 
     .containerFooter {
         flex-direction: column;
-        height: 20%;
+        
     }
     
     .containerImgFooter p {
@@ -342,7 +338,7 @@ a.animatedBorder:hover:after {
 
     .containerFooter {
         flex-direction: column;
-        height: 20%;
+        
     }
     .containerImgFooter p {
         display: none;
@@ -371,7 +367,7 @@ a.animatedBorder:hover:after {
 
     .containerFooter {
         flex-direction: column;
-        height: 20%;
+        
     }
     .containerImgFooter p {
         display: none;
