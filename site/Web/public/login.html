@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="css/login/login.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title>Login</title>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="css/login/login.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <title>Login</title>
+</head>
 
-    <header>
-      <a href="index.html"><img src="../assets/SVG/logo.svg" class="imgLogo" alt="" /></a>
-      <a href="javascript:void(0);" class="menu" onclick="exibirModal()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </header>
-    
-    
-    <nav id="navOptions">
-      <ul>
-        <li>
-          <a href="">Produtos</a>
-        </li>
-        <li>
-          <a href="">Contato</a>
-        </li>
-      </ul>
-    </nav>
+<body>
 
-  </body>
+  <header>
+    <a href="index.html"><img src="../assets/SVG/logo.svg" class="imgLogo" alt="" /></a>
+    <a href="javascript:void(0);" class="menu" onclick="exibirModal()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </header>
+
+  <div class="containerRightLog">
+    <div class="iconLog">
+      <img src="../assets/PNG/airPlane.png" alt="">
+    </div>
+    <h1>
+      Entrar
+    </h1>
+
+    <div class="Input">
+
+      <input type="text" placeholder="Email" class="in_email" id="iptEmail">
+
+      <input type="password" placeholder="Senha" class="in_password" id="iptSenha">
+
+      <div class="campos">
+
+        <div id="div_aguardar" class="loading-div">
+          <img src="../assets/PNG/circle-loading.gif" id="loading-gif">
+        </div>
+
+        <div id="div_erros_login">
+
+        </div>
+
+        <div class="alerta_erro">
+          <div class="card_erro" id="cardErro">
+
+            <span id="mensagem_erro"></span>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <button class="btnAcess" onclick="validar()">
+      Acessar
+    </button>
+
+  </div>
+
+
+  <nav id="navOptions">
+    <ul>
+      <li>
+        <a href="">Produtos</a>
+      </li>
+      <li>
+        <a href="">Contato</a>
+      </li>
+    </ul>
+  </nav>
+
+</body>
 
 </html>
 
@@ -44,4 +89,76 @@
       navOptions.style.display = "block";
     }
   }
+
+  function validar() {
+        aguardar();
+
+        var emailVar = iptEmail.value;
+        var senhaVar = iptSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Todos os campos precisam ser preenchidos";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+
+        cardErro.style.display = "none"
+
+    }
+    
 </script>
