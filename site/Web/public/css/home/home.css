@@ -7,6 +7,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 10%;
 }
 
 .containerTextHome {
@@ -29,9 +30,18 @@
     flex-direction: column;
 }
 
+.btnMore .iconTicket {
+    margin-right: 5%;
+    width: 10%;
+    height: 60%;
+}
+
 .btnMore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 5%;
-    width: 30%;
+    width: 35%;
     height: 50px;
     background-color: var(--colorBackgroundIcons);
     border: none;
