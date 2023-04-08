@@ -1,11 +1,9 @@
-var usuarioModel = require("../models/usuarioModel");
+var totemModel = require("../models/totemModel");
 
-var sessoes = [];
+function buscarTotens(req, res){
+    var fk = req.params.fkCompanhia;
 
-function buscarUsuario(req, res){
-    var id = req.params.idUsuario;
-    
-    usuarioModel.buscarUsuario(id).then((resultado) =>{
+    totemModel.buscarTotens(fk).then((resultado) => {
         res.status(200).json(resultado);
     })
     .catch((erro) =>{
@@ -17,7 +15,6 @@ function buscarUsuario(req, res){
 
 
 
-
 module.exports = {
-    buscarUsuario
+    buscarTotens
 }
