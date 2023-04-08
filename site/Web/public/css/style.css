@@ -272,6 +272,7 @@ a.animatedBorder:hover:after {
     }
 
     body {
+        overflow-x: hidden;
         width: 100%;
         flex-direction: column;
     }
@@ -302,6 +303,7 @@ a.animatedBorder:hover:after {
 
 @media only screen and (max-width: 992px) {
     body {
+        overflow-x: hidden;
         width: 100%;
         flex-direction: column;
     }
@@ -332,6 +334,7 @@ a.animatedBorder:hover:after {
 
 @media only screen and (max-width: 1200px) {
     body {
+        overflow-x: hidden;
         width: 100%;
         flex-direction: column;
     }
@@ -361,6 +364,7 @@ a.animatedBorder:hover:after {
 
 @media only screen and (max-width: 1750px) {
     body {
+        overflow-x: hidden;
         width: 100%;
         flex-direction: column;
     }
