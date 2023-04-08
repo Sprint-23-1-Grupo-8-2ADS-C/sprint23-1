@@ -1,6 +1,7 @@
 :root {
     --colorInput: rgba(217, 217, 217, 0.1);
     --btnColor: #0653B6;
+    --colorBackgroundLogin: rgba(16, 26, 39, 0.7);
 }
 
 .containerLogin {
@@ -104,4 +105,63 @@
     margin-left: 10%;
     width: 100%;
     height: 310px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .containerLeftLogin {
+        padding: 10%;
+        background-color: var(--colorBackgroundLogin);
+        box-shadow: inset 2px 2px 30px 1px var(--colorAnimatedBtn);
+        border-radius: 45px;
+        flex-direction: column;
+        margin: 5%;
+        width: 100%;
+        height: 50%;
+    }
+
+    .containerLeftLogin h1 {
+        font-size: 2rem;
+        margin-bottom: 10%;
+    }
+
+    .containerLeftLogin span {
+        font-size: 2rem;
+        margin-bottom: 10%;
+    }
+
+    .containerLeftLogin p {
+        font-size: 16px;
+        margin-bottom: 10%;
+        margin-left: 0%;
+    }
+
+    .containerLeftLogin input {
+        font-size: 24px;
+        margin-left: 0%;
+        width: 60%;
+        height: 70px;
+    }
+
+    .containerLeftLogin input::placeholder {
+        padding: 5%;
+        color: var(--colorWhite);
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .btnAccess {
+        margin-left: 0%;
+        width: 40%;
+        height: 60px;
+        font-size: 24px;
+        color: var(--colorWhite);
+        background-color: var(--btnColor);
+        border-radius: 10px;
+        border-color: transparent;
+    }
+
+    .containerRightLogin {
+        display: none;
+    }
 }
