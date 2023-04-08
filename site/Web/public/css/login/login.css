@@ -1,10 +1,107 @@
+:root {
+    --colorInput: rgba(217, 217, 217, 0.1);
+    --btnColor: #0653B6;
+}
+
 .containerLogin {
     width: 100%;
     height: 100%;
-    margin-top: 5%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 50%;
+    gap: 15%;
+}
+
+.containerLeftLogin {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerLeftLogin h1 {
+    font-size: 3rem;
+    color: var(--colorWhite);
+    font-weight: 800;
+    margin-bottom: 5%;
+}
+
+.containerLeftLogin span{
+    font-size: 3rem;
+    color: var(--colorWhite);
+    font-weight: 400;
+    margin-bottom: 10%;
+}
+
+.containerLeftLogin p {
+    font-size: 16px;
+    color: var(--colorWhite);
+    font-weight: 400;
+    margin-bottom: 10%;
+    margin-left: -20%;
+}
+
+.containerLeftLogin p:hover {
+    color: var(--colorAnimatedBtn);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.containerLeftLogin input{
+    font-size: 24px;
+    margin-left: 15%;
+    width: 60%;
+    height: 70px;
+    background: var(--colorInput);
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+.containerLeftLogin input::placeholder {
+    padding: 5%;
+    color: var(--colorWhite);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.btnAccess {
+    margin-left: 6%;
+    width: 50%;
+    height: 60px;
+    font-size: 24px;
+    color: var(--colorWhite);
+    background-color: var(--btnColor);
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+.containerRightLogin {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerRightLogin h1 {
+    margin-top: 10%;
+    font-size: 120px;
+    text-align: center;
+    color: var(--colorWhite);
+    font-weight: 500;
+}
+
+.containerRightLogin span {
+    font-size: 120px;
+    text-align: center;
+    color: var(--colorBackgroundIcons);
+    font-weight: 900;
+}
+
+.imgLogin img{
+    margin-left: 10%;
+    width: 100%;
+    height: 310px;
 }
