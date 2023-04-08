@@ -1,3 +1,9 @@
+:root {
+    --backgroundColorCard: #05143a;
+    --backgroundColorCardHover: #1c58fd;
+    --colorTopInfoBar: #8baaff;
+}
+
 .containerHome {
     margin-top: 3%;
     background-color: transparent;
@@ -69,18 +75,18 @@
 }
 
 .grid-container {
-    width: 1300px;
+    width: 70%;
     margin: auto;
     margin-top: 15%;
 
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    grid-template-rows: repeat(1, 400px);
+    grid-template-rows: repeat(1, 100%);
     gap: 2rem;
 }
 
 .card {
-    background-color: #05143a;
+    background-color: var(--backgroundColorCard);
     border-radius: 5px;
 
     display: flex;
@@ -92,13 +98,14 @@
 }
 
 .card:hover{
-    background-color: #1c58fd;
-    box-shadow: 0 0 50px #1c58fd;
+    background-color: var(--backgroundColorCardHover);
+    box-shadow: 0 0 50px var(--backgroundColorCardHover);
 }
 
 .top-info {
     width: 80%;
-    padding: 0 2rem;
+    padding: 1rem 1rem;
+    margin-top: 1rem;
     position: relative;
 
     display: flex;
@@ -107,7 +114,7 @@
 }
 
 .top-info .bar {
-    background-color: #8baaff;
+    background-color: var(--colorTopInfoBar);
     height: 35px;
     width: 5px;
 
@@ -137,7 +144,7 @@
 }
 
 .info h1 {
-    margin-bottom: 5%;
+    margin-bottom: 15%;
     line-height: 0;
     font-size: 1.5rem;
     color: #d3dfff;
@@ -373,13 +380,12 @@
         text-align: justify;
     }
     .containerHome img {
-        
         width: 100%;
         height: 100%;
     }
 
     .grid-container {
-        width: 100%;
+        width: 70%;
         margin: auto;
         margin-top: 15%;
         display: flex;
@@ -462,7 +468,6 @@
         text-align: justify;
     }
     .containerHome img {
-        
         width: 100%;
         height: 100%;
     }
@@ -548,7 +553,6 @@
         text-align: justify;
     }
     .containerHome img {
-        
         width: 100%;
         height: 100%;
     }
@@ -556,7 +560,7 @@
     .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 2fr);
-        grid-template-rows: repeat(1, 400px);
+        grid-template-rows: repeat(1, 100%);
         gap: 2rem;
     }
 
