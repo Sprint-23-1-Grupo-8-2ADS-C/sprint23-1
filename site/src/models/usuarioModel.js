@@ -12,7 +12,7 @@ function buscarUsuario(){
 
 function entrar(email, senha) {
     var instrucao = `
-        SELECT * FROM funcionario WHERE emailFunc = '${email}' AND senha = '${senha}';
+        SELECT * FROM funcionario WHERE email = '${email}' AND senha = '${senha}';
     `;
     return database.executar(instrucao);
 }

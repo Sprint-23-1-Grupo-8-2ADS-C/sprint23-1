@@ -1,34 +1,7 @@
-const spNome = document.getElementById("sp_nome"); 
-
-
 //#region VÁRIAVEIS DO FLUXO
 var idUsuario = sessionStorage.ID_USUARIO
-var fkCompanhia;
+var fkCompanhia = sessionStorage.ID_COMPANHIA;
 //#endregion
-
-
-buscarUsuario();
-
-function buscarUsuario(){
-    idUsuario = 2
-    fetch(`/usuarios/buscarUsuario/${idUsuario}`).then((response) => {
-        if(response.ok){
-            response.json().then(function (resposta){
-                mostrarUsuario(resposta);
-                buscarTotens()
-            })
-        }
-    })
-    .catch((erro) => {
-        console.log("Erro na obtenção da consulta");
-    })
-}
-
-function mostrarUsuario(dados){
-    spNome.innerHTML = dados[0].nome;
-    fkCompanhia = dados[0].fkCompanhia
-}
-
 
 function buscarTotens(){
     fetch(`/totens/buscarTotens/${fkCompanhia}`)
@@ -40,12 +13,12 @@ function buscarTotens(){
             }
         })
         .catch((erro) => {
-            console.log("Erro na obtenção da consulta");
+            console.log("Erro na obtenção da consulta" + erro);
         })
 }
 
 function mostrarTotens(dados){
-    const divTotens = document.getElementById("div_totens");
+    const divTotens = document.getElementById("divTotens");
 
     dados.forEach(totem => {
         divTotens.innerHTML += `
