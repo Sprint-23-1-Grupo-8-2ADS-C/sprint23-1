@@ -1,7 +1,7 @@
 var database = require("../database/config")
 
 
-function buscarUsuario(id){
+function buscarUsuario(){
     var instrucao = `
         SELECT * FROM funcionario
         WHERE idFuncionario = ${id}
@@ -10,8 +10,15 @@ function buscarUsuario(id){
     return database.executar(instrucao);
 }
 
+function entrar(email, senha) {
+    var instrucao = `
+        SELECT * FROM funcionario WHERE emailFunc = '${email}' AND senha = '${senha}';
+    `;
+    return database.executar(instrucao);
+}
 
 
 module.exports = {
-    buscarUsuario
+    buscarUsuario,
+    entrar
 };

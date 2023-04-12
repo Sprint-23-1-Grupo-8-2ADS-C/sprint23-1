@@ -290,3 +290,18 @@
                 display: none;
             }
 }
+
+.loading-div img {
+    width: 10%;
+}
+
+.loading-div{
+    display: none
+}
+
+.campos{
+
+    justify-content: center;
+    align-items: center;
+
+}

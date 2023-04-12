@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="./js/funcoes.js"></script>
+
     <title>Airplane Solutions</title>
 </head>
+
 <body>
     <div class="efeito-blur">
         <div class="lado esquerdo">
@@ -24,7 +28,8 @@
             <a class="optionsNav"><i class="fa-solid fa-bars"></i></a>
             <ul>
                 <li style="display: block;"><a class="animatedBorder" href="index.html">Home</a></li>
-                <li style="display: block;"><a class="animatedBorder" href="index.html#containerImgPerformanceFlow1">Projetos</a></li>
+                <li style="display: block;"><a class="animatedBorder"
+                        href="index.html#containerImgPerformanceFlow1">Projetos</a></li>
                 <li style="display: block;"><a class="animatedBorder" href="contact.html">Contatos</a></li>
                 <li style="display: block;"><a class="animatedBorder" href="contact.html">Login</a></li>
             </ul>
@@ -35,41 +40,62 @@
         <div class="containerLeftLogin">
             <h1><span>Seja</span><br>Bem-Vindo!</h1>
 
-            <input type="text" placeholder="E-mail"><br>
-            <input type="password" placeholder="Senha"><br>
+            <input id="iptEmail" type="text" placeholder="E-mail"><br>
+            <input id="iptSenha" type="password" placeholder="Senha"><br>
 
             <p>Forget Password?</p>
 
-            <button class="btnAccess" onclick="Logar()">Acesse</button>
+            <div class="campos">
+
+                <div class="alerta_erro">
+                    <div class="card_erro" id="cardErro">
+
+                        <span id="mensagem_erro"></span>
+
+                    </div>
+                </div>
+
+                <div id="div_aguardar" class="loading-div">
+                    <img src="../assets/PNG/loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login">
+
+                </div>
+
+            </div>
+
+            <button class="btnAccess" onclick="validar()">Acesse</button>
         </div>
 
         <div class="containerRightLogin">
             <h1>Airplane<br> <span>Solutions</span></h1>
-            
+
             <div class="imgLogin" id="imgLogin">
-              <img src="../assets/SVG/logo.svg" alt="">
-          </div>
-            
+                <img src="../assets/SVG/logo.svg" alt="">
+            </div>
+
         </div>
     </div>
 
 </body>
+
 </html>
 
 
 
 <script>
-  function exibirModal() {
-    const navOptions = document.getElementById("navOptions")
+    function exibirModal() {
+        const navOptions = document.getElementById("navOptions")
 
-    if (navOptions.style.display === "block") {
-      navOptions.style.display = "none";
-    } else {
-      navOptions.style.display = "block";
+        if (navOptions.style.display === "block") {
+            navOptions.style.display = "none";
+        } else {
+            navOptions.style.display = "block";
+        }
     }
-  }
 
-  function validar() {
+    function validar(email, senha) {
         aguardar();
 
         var emailVar = iptEmail.value;
@@ -112,7 +138,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard.html";
+                        window.location = "./dashboard/indexDash.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -139,5 +165,5 @@
         cardErro.style.display = "none"
 
     }
-    
+
 </script>
