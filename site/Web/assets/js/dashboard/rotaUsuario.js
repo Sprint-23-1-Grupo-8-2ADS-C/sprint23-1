@@ -71,3 +71,41 @@ function validar() {
         buscarTotens();
     }
 //#endregion
+
+function gerarCodigo() {
+
+    divVerificarCodigo.style.display = "flex";
+    var cogidoAleatorio = parseInt(100000 + Math.random() * 100000);
+
+    fetch("/usuarios/enviarCodigo", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+
+            codigoServer: cogidoAleatorio
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+
+            setTimeout(() => {
+                window.location = "telaupdate";
+            }, "2000")
+
+
+        } 
+    }).catch(function (resposta) {
+
+        console.log(`#ERRO: ${resposta}`);
+ 
+    });
+    
+// pegar codigo do banco e enviar para o email 
+//verificar se a chave enviada no email é a mesma digitada 
+// dar update na senha 
+
+} 
