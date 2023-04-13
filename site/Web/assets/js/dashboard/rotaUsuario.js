@@ -40,14 +40,19 @@ function validar() {
             senhaServer: senhaVar
         })
     }).then(function (resposta) {
-        if (resposta.ok) {
+        if (resposta.status == 200) {
             resposta.json().then(json => {
-
-                sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.idFuncionario;
-                sessionStorage.ID_COMPANHIA = json.fkCompanhia; 
-                sessionStorage.CARGO_USUARIO = json.cargo;
+                
+                if(json.idFuncionario != null){
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idFuncionario;
+                    sessionStorage.ID_COMPANHIA = json.fkCompanhia; 
+                    sessionStorage.CARGO_USUARIO = json.cargo;
+                }
+                else{
+                    exibirModal("Email ou senha inválidos")
+                }
 
                 setTimeout(function () {
                     window.location = "./dashboard/indexDash.html";
@@ -55,6 +60,10 @@ function validar() {
                 
             });
         } 
+        else{
+            div_aguardar.style.display = "none"; 
+            exibirModal("Email ou senha inválidos!")
+        }
     }).catch(function (erro) {
         console.log(erro);
     })
