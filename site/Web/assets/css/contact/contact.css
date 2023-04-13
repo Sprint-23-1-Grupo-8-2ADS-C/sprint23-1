@@ -62,6 +62,11 @@
     font-weight: 400;
 }
 
+.containerLeftLogin input[type="text" i] {
+    color: var(--colorWhite);
+    padding: 1px 2px;
+}
+
 .btnAccess {
     margin-left: 14%;
     width: 50%;

@@ -49,6 +49,13 @@
     cursor: pointer;
 }
 
+.containerLeftLogin a:-webkit-any-link {
+    color: var(--colorWhite);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
 .containerLeftLogin input{
     font-size: 24px;
     margin-left: 15%;
@@ -57,6 +64,16 @@
     background: var(--colorInput);
     border-radius: 10px;
     border-color: transparent;
+}
+
+.containerLeftLogin input[type="text" i] {
+    color: var(--colorWhite);
+    padding: 1px 2px;
+}
+
+.containerLeftLogin input[type="password" i] {
+    color: var(--colorWhite);
+    padding: 1px 2px;
 }
 
 .containerLeftLogin input::placeholder {
