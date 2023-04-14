@@ -17,20 +17,14 @@ function entrar(email, senha) {
     return database.executar(instrucao);
 }
 
-function salvarCodigo(email, codigo, idFuncao) {
+function salvarCodigo(email, codigo) {
 
-    if (idFuncao == enviarCodigo) {
+   
         var instrucao = `
     update funcionario set  codigoVerificacao =  '${codigo}' 
-	where emailFunc = '${email}'; ;
+	where emailFunc = '${email}';
 `;
 
-    }else {
-        var instrucao = `
-        select funcionario.codigoVerificacao from funcionario where emailFunc = '${email}'; ;
-`;
-
-    }
 
     return database.executar(instrucao);
 }

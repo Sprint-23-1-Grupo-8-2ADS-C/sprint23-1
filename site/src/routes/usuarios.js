@@ -12,8 +12,8 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
-router.post("/TrocarSenha/:idFuncao", function (req, res) {
-    usuarioController.entrar(req, res);
+router.post("/TrocarSenha", function (req, res) {
+    usuarioController.salvarCodigo(req, res);
 });
 
 module.exports = router;

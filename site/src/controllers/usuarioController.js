@@ -51,11 +51,14 @@ function entrar(req, res) {
 }
 
 function salvarCodigo(req, res){
-    var codigo = req.body.codigoServer;
-    var email = req.body.emailServer;
-    var idFuncao = req.body.idFuncao;
-    usuarioModel.salvarCodigo(email, codigo, idFuncao).then((resultado) =>{
+    var codigo = parseInt(100000 + Math.random() * 100000);
+     var email = req.body.emailServer;
+    usuarioModel.salvarCodigo(email, codigo).then((resultado) =>{
         res.status(200).json(resultado);
+
+        // ENVIAR O EMAIL AQUI USANDO A VAR CODIGO
+        console.log(codigo)
+
     })
     .catch((erro) =>{
         console.log(erro);
