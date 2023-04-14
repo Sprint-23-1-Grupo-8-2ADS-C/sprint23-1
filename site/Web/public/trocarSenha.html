@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/login/login.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Airplane Solutions</title>
+</head>
+
+<body>
+    <div class="efeito-blur">
+        <div class="lado esquerdo">
+            <div class="blur"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="imgLogo" id="imgLogo">
+            <img src="../assets/SVG/logo.svg" alt="">
+        </div>
+        <nav>
+            <a class="optionsNav"><i class="fa-solid fa-bars"></i></a>
+            <ul>
+                <li style="display: block;"><a class="animatedBorder" href="index.html">Home</a></li>
+                <li style="display: block;"><a class="animatedBorder"
+                        href="index.html#containerImgPerformanceFlow1">Projetos</a></li>
+                <li style="display: block;"><a class="animatedBorder" href="contact.html">Contatos</a></li>
+                <li style="display: block;"><a class="animatedBorder" href="contact.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="containerLogin">
+        <div class="containerLeftLogin">
+            <h1><br>New Password?</h1>
+
+            <input id="senhaNova" type="text" placeholder="Nova senha"><br>
+
+            <input id="confirmaSenha" type="text" placeholder="Confirmar senha"><br>
+
+            <button class="btnAccess" onclick="validarSenha()">Enviar</button>
+
+
+            <div class="campos">
+                <div class="alerta_erro">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="containerRightLogin">
+            <h1>Airplane<br> <span>Solutions</span></h1>
+
+            <div class="imgLogin" id="imgLogin">
+                <img src="../assets/SVG/logo.svg" alt="">
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../assets/js/dashboard/rotaUsuario.js"></script>

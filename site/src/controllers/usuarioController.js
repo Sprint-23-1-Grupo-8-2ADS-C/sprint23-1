@@ -48,10 +48,26 @@ function entrar(req, res) {
                 }
             );
     }
+}
+
+function salvarCodigo(req, res){
+    var codigo = req.body.codigoServer;
+    var email = req.body.emailServer;
+    var idFuncao = req.body.idFuncao;
+    usuarioModel.salvarCodigo(email, codigo, idFuncao).then((resultado) =>{
+        res.status(200).json(resultado);
+    })
+    .catch((erro) =>{
+        console.log(erro);
+        console.log("Houve um erro ao enviar o codigo: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    })
+
 
 }
 
 module.exports = {
     buscarUsuario,
-    entrar
+    entrar,
+    salvarCodigo
 }

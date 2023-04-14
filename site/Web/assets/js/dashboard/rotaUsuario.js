@@ -81,19 +81,20 @@ function validar() {
     }
 //#endregion
 
-function gerarCodigo() {
-
+function gerarCodigo(email, codigo, idFuncao) {
+    var emailVar = forgetEmail.value;
     divVerificarCodigo.style.display = "flex";
-    var cogidoAleatorio = parseInt(100000 + Math.random() * 100000);
+    var codigo = parseInt(100000 + Math.random() * 100000);
 
-    fetch("/usuarios/enviarCodigo", {
+    fetch("/usuarios/TrocarSenha/enviarCodigo", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
 
-            codigoServer: cogidoAleatorio
+            emailServer: emailVar,
+            codigoServer: codigo
         })
     }).then(function (resposta) {
 
@@ -101,8 +102,10 @@ function gerarCodigo() {
 
         if (resposta.ok) {
 
+            //enviarEmail()
+
             setTimeout(() => {
-                window.location = "telaupdate";
+                //window.location = "./trocarSenha.html";
             }, "2000")
 
 
@@ -112,7 +115,60 @@ function gerarCodigo() {
         console.log(`#ERRO: ${resposta}`);
  
     });
+
+    function enviarEmail(codigo, idFuncao){
+        var codigoVerificado;
+      
+        fetch("/usuarios/TrocarSenha/pegarCodigo", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            if (resposta.status == 200) {
+                resposta.json().then(json => {
+                    
+                    if(json.idFuncionario != null){
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.ID_USUARIO = json.idFuncionario;
+                        sessionStorage.ID_COMPANHIA = json.fkCompanhia; 
+                        sessionStorage.CARGO_USUARIO = json.cargo;
+                    }
+                    else{
+                        exibirModal("Email ou senha inválidos")
+                    }
     
+                    setTimeout(function () {
+                        window.location = "./dashboard/indexDash.html";
+                    }, 1000);
+                    
+                });
+            } 
+            else{
+                div_aguardar.style.display = "none"; 
+                exibirModal("Email ou senha inválidos!")
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+
+
+
+    }
+    
+
+    function validarSenha(){
+
+
+
+
+    }
 // pegar codigo do banco e enviar para o email 
 //verificar se a chave enviada no email é a mesma digitada 
 // dar update na senha 
