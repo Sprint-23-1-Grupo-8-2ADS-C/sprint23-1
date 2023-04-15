@@ -6,7 +6,7 @@
     --colorBackgroundLogin: rgba(16, 26, 39, 0.7);
 }
 
-.containerLogin {
+.containerDados {
     width: 100%;
     height: 100%;
     display: flex;
@@ -15,7 +15,8 @@
     gap: 15%;
 }
 
-.containerLeftLogin {
+.containerLeft
+ {
     width: 50%;
     height: 100%;
     display: flex;
@@ -23,7 +24,8 @@
     flex-direction: column;
 }
 
-.containerLeftLogin h1 {
+.containerLeft
+ h1 {
     margin-left: 15%;
     font-size: 3rem;
     color: var(--colorWhite);
@@ -31,7 +33,8 @@
     margin-bottom: 5%;
 }
 
-.containerLeftLogin p {
+.containerLeft
+ p {
     font-size: 16px;
     color: var(--colorWhite);
     font-weight: 400;
@@ -39,13 +42,15 @@
     margin-left: -20%;
 }
 
-.containerLeftLogin p:hover {
+.containerLeft
+ p:hover {
     color: var(--colorAnimatedBtn);
     text-decoration: underline;
     cursor: pointer;
 }
 
-.containerLeftLogin input{
+.containerLeft
+ input{
     font-size: 24px;
     margin-left: 15%;
     width: 60%;
@@ -55,14 +60,16 @@
     border-color: transparent;
 }
 
-.containerLeftLogin input::placeholder {
+.containerLeft
+ input::placeholder {
     padding: 5%;
     color: var(--colorWhite);
     font-size: 24px;
     font-weight: 400;
 }
 
-.containerLeftLogin input[type="text" i] {
+.containerLeft
+ input[type="text" i] {
     color: var(--colorWhite);
     padding: 1px 2px;
 }
@@ -88,7 +95,7 @@
 .containerRightLogin {
     width: 50%;
     height: 50%;
-    margin-top: -20%;
+    margin-top: -250px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -164,7 +171,8 @@
 }
 
 .info h1 {
-    font-family: 'Anton', sans-serif;
+    /* font-family: 'Anton', sans-serif; */
+    font-family: 'Roboto Slab', serif;
     line-height: 0;
     font-size: 1.5rem;
     color: #d3dfff;
@@ -179,16 +187,23 @@
 .person h1{
     font-size: 16px;
     color: var(--colorWhite);
+    margin-top: 5%;
 
+}
+.person a{
+    margin-top: 15%;
+    color: #8baaff;
 }
 
 .person p {
+    margin-top: 5%;
     color: var(--colorWhite);
 }
 
 @media only screen and (max-width: 600px) {
 
-    .containerLeftLogin {
+    .containerLeft
+     {
         padding: 10%;
         background-color: var(--colorBackgroundLogin);
         box-shadow: inset 2px 2px 30px 1px var(--colorAnimatedBtn);
@@ -199,30 +214,35 @@
         height: 50%;
     }
 
-    .containerLeftLogin h1 {
+    .containerLeft
+     h1 {
         font-size: 2rem;
         margin-bottom: 10%;
     }
 
-    .containerLeftLogin span {
+    .containerLeft
+     span {
         font-size: 2rem;
         margin-bottom: 10%;
     }
 
-    .containerLeftLogin p {
+    .containerLeft
+     p {
         font-size: 16px;
         margin-bottom: 10%;
         margin-left: 0%;
     }
 
-    .containerLeftLogin input {
+    .containerLeft
+     input {
         font-size: 24px;
         margin-left: 0%;
         width: 60%;
         height: 70px;
     }
 
-    .containerLeftLogin input::placeholder {
+    .containerLeft
+     input::placeholder {
         padding: 5%;
         color: var(--colorWhite);
         font-size: 24px;
@@ -247,7 +267,8 @@
 
 @media only screen and (max-width: 768px) {
     
-        .containerLeftLogin {
+        .containerLeft
+         {
             padding: 10%;
             background-color: var(--colorBackgroundLogin);
             box-shadow: inset 2px 2px 30px 1px var(--colorAnimatedBtn);
@@ -258,30 +279,35 @@
             height: 50%;
         }
     
-        .containerLeftLogin h1 {
+        .containerLeft
+         h1 {
             font-size: 2rem;
             margin-bottom: 10%;
         }
     
-        .containerLeftLogin span {
+        .containerLeft
+         span {
             font-size: 2rem;
             margin-bottom: 10%;
         }
     
-        .containerLeftLogin p {
+        .containerLeft
+         p {
             font-size: 16px;
             margin-bottom: 10%;
             margin-left: 0%;
         }
     
-        .containerLeftLogin input {
+        .containerLeft
+         input {
             font-size: 24px;
             margin-left: 0%;
             width: 60%;
             height: 70px;
         }
     
-        .containerLeftLogin input::placeholder {
+        .containerLeft
+         input::placeholder {
             padding: 5%;
             color: var(--colorWhite);
             font-size: 24px;
@@ -306,7 +332,8 @@
 
 @media only screen and (max-width: 992px) {
         
-            .containerLeftLogin {
+            .containerLeft
+             {
                 padding: 10%;
                 background-color: var(--colorBackgroundLogin);
                 box-shadow: inset 2px 2px 30px 1px var(--colorAnimatedBtn);
@@ -317,30 +344,35 @@
                 height: 50%;
             }
         
-            .containerLeftLogin h1 {
+            .containerLeft
+             h1 {
                 font-size: 2rem;
                 margin-bottom: 10%;
             }
         
-            .containerLeftLogin span {
+            .containerLeft
+             span {
                 font-size: 2rem;
                 margin-bottom: 10%;
             }
         
-            .containerLeftLogin p {
+            .containerLeft
+             p {
                 font-size: 16px;
                 margin-bottom: 10%;
                 margin-left: 0%;
             }
         
-            .containerLeftLogin input {
+            .containerLeft
+             input {
                 font-size: 24px;
                 margin-left: 0%;
                 width: 60%;
                 height: 70px;
             }
         
-            .containerLeftLogin input::placeholder {
+            .containerLeft
+             input::placeholder {
                 padding: 5%;
                 color: var(--colorWhite);
                 font-size: 24px;
