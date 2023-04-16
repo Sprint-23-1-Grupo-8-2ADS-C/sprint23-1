@@ -3,11 +3,14 @@
 :root {
     --backgroundColorBlueMidnight: #111b4f;
     --colorScrollBar: #0783ad;
-    --backgroundColor: #000A17;
+    --backgroundColor: #000A18;
     --colorWhite: #fff;
     --colorAnimatedBtn: #0873AD;
     --colorBackgroundIcons: #024A96;
     --colorBlur: rgb(6, 82, 182);
+
+    --colorBackgroundDashboard: #F8FCFF;
+    --colorRed: #EC2626;
 }
 
 *{

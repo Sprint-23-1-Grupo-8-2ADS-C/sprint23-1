@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+:root{
+    /*FONTE DA NAVBAR*/
+    --sizeNav: 15px; 
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    height: 100vh;
+    width: 256px;
+    /* background-color: var(--backgroundColorBlueMidnight); */
+    position: fixed;    
+}
+
+.divLogo{
+    display: flex;
+    align-items: center;
+    margin: 26px 0 0 30px ;
+}
+.divLogo h3{
+    font-size: 20px;
+    color: var(--colorBackgroundDashboard);
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    text-align: center;
+}
+
+.divLogo h3 span{
+    font-weight: bold;
+}
+
+.divLogo img{
+    margin-right: 15px;
+    height: 50px;
+    width: 50px;
+}
+
+.divItems{
+    margin-top: 60px;
+    width: 100%;
+    position: relative;
+}
+.divNavigationItems{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+
+.divItem{
+    color: var(--colorBackgroundDashboard);
+    font-size: var(--sizeNav);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.divItem img{
+    height: 25px;
+    width: 25px;
+    margin-left: 42px;
+}
+.itemNavigation{
+    width: 220px;
+    padding: 8px 5px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+.itemNavigation:hover{
+    background-color: #242b53bb;
+}
+
+.itemSelect{
+    font-weight: bold;
+}
+.itemSelect::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 40px;
+    width: 7px;
+    border-radius: 0 20px 20px 0;
+    background-color: #C9E7F8;
+
+}
+
+.divNavigationUser{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.divNaviagtionExit{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logOut{
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--colorRed);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.logOut:hover{
+    background-color: #FF3232;
+}
