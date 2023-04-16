@@ -83,7 +83,8 @@ function mostrarUsuario() {
 
 function gerarCodigo() {
     var emailVar = forgetEmail.value;
-    divVerificarCodigo.style.display = "flex";
+
+
 
 
     fetch("/usuarios/TrocarSenha", {
@@ -93,14 +94,16 @@ function gerarCodigo() {
         },
         body: JSON.stringify({
             emailServer: emailVar,
-            
+
         })
     }).then(function (resposta) {
 
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-
+            divVerificarCodigo.style.display = "flex";
+        } else {
+            exibirModal("Email inválido")
         }
     }).catch(function (resposta) {
 
