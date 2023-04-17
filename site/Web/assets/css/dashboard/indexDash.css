@@ -1,9 +1,90 @@
-body{
+.divFirstGroup{
+
     display: flex;
+    justify-content: space-between;
 }
 
-.divContent{
+/* KPI */
+.divGroupKpi{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.divKpi{
+    width: 250px;
+    height: 90px;
+    border: 3px solid #000A18;
+    border-radius: 10px;
+    padding: 10px 10px 0 20px;
+}
+
+.spTitle{
+    color: var(--colorGray);
+    font-size: 0.9rem;
+}
+.divKpi h3{
+    color: var(--backgroundColor);
+
+}
+.spQuantidade{
+    font-size: 3rem;
+}
+
+/* ATIVIDADE TOTEM */
+.divAtividadeTotem{
+    height: 290px;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    border-radius: 10px;
+
+    padding: 25px 25px 10px;
+    margin-left: 40px;
+
+    overflow:auto; 
+}
+
+.divAtividadeTotem::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+    background-color: var(--backgroundColor);
+}
+
+.divAtividadeTotem::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #0653B6;
+}
+
+.divAtividadeTotem h3{
+    color: var(--colorBackgroundDashboard);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.tableAtividadeTotem{
     height: 100%;
     width: 100%;
-    background-color: red;
+    color: var(--colorBackgroundDashboard);
+    border-collapse: collapse;
 }
+
+.tableAtividadeTotem tr{
+    border-bottom: 1px solid #293E5A;
+    cursor: pointer;
+}
+
+.tableAtividadeTotem tr:hover{
+    font-weight: bolder;
+}
+
+.trFirstRow{
+    color: var(--colorGray);
+}
+
+.totemInativo{
+    color: var(--colorRed);
+}
+
+.totemAtivo{
+    color: var(--colorGreen);
+}
+
