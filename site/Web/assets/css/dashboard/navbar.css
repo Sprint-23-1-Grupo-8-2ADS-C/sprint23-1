@@ -10,7 +10,7 @@
 
 nav{
     height: 100vh;
-    width: 256px;
+    width: 220px;
     /* background-color: var(--backgroundColorBlueMidnight); */
     position: fixed;    
 }
@@ -68,7 +68,6 @@ nav{
 .itemNavigation{
     width: 220px;
     padding: 8px 5px;
-    border-radius: 0 10px 10px 0;
     cursor: pointer;
 }
 .itemNavigation:hover{
@@ -113,4 +112,119 @@ nav{
 
 .logOut:hover{
     background-color: #FF3232;
+}
+
+/* SELECIONAR TOTEM */
+
+dialog{
+    border-radius: 10px;
+    padding: 0;
+    border: none;
+    margin: auto;
+}
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.divSelecionarTotem{
+    background-color: var(--colorBackgroundDashboard);
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.divSelecionarTotem h3{
+    font-size: 1.5rem;
+    color: var(--backgroundColor);
+    margin-bottom: 20px;
+}
+
+.divSearch{
+    display: flex;
+    align-items: center;
+    width: 290px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #161F2B;
+
+}
+.divSearch img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+.divSearch input{
+    height: 50px;
+    width: 100%;
+    background-color: #ffffff00;
+    border: none;
+    border-radius: 10px;
+    color: var(--colorBackgroundDashboard);
+}
+.divSearch input:focus{
+    border-color: #ffffff00;
+}
+
+.divTable{
+    width: 90%;
+    height: 200px;
+    overflow:auto; 
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+.divSelecionarTotem table{
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-collapse: collapse;
+}
+
+.tdFirst{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--backgroundColor);
+}
+.tdDefault{
+    color: var(--colorGray);
+}
+
+
+.divSelecionarTotem button{
+    width: 120px;
+    height: 35px;
+    color: var(--colorBackgroundDashboard);
+    background-color: var(--backgroundColor);
+    border: none;
+    border-radius: 10px;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.divSelecionarTotem button:hover{
+    background-color: #021735;
+}
+
+.selected{
+    background-color: #D9D9D9;
+    border-radius: 10px !important;
+}
+
+.selected td{
+    color: var(--backgroundColor);
+    font-weight: bold;
+}
+
+
+.divTable::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--colorBackgroundDashboard);
+}
+
+.divTable::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #0653B6;
 }
