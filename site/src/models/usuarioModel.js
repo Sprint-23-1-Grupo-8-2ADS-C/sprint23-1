@@ -29,9 +29,22 @@ function salvarCodigo(email, codigo) {
     return database.executar(instrucao);
 }
 
+function verificacaoCodigo(email, codigo){
+
+    var instrucao = `
+
+    select funcionario.codigoVerificacao from funcionario where emailFunc = '${email}' and codigoVerificacao = '${codigo}';
+
+`;
+
+
+    return database.executar(instrucao);
+
+}
 
 module.exports = {
     buscarUsuario,
     entrar,
-    salvarCodigo
+    salvarCodigo,
+    verificacaoCodigo
 };

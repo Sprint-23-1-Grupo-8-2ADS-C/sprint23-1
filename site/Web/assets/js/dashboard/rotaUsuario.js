@@ -84,9 +84,6 @@ function mostrarUsuario() {
 function gerarCodigo() {
     var emailVar = forgetEmail.value;
 
-
-
-
     fetch("/usuarios/TrocarSenha", {
         method: "POST",
         headers: {
@@ -111,5 +108,39 @@ function gerarCodigo() {
 
     });
 
+  
 
 } 
+
+function verificarCodigo(){
+    var verificar = iptVerifica.value;
+    var emailVar = forgetEmail.value;
+
+    fetch("/usuarios/verificacao", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            verificarServer: verificar,
+            emailServer: emailVar,
+
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+        
+            window.location = "./trocarSenha.html";
+        } else {
+            exibirModal("Código inválido")
+        }
+    }).catch(function (resposta) {
+
+        console.log(`#ERRO: ${resposta}`);
+
+    });
+
+
+  }  

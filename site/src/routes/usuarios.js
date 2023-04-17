@@ -16,4 +16,8 @@ router.post("/TrocarSenha", function (req, res) {
     usuarioController.salvarCodigo(req, res);
 });
 
+router.post("/verificacao", function (req, res) {
+    usuarioController.verificacaoCodigo(req, res);
+});
+
 module.exports = router;

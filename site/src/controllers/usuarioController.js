@@ -50,6 +50,34 @@ function entrar(req, res) {
     }
 }
 
+function verificacaoCodigo(req, res) {
+    var codigo = req.body.verificarServer
+    var email = req.body.emailServer;
+
+    usuarioModel.verificacaoCodigo(email, codigo).then((resultado) => {
+
+        console.log('AQUUUUUUUUUUUIIIIII')
+        console.log(resultado)
+
+        if( resultado.length > 0){
+
+         res.status(200).json(resultado);    
+
+        } else{
+            res.status(404).json({ erro: "Código Inválido" });
+
+        }
+
+       
+    })
+        .catch((erro) => {
+            console.log(erro);
+            console.log("Houve um erro ao verificar código: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        })
+
+}
+
 function salvarCodigo(req, res) {
     var codigo = parseInt(100000 + Math.random() * 100000);
     var email = req.body.emailServer;
@@ -66,16 +94,17 @@ function salvarCodigo(req, res) {
             const formData = require('form-data');
             const Mailgun = require('mailgun.js');
             const mailgun = new Mailgun(formData);
-            const mg = mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY || '240740586ff660c13956cd326438bdbf-2cc48b29-a9557bf3' });
+            const mg = mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY || 'c4544799b9ef2a3d60fc523305872137-181449aa-8b230eec' });
 
-            mg.messages.create('sandbox0e110523588b4d43aad68329dd9d20d9.mailgun.org', {
-                from: "Airplane Solutions <mailgun@sandbox0e110523588b4d43aad68329dd9d20d9.mailgun.org>",
+            mg.messages.create('sandboxea8ad1cb90ce4f2dab9f3b084922242a.mailgun.org', {
+                from: "Airplane Solutions <mailgun@sandboxea8ad1cb90ce4f2dab9f3b084922242a.mailgun.org>",
                 to: [email],
                 subject: "Recuperação de Senha",
                 text: `Seu código de verificação é ${codigo}`,
                 html: `<h1>Seu código de verificação é ${codigo}</h1>`
-            }) .then(msg => console.log(msg)) // logs response data
-            .catch(err => console.log(err)); // logs any error
+            }).then(msg => console.log(msg)) // logs response data
+                .catch(err => console.log(err)); // logs any error
+
             res.status(200).json(resultado);
         }
 
@@ -92,5 +121,6 @@ function salvarCodigo(req, res) {
 module.exports = {
     buscarUsuario,
     entrar,
-    salvarCodigo
+    salvarCodigo,
+    verificacaoCodigo
 }
