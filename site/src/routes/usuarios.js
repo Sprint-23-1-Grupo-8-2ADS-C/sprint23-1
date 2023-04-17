@@ -20,4 +20,8 @@ router.post("/verificacao", function (req, res) {
     usuarioController.verificacaoCodigo(req, res);
 });
 
+router.post("/updateSenha", function (req, res) {
+    usuarioController.updateSenha(req, res);
+});
+
 module.exports = router;

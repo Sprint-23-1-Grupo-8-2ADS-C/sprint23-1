@@ -49,15 +49,30 @@ function entrar(req, res) {
         );
     }
 }
+function updateSenha(req, res){
+    var senha = req.body.novasenhaServer;
+    var email = req.body.emailServer;
 
+    usuarioModel.updateSenha(senha, email).then((resultado) => {
+
+        res.status(200).jason(resultado); 
+
+
+    })
+    .catch((erro) => {
+        console.log(erro);
+        console.log("Houve um erro ao atualizar a senha", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    })
+
+
+}
 function verificacaoCodigo(req, res) {
     var codigo = req.body.verificarServer
     var email = req.body.emailServer;
 
     usuarioModel.verificacaoCodigo(email, codigo).then((resultado) => {
 
-        console.log('AQUUUUUUUUUUUIIIIII')
-        console.log(resultado)
 
         if( resultado.length > 0){
 
@@ -122,5 +137,6 @@ module.exports = {
     buscarUsuario,
     entrar,
     salvarCodigo,
-    verificacaoCodigo
+    verificacaoCodigo,
+    updateSenha
 }

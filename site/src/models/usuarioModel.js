@@ -37,8 +37,14 @@ function verificacaoCodigo(email, codigo){
 
 `;
 
-
     return database.executar(instrucao);
+}
+
+function updateSenha(senha, email){
+var instrucao = `
+    update funcionario set senha = '${senha}'
+    where emailFunc = '${email}';
+`;
 
 }
 
@@ -46,5 +52,6 @@ module.exports = {
     buscarUsuario,
     entrar,
     salvarCodigo,
-    verificacaoCodigo
+    verificacaoCodigo,
+    updateSenha
 };

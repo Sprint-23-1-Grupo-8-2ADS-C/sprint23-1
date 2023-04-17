@@ -148,6 +148,8 @@ function verificarCodigo() {
 function validarSenha() {
     var novasenha = senhaNova.value;
     var confirmaSenha = confirmaSenha.value;
+    var emailVar = forgetEmail.value;
+
 
     if (novasenha == confirmaSenha){
         fetch("/usuarios/updateSenha", {
@@ -157,6 +159,7 @@ function validarSenha() {
             },
             body: JSON.stringify({
                 novasenhaServer: novasenha,
+                emailServer: emailVar
     
             })
         }).then(function (resposta) {
@@ -164,10 +167,8 @@ function validarSenha() {
             console.log("resposta: ", resposta);
     
             if (resposta.ok) {
-    
-                window.location = "./trocarSenha.html";
-            } else {
-                exibirModal("Código inválido")
+                exibirModal("Troca realizada com sucesso!")
+                
             }
         }).catch(function (resposta) {
     
