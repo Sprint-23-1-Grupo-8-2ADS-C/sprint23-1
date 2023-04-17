@@ -108,11 +108,11 @@ function gerarCodigo() {
 
     });
 
-  
 
-} 
 
-function verificarCodigo(){
+}
+
+function verificarCodigo() {
     var verificar = iptVerifica.value;
     var emailVar = forgetEmail.value;
 
@@ -131,7 +131,7 @@ function verificarCodigo(){
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-        
+
             window.location = "./trocarSenha.html";
         } else {
             exibirModal("Código inválido")
@@ -143,4 +143,43 @@ function verificarCodigo(){
     });
 
 
-  }  
+}
+
+function validarSenha() {
+    var novasenha = senhaNova.value;
+    var confirmaSenha = confirmaSenha.value;
+
+    if (novasenha == confirmaSenha){
+        fetch("/usuarios/updateSenha", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                novasenhaServer: novasenha,
+    
+            })
+        }).then(function (resposta) {
+    
+            console.log("resposta: ", resposta);
+    
+            if (resposta.ok) {
+    
+                window.location = "./trocarSenha.html";
+            } else {
+                exibirModal("Código inválido")
+            }
+        }).catch(function (resposta) {
+    
+            console.log(`#ERRO: ${resposta}`);
+    
+        });
+
+    }else {
+        exibirModal("Senhas diferentes")
+
+    }
+
+
+
+}
