@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/navbar.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/indexDash.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
-    
+
     <title>Airplane Solutions</title>
 </head>
-<body>
 
+<body>
     <dialog>
         <div class="divSelecionarTotem">
             <h3>Selecionar Totem</h3>
-            <div class="divSearch"> 
+            <div class="divSearch">
                 <img src="../../assets/SVG/icons/search.svg">
                 <input type="text" placeholder="Encontrar máquina...">
             </div>
@@ -45,7 +45,7 @@
                     </tr>
                 </table>
             </div>
-            
+
             <button>Selecionar</button>
         </div>
     </dialog>
@@ -54,7 +54,7 @@
         <div class="divLogo">
             <img src="../../assets/SVG/logo.svg">
             <h3>
-                <span>Airplane</span> 
+                <span>Airplane</span>
                 Solutions
             </h3>
         </div>
@@ -104,117 +104,64 @@
 
     <div class="divContent">
         <div class="divTop">
-            <h2>Olá, Administrador</h2>
+            <h2>Cadastrar Funcionário</h2>
         </div>
 
-        <div class="divFirstGroup">
-            <div class="divGroupKpi">
-                <div class="divKpi">
-                    <span class="spTitle">Totens Ativos</span>
-                    <h3>
-                        <span class="spQuantidade">8</span>
-                        unidades
-                    </h3>
-                </div>
-                <div class="divKpi">
-                    <span class="spTitle">Totens Ativos</span>
-                    <h3>
-                        <span class="spQuantidade">8</span>
-                        unidades
-                    </h3>
-                </div>
-                <div class="divKpi">
-                    <span class="spTitle">Totens Ativos</span>
-                    <h3>
-                        <span class="spQuantidade">8</span>
-                        unidades
-                    </h3>
-                </div>
-            </div>
-            <div class="divAtividadeTotem">
-                <h3>Estado dos Totens</h3>
-                <table class="tableAtividadeTotem">
-                    <tr class="trFirstRow">
-                        <td>Totem</td>
-                        <td>Estado</td>
-                        <td>Tempo</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 01</td>
-                        <td class="totemInativo">Inativo</td>
-                        <td>1h</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 04</td>
-                        <td class="totemInativo">Inativo</td>
-                        <td>1min</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 02</td>
-                        <td class="totemAtivo">Ativo</td>
-                        <td>1h</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 03</td>
-                        <td class="totemAtivo">Ativo</td>
-                        <td>20min</td>
-                    </tr>
-                </table>
-            </div>
+
+        <div class="divInfosMiddle">
+
+            <h3>
+                <span class="infoTitle">Informações Básicas</span>
+            </h3>
+
+            <span class="infodescription">Preencha todas as informações para criar um novo cadastro</span>
+
         </div>
-    
-        <div class="divSecondGroup">
-            <div class="divGraphic divChartComparacaoCpu">
-                <h3>Comparação da CPU por tempo <span>(ativo)</span></h3>
 
-                <div class="divChart">
-                    <canvas id="chartCpu"></canvas>
-                </div>
+        <div class="divCadastroFuncionario">
+
+            <div class="divFirstGroup">
+
+                <span class="spTitle">Nome <p>*</p></span>
+                <input id="nomeFuncionario" type="text" placeholder="User"><br>
+
+                <span class="spTitle">Senha <p>*</p></span>
+                <input id="senha" type="password" placeholder="***********"><br>
+
+                <span class="spTitle">Confirmar Senha <p>*</p></span>
+                <input id="cfmSenha" type="password" placeholder="***********"><br>
+
             </div>
 
-            <div class="divGraphic divChartArmazenamento">
-                <h3>Comparação armazenamento</h3>
+            <div class="divSecondGroup">
+                <span class="spTitle">E-mail <p>*</p></span>
+                <input id="emailFuncionario" type="text" placeholder="user@gmail.com"><br>
 
-                <div class="divChart">
-                    <canvas id="chartArmazenamento"></canvas>
-                </div>
+                <span class="spTitle">Cargo <p>*</p></span>
+
+                <select name="" id="selCargo">
+                    <option value="">Selecione o cargo</option>
+                    <option value="">Analista</option>
+
+                </select>
+
+                <input id="upload" type="file">
+                <img src="../../assets/PNG/icons/upload-de-arquivo.png" alt="">
+
             </div>
+
         </div>
-    
+
+        <div class="divEnd">
+
+            <span class="obrigatorios">Campos com * são obrigatórios</span>
+            <button>Cadastrar</button>
+        </div>
+
     </div>
+
+
+
 </body>
+
 </html>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../../assets/js/dashboard/rotaTotem.js"></script>
-<script src="../../assets/js/dashboard/rotaUsuario.js"></script>
-<script src="../../assets/js/dashboard/chart.js"></script>
-
-<script>
-    
-</script>
-<script>
-    mostrarUsuario();
-    buscarTotens();
-
-    const radioButtons = document.querySelectorAll('input[type="radio"]');
-
-    radioButtons.forEach((radioButton) => {
-        radioButton.addEventListener('click', () => {
-            const tr = radioButton.closest('tr');
-            const table = tr.closest('table');
-            table.querySelectorAll('tr').forEach((row) => {
-            if (row !== tr) {
-                row.classList.remove('selected');
-            }
-            });
-            tr.classList.add('selected');
-        });
-    });
-
-
-    
-    function abrirModal() {
-        const modal = document.querySelector("dialog");
-        modal.showModal();
-    }
-</script>
