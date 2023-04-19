@@ -1,5 +1,4 @@
 .divFirstGroup{
-
     display: flex;
     justify-content: space-between;
 }
@@ -88,3 +87,36 @@
     color: var(--colorGreen);
 }
 
+/* GRÁFICOS */
+
+.divSecondGroup{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.divGraphic{
+    background-color: var(--backgroundColor);
+    height: 300px;
+    border-radius: 10px;
+    padding: 25px 25px 10px;
+}
+.divGraphic h3{
+    color: var(--colorBackgroundDashboard);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.divGraphic h3 span{
+    font-size: 1rem;
+}
+.divChartComparacaoCpu{
+    width: 65%;
+}
+.divChartArmazenamento{
+    width: 30%;
+}
+
+.divChart{
+    background-color: var(--backgroundColor);
+}
