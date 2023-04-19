@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,15 @@
     <link rel="stylesheet" href="../../assets/css/dashboard/navbar.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/indexDash.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
-    
+
     <title>Airplane Solutions</title>
 </head>
+
 <body>
     <dialog>
         <div class="divSelecionarTotem">
             <h3>Selecionar Totem</h3>
-            <div class="divSearch"> 
+            <div class="divSearch">
                 <img src="../../assets/SVG/icons/search.svg">
                 <input type="text" placeholder="Encontrar máquina...">
             </div>
@@ -43,7 +45,7 @@
                     </tr>
                 </table>
             </div>
-            
+
             <button>Selecionar</button>
         </div>
     </dialog>
@@ -52,7 +54,7 @@
         <div class="divLogo">
             <img src="../../assets/SVG/logo.svg">
             <h3>
-                <span>Airplane</span> 
+                <span>Airplane</span>
                 Solutions
             </h3>
         </div>
@@ -105,9 +107,61 @@
             <h2>Cadastrar Funcionário</h2>
         </div>
 
+
+        <div class="divInfosMiddle">
+
+            <h3>
+                <span class="infoTitle">Informações Básicas</span>
+            </h3>
+
+            <span class="infodescription">Preencha todas as informações para criar um novo cadastro</span>
+
+        </div>
+
+        <div class="divCadastroFuncionario">
+
+            <div class="divFirstGroup">
+
+                <span class="spTitle">Nome <p>*</p></span>
+                <input id="nomeFuncionario" type="text" placeholder="User"><br>
+
+                <span class="spTitle">Senha <p>*</p></span>
+                <input id="senha" type="password" placeholder="***********"><br>
+
+                <span class="spTitle">Confirmar Senha <p>*</p></span>
+                <input id="cfmSenha" type="password" placeholder="***********"><br>
+
+            </div>
+
+            <div class="divSecondGroup">
+                <span class="spTitle">E-mail <p>*</p></span>
+                <input id="emailFuncionario" type="text" placeholder="user@gmail.com"><br>
+
+                <span class="spTitle">Cargo <p>*</p></span>
+
+                <select name="" id="selCargo">
+                    <option value="">Selecione o cargo</option>
+                    <option value="">Analista</option>
+
+                </select>
+
+                <input id="upload" type="file">
+                <img src="../../assets/PNG/icons/upload-de-arquivo.png" alt="">
+
+            </div>
+
+        </div>
+
+        <div class="divEnd">
+
+            <span class="obrigatorios">Campos com * são obrigatórios</span>
+            <button>Cadastrar</button>
+        </div>
+
     </div>
 
 
 
 </body>
+
 </html>
