@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/navbar.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/indexDash.css">
@@ -13,7 +12,6 @@
     <title>Airplane Solutions</title>
 </head>
 <body>
-
     <dialog>
         <div class="divSelecionarTotem">
             <h3>Selecionar Totem</h3>
@@ -104,93 +102,12 @@
 
     <div class="divContent">
         <div class="divTop">
-            <h2>Olá, Administrador</h2>
+            <h2>Cadastrar Funcionário</h2>
         </div>
 
-        <div class="divFirstGroup">
-            <div class="divGroupKpi">
-                <div class="divKpi">
-                    <span class="spTitle">Totens Ativos</span>
-                    <h3>
-                        <span class="spQuantidade">8</span>
-                        unidades
-                    </h3>
-                </div>
-                <div class="divKpi">
-                    <span class="spTitle">Totens Ativos</span>
-                    <h3>
-                        <span class="spQuantidade">8</span>
-                        unidades
-                    </h3>
-                </div>
-                <div class="divKpi">
-                    <span class="spTitle">Totens Ativos</span>
-                    <h3>
-                        <span class="spQuantidade">8</span>
-                        unidades
-                    </h3>
-                </div>
-            </div>
-            <div class="divAtividadeTotem">
-                <h3>Estado dos Totens</h3>
-                <table class="tableAtividadeTotem">
-                    <tr class="trFirstRow">
-                        <td>Totem</td>
-                        <td>Estado</td>
-                        <td>Tempo</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 01</td>
-                        <td class="totemInativo">Inativo</td>
-                        <td>1h</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 04</td>
-                        <td class="totemInativo">Inativo</td>
-                        <td>1min</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 02</td>
-                        <td class="totemAtivo">Ativo</td>
-                        <td>1h</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 03</td>
-                        <td class="totemAtivo">Ativo</td>
-                        <td>20min</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
     </div>
+
+
+
 </body>
 </html>
-<script src="../../assets/js/dashboard/rotaTotem.js"></script>
-<script src="../../assets/js/dashboard/rotaUsuario.js"></script>
-
-<script>
-    mostrarUsuario();
-    buscarTotens();
-
-    const radioButtons = document.querySelectorAll('input[type="radio"]');
-
-    radioButtons.forEach((radioButton) => {
-        radioButton.addEventListener('click', () => {
-            const tr = radioButton.closest('tr');
-            const table = tr.closest('table');
-            table.querySelectorAll('tr').forEach((row) => {
-            if (row !== tr) {
-                row.classList.remove('selected');
-            }
-            });
-            tr.classList.add('selected');
-        });
-    });
-
-
-    
-    function abrirModal() {
-        const modal = document.querySelector("dialog");
-        modal.showModal();
-    }
-</script>
