@@ -1,0 +1,79 @@
+.infoTitle {
+    font-size: 28px;
+}
+
+.infodescription {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.spTitle {
+    display: inherit;
+    padding-bottom: 2%;
+    font-size: 15px;
+}
+
+.titleUpload {
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.divContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+.divCadastroFuncionario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.divInfosMiddle {
+    padding-bottom: 2%;
+    line-height: 2;
+}
+
+.divFirstGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.divSecondGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.divSecondGroup img {
+    margin-left: 30%;
+    width: 30%;
+}
+
+.campos {
+    width: 343px;
+    height: 60px;
+    border: 3px solid #000A18;
+    border-radius: 10px;
+    padding: 10px 10px 0 20px;
+}
+
+.divBox {
+    margin-top: 3%;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #000A18;
+    border-radius: 10px;
+    padding: 10px 10px 0 20px;
+    align-items: center;
+}
+
+.divEnd {
+    padding-top: 6%;
+
+}
