@@ -16,7 +16,37 @@
 .titleUpload {
     font-weight: bold;
     color: black;
-    text-align: center;
+    margin-left: 30%;
+}
+
+#obrigatorio{
+    color: red;
+}
+
+.obrigatorios{
+    font-weight: bold;
+    color: red; 
+    font-size: 15px;
+}
+.button{
+    background-color: black;
+    color: #ffffff;
+    border-color: black;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 225px;
+    height: 45px;
+}
+.buttonUpload{
+    background-color: black;
+    color: #ffffff;
+    border-color: black;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 180px;
+    height: 45px;
+    margin-left: 8.33%;
+
 }
 
 .divContainer {
@@ -44,15 +74,17 @@
     justify-content: space-between;
 }
 
-.divSecondGroup {
+.divSecondGroupTime {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
-.divSecondGroup img {
-    margin-left: 30%;
-    width: 30%;
+
+.divSecondGroupTime img {
+    margin-left: 35%;
+    width: 25%;
 }
 
 .campos {
@@ -64,9 +96,9 @@
 }
 
 .divBox {
-    margin-top: 3%;
-    width: 200px;
-    height: 100px;
+    margin-top: 35px;
+    width: 270px;
+    height: 120px;
     border: 3px solid #000A18;
     border-radius: 10px;
     padding: 10px 10px 0 20px;
@@ -74,6 +106,7 @@
 }
 
 .divEnd {
-    padding-top: 6%;
+    padding-top: 4%;
+    margin-bottom: 6%;
 
 }

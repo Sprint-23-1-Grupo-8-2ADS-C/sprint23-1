@@ -125,23 +125,23 @@
 
                 <div class="divFirstGroup">
 
-                    <span class="spTitle">Nome <p> *</p></span>
+                    <span class="spTitle">Nome <p id="obrigatorio"> *</p></span>
                     <input class="campos" id="nomeFuncionario" type="text" placeholder="User"><br>
 
-                    <span class="spTitle">Senha <p> *</p></span>
+                    <span class="spTitle">Senha <p id="obrigatorio"> *</p></span>
                     <input class="campos" id="senha" type="password" placeholder="***********"><br>
 
-                    <span class="spTitle">Confirmar Senha <p> *</p></span>
+                    <span class="spTitle">Confirmar Senha <p id="obrigatorio"> *</p></span>
                     <input class="campos" id="cfmSenha" type="password" placeholder="***********"><br>
 
                 </div>
 
-                <div class="divSecondGroup">
+                <div class="divSecondGroupTime">
 
-                    <span class="spTitle">E-mail <p> *</p></span>
+                    <span class="spTitle">E-mail <p id="obrigatorio"> *</p></span>
                     <input class="campos" id="emailFuncionario" type="text" placeholder="user@gmail.com"><br>
 
-                    <span class="spTitle">Cargo <p> *</p></span>
+                    <span class="spTitle">Cargo <p id="obrigatorio"> *</p></span>
 
                     <select name="" id="selCargo" class="campos">
                         <option value="">Selecione o cargo</option>
@@ -152,7 +152,8 @@
                     <div class="divBox">
                        <img src="../../assets/PNG/icons/upload-de-arquivo.png" alt=""> <br>
                        <span class="titleUpload">Upload Foto</span> <br>
-                        <button>Upload</button>
+                        <button onclick="upload()" class="buttonUpload">Upload</button><br><br>
+                        <input style="display: none;" id="uploadOculto" type="file">
                         
                     </div>
 
@@ -164,7 +165,8 @@
             <div class="divEnd">
 
                 <span class="obrigatorios">Campos com * são obrigatórios</span> <br>
-                <button>Cadastrar</button>
+                <button class="button">Cadastrar</button>
+
             </div>
 
         </div>
@@ -175,3 +177,10 @@
 </body>
 
 </html>
+<script>
+function upload(){
+uploadOculto.style.display = "block";
+}
+
+
+</script>
