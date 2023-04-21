@@ -176,10 +176,14 @@ dialog::backdrop{
     margin-left: 10px;
 }
 .divSelecionarTotem table{
-    width: 100%;
     height: 250px;
     border: none;
     border-collapse: collapse;
+
+}
+
+.divSelecionarTotem table{
+    font-size: 1.3rem;
 }
 
 .tdFirst{
