@@ -32,3 +32,44 @@
     font-size: 20px;
     align-self: flex-end;
 }
+
+.divListaFuncionario {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: #000A18;
+    padding: 2%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
+.divListaFuncionario h1 {
+    color: white;
+    margin-bottom: 3%;
+}
+
+.funcionario {
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.divIcon a{
+    padding: 15px;
+    text-align: center;
+    color: var(--colorWhite);
+    background-color: var(--colorBackgroundIcons);
+    border-radius: 50%;
+    margin: 0rem 1.2rem 0rem 1.2rem;
+    line-height: 2.4rem;
+}
+
+.divIcon a:hover{
+    transition: all 0.5s ease;
+    background-color: var(--colorWhite);
+    color: var(--colorBackgroundIcons);
+}
+
+.divIcon i {
+    align-self: center;
+}
