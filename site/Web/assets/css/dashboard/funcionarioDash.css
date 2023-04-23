@@ -73,3 +73,30 @@
 .divIcon i {
     align-self: center;
 }
+
+.divInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.divInfo h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.divInfo p {
+    color: gray;
+}
+
+.divCargo {
+    display: flex;
+    width: 30%;
+    border: white solid 1px;
+    border-radius: 10px;
+    margin-left: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+
