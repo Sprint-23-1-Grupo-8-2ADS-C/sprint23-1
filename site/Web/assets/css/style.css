@@ -6,6 +6,7 @@
 
 body {
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 .efeito-blur {
