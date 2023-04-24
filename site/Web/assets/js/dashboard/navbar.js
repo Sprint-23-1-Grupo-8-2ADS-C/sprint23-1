@@ -10,7 +10,7 @@ var navContent = `
     <div class="divItems">
 
         <div class="divNavigationItems">
-            <div class="divItem itemNavigation itemSelect">
+            <div class="divItem itemNavigation">
                 <img src="../../assets/SVG/icons/dashboard.SVG">
                 <span>Dashboard</span>
             </div>
@@ -92,7 +92,7 @@ var dialogContent = `
             </table>
         </div>
 
-        <button>Selecionar</button>
+        <button onclick="window.location = 'totem.html'">Selecionar</button>
     </div>
 `
 
