@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+    position: relative;
+}
+:root {
+    --colorInput: rgba(217, 217, 217, 0.1);
+    --btnColor: #0653B6;
+    --colorBackgroundLogin: rgba(16, 26, 39, 0.7);
+}
+
+.containerDados {
+    display: flex;
+    flex-direction: row;
+}
+
+.containerRight{
+    width: 70%;
+    margin-top: 20px;
+}
+.containerRight h1 {
+    font-size: 1.8rem;
+    color: var(--colorWhite);
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.containerRight input{
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    font-size: 1rem;
+    border: none;
+    background: var(--colorInput);
+    color: white;
+}
+textarea{
+    display: block;
+    width: 70%;
+    height: 150px;
+    font-size: 1rem;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: none;
+    background: var(--colorInput);
+    color: white;
+}
+
+.btnAccess {
+    width: 250px;
+    height: 45px;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-top: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    color: var(--colorWhite);
+    background-color: var(--btnColor);
+}
+
+.btnAccess:hover {
+    background-color: var(--colorAnimatedBtn);
+}
+
+
+/* LADO ESQUERDO */
+.backgroundLeft{
+    height: 100vh;
+    width: 50%;
+    background-color: #384B63;
+    position: absolute;
+}
+
+.containerLeft {
+    z-index: 9;
+    margin-top: 80px;
+    padding: 0 100px;
+}
+
+.containerLeft h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: white;
+    font-weight: normal;
+}
+
+.leftText{
+    font-size: 1.3rem;
+    color: white;
+    width: 70%;
+}
+
+
+.info {
+    margin-top: 50px;
+    width: 500px;
+    background-color: #061425;
+    border-radius: 10px;
+    padding: 70px 50px 20px;
+    position: relative;
+}
+.aspas{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 70px;
+    width: 70px;
+}
+
+.infoText{
+    font-size: 1.3rem;
+    color: white;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.person{
+    display: flex;
+    align-items: center;
+}
+
+.bola{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+}
+.person i{
+    font-size: 2.5rem;
+    color: #061425;
+}
+.person p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--colorWhite);
+}
+.person span{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: var(--colorWhite);
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .containerRight
+     {
+        padding: 10%;
+        background-color: var(--colorBackgroundLogin);
+        box-shadow: inset 2px 2px 30px 1px var(--colorAnimatedBtn);
+        border-radius: 45px;
+        flex-direction: column;
+        margin: 5%;
+        width: 100%;
+        height: 50%;
+    }
+
+    .containerRight
+     h1 {
+        font-size: 2rem;
+        margin-bottom: 10%;
+    }
+
+    .containerRight
+     span {
+        font-size: 2rem;
+        margin-bottom: 10%;
+    }
+
+    .containerRight
+     p {
+        font-size: 16px;
+        margin-bottom: 10%;
+        margin-left: 0%;
+    }
+
+    .containerRight
+     input {
+        font-size: 24px;
+        margin-left: 0%;
+        width: 60%;
+        height: 70px;
+    }
+
+    .containerRight
+     input::placeholder {
+        padding: 5%;
+        color: var(--colorWhite);
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .btnAccess {
+        margin-left: 0%;
+        width: 40%;
+        height: 60px;
+        font-size: 24px;
+        color: var(--colorWhite);
+        background-color: var(--btnColor);
+        border-radius: 10px;
+        border-color: transparent;
+    }
+
+    .containerLeft {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+        .containerRight
+         {
+            padding: 10%;
+            background-color: var(--colorBackgroundLogin);
+            box-shadow: inset 2px 2px 30px 1px var(--colorAnimatedBtn);
+            border-radius: 45px;
+            flex-direction: column;
+            margin: 5%;
+            width: 100%;
+            height: 50%;
+        }
+    
+        .containerRight
+         h1 {
+            font-size: 2rem;
+            margin-bottom: 10%;
+        }
+    
+        .containerRight
+         span {
+            font-size: 2rem;
+            margin-bottom: 10%;
+        }
+    
+        .containerRight
+         p {
+            font-size: 16px;
+            margin-bottom: 10%;
+            margin-left: 0%;
+        }
+    
+        .containerRight
+         input {
+            font-size: 24px;
+            margin-left: 0%;
+            width: 60%;
+            height: 70px;
+        }
+    
+        .containerRight
+         input::placeholder {
+            padding: 5%;
+            color: var(--colorWhite);
+            font-size: 24px;
+            font-weight: 400;
+        }
+    
+        .btnAccess {
+            margin-left: 0%;
+            width: 40%;
+            height: 60px;
+            font-size: 24px;
+            color: var(--colorWhite);
+            background-color: var(--btnColor);
+            border-radius: 10px;
+            border-color: transparent;
+        }
+    
+        .containerLeft {
+            display: none;
+        }
+}
+
+@media only screen and (max-width: 992px) {
+        
+            .containerRight
+             {
+                padding: 10%;
+                background-color: var(--colorBackgroundLogin);
+                box-shadow: inset 2px 2px 30px 1px var(--colorAnimatedBtn);
+                border-radius: 45px;
+                flex-direction: column;
+                margin: 5%;
+                width: 100%;
+                height: 50%;
+            }
+        
+            .containerRight
+             h1 {
+                font-size: 2rem;
+                margin-bottom: 10%;
+            }
+        
+            .containerRight
+             span {
+                font-size: 2rem;
+                margin-bottom: 10%;
+            }
+        
+            .containerRight
+             p {
+                font-size: 16px;
+                margin-bottom: 10%;
+                margin-left: 0%;
+            }
+        
+            .containerRight
+             input {
+                font-size: 24px;
+                margin-left: 0%;
+                width: 60%;
+                height: 70px;
+            }
+        
+            .containerRight
+             input::placeholder {
+                padding: 5%;
+                color: var(--colorWhite);
+                font-size: 24px;
+                font-weight: 400;
+            }
+        
+            .btnAccess {
+                margin-left: 0%;
+                width: 40%;
+                height: 60px;
+                font-size: 24px;
+                color: var(--colorWhite);
+                background-color: var(--btnColor);
+                border-radius: 10px;
+                border-color: transparent;
+            }
+        
+            .containerLeft {
+                display: none;
+            }
+}
+

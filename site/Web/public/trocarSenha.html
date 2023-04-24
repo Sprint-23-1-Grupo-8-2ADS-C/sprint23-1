@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/login/login.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Airplane Solutions</title>
 </head>
 
@@ -30,23 +28,25 @@
         <nav>
             <a class="optionsNav"><i class="fa-solid fa-bars"></i></a>
             <ul>
-                <li><a class="animatedBorder" href="index.html">Home</a></li>
-                <li><a class="animatedBorder" href="index.html#containerImgPerformanceFlow1">Projetos</a></li>
-                <li><a class="animatedBorder" href="contact.html">Contatos</a></li>
-                <div></div>
-                <li><a class="animatedBorder" href="login.html">Login</a></li>
+                <li style="display: block;"><a class="animatedBorder" href="index.html">Home</a></li>
+                <li style="display: block;"><a class="animatedBorder"
+                        href="index.html#containerImgPerformanceFlow1">Projetos</a></li>
+                <li style="display: block;"><a class="animatedBorder" href="contact.html">Contatos</a></li>
+                <li style="display: block;"><a class="animatedBorder" href="contact.html">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="containerLogin">
         <div class="containerLeftLogin">
-            <h1><span>Seja</span><br>Bem-Vindo!</h1>
+            <h1><br>New Password?</h1>
 
-            <input id="iptEmail" type="text" placeholder="E-mail"><br>
-            <input id="iptSenha" type="password" placeholder="Senha"><br>
+            <input id="senhaNova" type="text" placeholder="Nova senha"><br>
 
-            <p> <a href="forgotPassword.html">Forgot Password? </a></p>
+            <input id="confirmaSenha" type="text" placeholder="Confirmar senha"><br>
+
+            <button class="btnAccess" onclick="validarSenha()">Enviar</button>
+
 
             <div class="campos">
                 <!-- TEM QUE TRANSFORMAR ISSO EM UMA MENSAGEM DE CANTO DE TELA -->
@@ -58,17 +58,14 @@
                     </div>
                 </div>
 
-                <div id="div_aguardar" class="loading-div">
-                    <img src="../assets/PNG/loading.gif" id="loading-gif">
-                </div>
-
             </div>
 
-            <button class="btnAccess" onclick="validar()">Acesse</button>
         </div>
 
+
+
         <div class="containerRightLogin">
-            <span class="airplaneSolution">Airplane<br> <span class="bold">Solutions</span></span>
+            <h1>Airplane<br> <span>Solutions</span></h1>
 
             <div class="imgLogin" id="imgLogin">
                 <img src="../assets/SVG/logo.svg" alt="">
@@ -76,9 +73,7 @@
 
         </div>
     </div>
-
 </body>
 
 </html>
-<script src="../assets/js/funcoes.js"></script>
 <script src="../assets/js/dashboard/rotaUsuario.js"></script>

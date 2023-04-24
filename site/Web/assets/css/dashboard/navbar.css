@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+:root{
+    /*FONTE DA NAVBAR*/
+    --sizeNav: 15px; 
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    height: 100vh;
+    width: 220px;
+    /* background-color: var(--backgroundColorBlueMidnight); */
+    position: fixed;    
+}
+
+.divLogo{
+    display: flex;
+    align-items: center;
+    margin: 26px 0 0 30px ;
+}
+.divLogo h3{
+    font-size: 20px;
+    color: var(--colorBackgroundDashboard);
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    text-align: center;
+}
+
+.divLogo h3 span{
+    font-weight: bold;
+}
+
+.divLogo img{
+    margin-right: 15px;
+    height: 50px;
+    width: 50px;
+}
+
+.divItems{
+    margin-top: 60px;
+    width: 100%;
+    position: relative;
+}
+.divNavigationItems{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+
+.divItem{
+    color: var(--colorBackgroundDashboard);
+    font-size: var(--sizeNav);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.divItem img{
+    height: 25px;
+    width: 25px;
+    margin-left: 42px;
+}
+.itemNavigation{
+    width: 220px;
+    padding: 8px 5px;
+    cursor: pointer;
+}
+.itemNavigation:hover{
+    background-color: #242b53bb;
+}
+
+.itemSelect{
+    font-weight: bold;
+}
+.itemSelect::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 40px;
+    width: 7px;
+    border-radius: 0 20px 20px 0;
+    background-color: #C9E7F8;
+
+}
+
+.divNavigationUser{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.divNaviagtionExit{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logOut{
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--colorRed);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.logOut:hover{
+    background-color: #FF3232;
+}
+
+/* SELECIONAR TOTEM */
+
+dialog{
+    border-radius: 10px;
+    padding: 0;
+    border: none;
+    margin: auto;
+}
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.divSelecionarTotem{
+    background-color: var(--colorBackgroundDashboard);
+    width: 380px;
+    height: 450px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.divSelecionarTotem h3{
+    font-size: 1.5rem;
+    color: var(--backgroundColor);
+    margin-bottom: 20px;
+}
+
+.divSearch{
+    display: flex;
+    align-items: center;
+    width: 290px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #161F2B;
+
+}
+.divSearch img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+.divSearch input{
+    height: 50px;
+    width: 100%;
+    background-color: #ffffff00;
+    border: none;
+    border-radius: 10px;
+    color: var(--colorBackgroundDashboard);
+}
+.divSearch input:focus{
+    border-color: #ffffff00;
+}
+
+.divTable{
+    width: 90%;
+    overflow:auto; 
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+.divSelecionarTotem table{
+    height: 250px;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    font-size: 1.3rem;
+}
+
+
+.tdFirst{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--backgroundColor);
+}
+.tdDefault{
+    color: var(--colorGray);
+}
+
+
+.divSelecionarTotem button{
+    width: 120px;
+    height: 35px;
+    color: var(--colorBackgroundDashboard);
+    background-color: var(--backgroundColor);
+    border: none;
+    border-radius: 10px;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.divSelecionarTotem button:hover{
+    background-color: #021735;
+}
+
+.selected{
+    background-color: #D9D9D9;
+}
+
+.selected td{
+    color: var(--backgroundColor);
+    font-weight: bold;
+}
+
+
+.divTable::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--colorBackgroundDashboard);
+}
+
+.divTable::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #0653B6;
+}

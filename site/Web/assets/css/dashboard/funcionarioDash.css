@@ -1,0 +1,108 @@
+.divInfosMiddle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.divTop {
+    margin-bottom: 5%;
+}
+
+.cardTotalFuncionarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid black;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.cardTotalFuncionarios p{
+    color: gray;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.btnSignUpFunc {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #000A18;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.divListaFuncionario {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: #000A18;
+    padding: 2%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
+.divListaFuncionario h1 {
+    color: white;
+    margin-bottom: 5%;
+}
+
+.funcionario {
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.divIcon a{
+    padding: 15px;
+    text-align: center;
+    color: var(--colorWhite);
+    background-color: var(--colorBackgroundIcons);
+    border-radius: 50%;
+    margin: 0rem 1.2rem 0rem 1.2rem;
+    line-height: 2.4rem;
+}
+
+.divIcon a:hover{
+    transition: all 0.5s ease;
+    background-color: var(--colorWhite);
+    color: var(--colorBackgroundIcons);
+}
+
+.divIcon i {
+    align-self: center;
+}
+
+.divInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+}
+
+.divInfo h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.divInfo p {
+    color: gray;
+}
+
+.divCargo {
+    display: flex;
+    width: 30%;
+    border: white solid 1px;
+    border-radius: 10px;
+    margin-left: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+

@@ -1,0 +1,109 @@
+.infoTitle {
+    font-size: 28px;
+}
+
+.infodescription {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.spTitle {
+    display: inherit;
+    padding-bottom: 2%;
+    font-size: 15px;
+}
+
+.titleUpload {
+    font-weight: bold;
+    color: var(--backgroundColor);
+    margin-left: 30%;
+}
+
+#obrigatorio{
+    color: red;
+}
+
+.obrigatorios{
+    color: red; 
+    font-size: 15px;
+}
+
+button{
+    background-color: var(--backgroundColor);
+    color: var(--colorBackgroundDashboard);
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button{
+    width: 225px;
+    height: 45px;
+}
+.buttonUpload{
+    width: 180px;
+    height: 45px;
+    margin-left: 8.33%;
+}
+
+.divContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.divCadastroFuncionario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.divInfosMiddle {
+    padding-bottom: 2%;
+    line-height: 2;
+}
+
+.divFirstGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.divSecondGroupTime {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 80px;
+}
+
+
+.divSecondGroupTime img {
+    margin-left: 35%;
+    width: 25%;
+}
+
+.campos {
+    width: 343px;
+    height: 60px;
+    border: 3px solid #000A18;
+    border-radius: 10px;
+    padding: 0 10px 0 20px;
+}
+
+.divBox {
+    margin-top: 35px;
+    width: 270px;
+    height: 120px;
+    border: 3px solid #000A18;
+    border-radius: 10px;
+    padding: 10px 10px 0 20px;
+    align-items: center;
+}
+
+.divEnd {
+    padding-top: 4%;
+    margin-bottom: 6%;
+
+}

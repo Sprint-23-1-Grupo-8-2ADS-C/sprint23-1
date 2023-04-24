@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/totem.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <dialog id="dialog"></dialog>
+    <nav id="navbar"></nav>
+    
+    <div class="divInformationTotem">
+        <div class="divTitleInformation">
+            <h2>Totem 02</h2>
+            <div class="divPoints">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="divDataTotem">
+            <div class="divData line">
+                <span>Estado</span>
+                <h3>Ativo</h3>
+            </div>
+            <div class="divData line">
+                <span>Processador</span>
+                <h3>i5-1000</h3>
+            </div>
+            <div class="divData line">
+                <span>Sistema Operacional</span>
+                <h3>Linux</h3>
+            </div>
+            <div class="divData line">
+                <span>Total RAM</span>
+                <h3>16gb</h3>
+            </div>
+            <div class="divData line">
+                <span>Total Disco</span>
+                <h3>128gb</h3>
+            </div>
+            <div class="divData">
+                <span>IPv4</span>
+                <h3>00.000.000.00</h3>
+            </div>
+        </div>
+
+        <div class="divDataTokem">
+            <div class="divTokemInformation">
+                <span>Tokem</span>
+                <img src="../../assets/SVG/icons/copy.svg" id="imgCopyToken">
+            </div>
+            <div class="divNumberToken">
+                <span>A</span>
+                <span>0</span>
+                <span>0</span>
+                <span>2</span>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="divContent">
+        <div class="divTop">
+            <h2>Totem</h2>
+            <div class="divAtualizarAutomaticamente">
+                <p>Atualizar informações do hardware automáticamente</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <div class="divInformationHealthTotem">
+            <div class="divTitleHealth">
+                <h2>Saúde</h2>
+
+                <div class="divMeters">
+                    <div class="divMeter">
+                        <div class="green"></div>
+                        <span>Legal</span>
+                    </div>
+                    <div class="divMeter">
+                        <div class="yellow"></div>
+                        <span>Risco</span>
+                    </div>
+                    <div class="divMeter">
+                        <div class="red"></div>
+                        <span>Alerta</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divMeterComponentes">
+                <span class="spComponente">Componente</span>
+                <span class="spStatus">Status</span>
+
+                <div class="divComponente rightLine">
+                    <h3>CPU</h3>
+                    <div class="green">
+                        <span>50%</span>
+                    </div>
+                </div>
+                <div class="divComponente rightLine">
+                    <h3>Memória</h3>
+                    <div class="red">
+                        <span>100%</span>
+                    </div>
+                </div>
+                <div class="divComponente rightLine">
+                    <h3>Disco</h3>
+                    <div class="yellow">
+                        <span>60%</span>
+                    </div>
+                </div>
+                <div class="divComponente">
+                    <h3>Rede</h3>
+                    <div class="green">
+                        <span>10%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divGraphic">
+            <h3>% de uso da CPU por hora</h3>
+            <div class="divChart">
+                <canvas id="chartCpuTotem"></canvas>
+            </div>
+        </div>
+
+        <div class="divRamDisco">
+            <div class="divGraphic graphicRam">
+                <h3>Memória RAM</h3>
+                <div class="divChart">
+                    <canvas id="chartRamTotem"></canvas>
+                </div>
+            </div>
+            <div class="divGraphic graphicDisco">
+                <h3>Uso de disco</h3>
+                <div class="divChart">
+                    <canvas id="chartDiscoTotem"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../../assets/js/dashboard/chartTotem.js"></script>
+<script src="../../assets/js/dashboard/navbar.js"></script>

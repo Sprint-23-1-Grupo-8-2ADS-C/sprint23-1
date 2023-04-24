@@ -2,27 +2,17 @@ var usuarioModel = require("../models/usuarioModel");
 
 var sessoes = [];
 
-function testar(req, res) {
-    console.log("ENTRAMOS NA usuarioController");
-    res.json("ESTAMOS FUNCIONANDO!");
-}
+function buscarUsuario(req, res) {
+    var id = req.params.idUsuario;
 
-
-function listar(req, res) {
-    usuarioModel.listar()
-        .then(function (resultado) {
-            if (resultado.length > 0) {
-                res.status(200).json(resultado);
-            } else {
-                res.status(204).send("Nenhum resultado encontrado!")
-            }
-        }).catch(
-            function (erro) {
-                console.log(erro);
-                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
+    usuarioModel.buscarUsuario(id).then((resultado) => {
+        res.status(200).json(resultado);
+    })
+        .catch((erro) => {
+            console.log(erro);
+            console.log("Houve um erro ao buscar os avisos: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        })
 }
 
 function entrar(req, res) {
@@ -34,102 +24,119 @@ function entrar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
-        
-        usuarioModel.entrar(email, senha)
-            .then(
-                function (resultado) {
-                    console.log(`\nResultados encontrados: ${resultado.length}`);
-                    console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
 
-                    if (resultado.length == 1) {
-                        console.log(resultado);
+        usuarioModel.entrar(email, senha).then(
+            function (resultado) {
+                console.log(`\nResultados encontrados: ${resultado.length}`);
+                console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
 
-                        res.json(resultado[0]);
-                    } else if (resultado.length == 0) {
-                        res.status(403).send("Email e/ou senha inválido(s)");
-                    } else {
-                        res.status(403).send("Mais de um usuário com o mesmo login e senha!");
-                    }
+                if (resultado.length == 1) {
+                    console.log(resultado);
+
+                    res.json(resultado[0]);
+                } else if (resultado.length == 0) {
+                    res.status(403).send("Email e/ou senha inválido(s)");
+                } else {
+                    res.status(403).send("Mais de um usuário com o mesmo login e senha!");
                 }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
     }
+}
+function updateSenha(req, res){
+    var senha = req.body.novasenhaServer;
+    var email = req.body.emailServer;
+
+    usuarioModel.updateSenha(senha, email).then((resultado) => {
+
+        res.status(200).jason(resultado); 
+
+
+    })
+    .catch((erro) => {
+        console.log(erro);
+        console.log("Houve um erro ao atualizar a senha", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    })
+
+
+}
+function verificacaoCodigo(req, res) {
+    var codigo = req.body.verificarServer
+    var email = req.body.emailServer;
+
+    usuarioModel.verificacaoCodigo(email, codigo).then((resultado) => {
+
+
+        if( resultado.length > 0){
+
+         res.status(200).json(resultado);    
+
+        } else{
+            res.status(404).json({ erro: "Código Inválido" });
+
+        }
+
+       
+    })
+        .catch((erro) => {
+            console.log(erro);
+            console.log("Houve um erro ao verificar código: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        })
 
 }
 
-function cadastrar(req, res) {
-    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var nome = req.body.nomeServer;
-    var logradouro = req.body.logradouroServer; 
-    var bairro = req.body.bairroServer;
-    var cep = req.body.cepServer;
-    var cidade = req.body.cidadeServer;
-    var estado = req.body.estadoServer;
-    var tel = req.body.telServer;
-    var email = req.body.emailServer;    
-    var senha = req.body.senhaServer;
-    var lat = req.body.latServer;
-    var lng = req.body.lngServer;
-
-    console.log(lat)
-    console.log(lng)
+function salvarCodigo(req, res) {
+    var codigo = parseInt(100000 + Math.random() * 100000);
+    var email = req.body.emailServer;
+    usuarioModel.salvarCodigo(email, codigo).then((resultado) => {
 
 
-    // Faça as validações dos valores
-    if (nome == undefined) {
-        res.status(400).send("Seu nome está undefined!");
-    } else if (email == undefined) {
-        res.status(400).send("Seu email está undefined!");
-    } else if (logradouro == undefined){
-        res.status(400).send("Seu logradouro está undefined!");
-    } else if (bairro == undefined){
-        res.status(400).send("Seu bairro está undefined!");
-    }else if (cep == undefined){
-        res.status(400).send("Seu cep está undefined!");
-    } else if (cidade == undefined){
-        res.status(400).send("Seu cidade está undefined!");
-    }else if (estado == undefined){
-        res.status(400).send("Seu estado está undefined!");
-    } else if (tel == undefined){
-        res.status(400).send("Seu telefone está undefined!");
-    }else if (senha == undefined) {
-        res.status(400).send("Sua senha está undefined!"); 
-    } else if (lat == undefined) {
-        res.status(400).send("Sua latitude está undefined!");
-    } else if (lng == undefined) {
-        res.status(400).send("Sua longitude está undefined!");
-    } else {
-      
-       // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, logradouro, bairro, cep, cidade, estado, tel, email, senha, lat, lng)
-            .then(
-                function (resultado) {
-                    res.json(resultado);
-                }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao realizar o cadastro! Erro: ",
-                        erro.sqlMessage
-                    );
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
-    }
+        if (resultado.changedRows == 0) {
+
+
+            res.status(404).json({ erro: "Usuário não encontrado" });
+
+        } else {
+
+            const formData = require('form-data');
+            const Mailgun = require('mailgun.js');
+            const mailgun = new Mailgun(formData);
+            const mg = mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY || 'c4544799b9ef2a3d60fc523305872137-181449aa-8b230eec' });
+
+            mg.messages.create('sandboxea8ad1cb90ce4f2dab9f3b084922242a.mailgun.org', {
+                from: "Airplane Solutions <mailgun@sandboxea8ad1cb90ce4f2dab9f3b084922242a.mailgun.org>",
+                to: [email],
+                subject: "Recuperação de Senha",
+                text: `Seu código de verificação é ${codigo}`,
+                html: `<h1>Seu código de verificação é ${codigo}</h1>`
+            }).then(msg => console.log(msg)) // logs response data
+                .catch(err => console.log(err)); // logs any error
+
+            res.status(200).json(resultado);
+        }
+
+    })
+        .catch((erro) => {
+            console.log(erro);
+            console.log("Houve um erro ao enviar o codigo: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        })
+
+
 }
-
-
-
 
 module.exports = {
+    buscarUsuario,
     entrar,
-    cadastrar,
-    listar,
-    testar
+    salvarCodigo,
+    verificacaoCodigo,
+    updateSenha
 }

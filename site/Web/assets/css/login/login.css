@@ -1,0 +1,314 @@
+:root {
+    --colorInput: rgba(217, 217, 217, 0.1);
+    --btnColor: #0653B6;
+    --colorBackgroundLogin: rgba(16, 26, 39, 0.7);
+}
+
+.containerLogin {
+    padding-top: 70px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 150px;
+}
+
+.containerLeftLogin {
+    width: 50%;
+    height: 100%;
+    padding-left: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerLeftLogin h1 {
+    font-size: 3rem;
+    color: var(--colorWhite);
+    font-weight: 800;
+    margin-bottom: 5%;
+}
+
+.containerLeftLogin span{
+    font-size: 3rem;
+    color: var(--colorWhite);
+    font-weight: 400;
+    margin-bottom: 10%;
+}
+
+.containerLeftLogin p {
+    font-size: 16px;
+    color: var(--colorWhite);
+    font-weight: 400;
+    margin-bottom: 10%;
+}
+
+.containerLeftLogin p:hover {
+    color: var(--colorAnimatedBtn);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.containerLeftLogin a {
+    color: var(--colorWhite);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.containerLeftLogin input{
+    font-size: 1rem;
+    padding-left: 20px;
+    width: 350px;
+    height: 70px;
+    background: var(--colorInput);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}
+
+.containerLeftLogin input::placeholder {
+    color: #d6d6d6;
+}
+
+.btnAccess {
+    width: 50%;
+    height: 50px;
+    font-size: 1rem;
+    color: var(--colorWhite);
+    background-color: var(--btnColor);
+    border-radius: 10px;
+    border-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btnAccess:hover {
+    background-color: var(--colorAnimatedBtn);
+}
+
+.containerRightLogin {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 100px;
+}
+
+.containerRightLogin span {
+    font-size: 120px;
+    text-align: center;
+    color: var(--colorBackgroundIcons);
+    font-weight: 900;
+}
+
+
+.containerRightLogin span {
+    font-size: 100px;
+    font-weight: normal;
+    color: var(--colorWhite);
+    display: flex;
+    flex-direction: column;
+}
+.bold{
+    font-weight: bold !important;
+    color: var(--colorBackgroundIcons) !important;
+}
+.imgLogin img{
+    width: 250px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .containerLeftLogin {
+        padding: 10%;
+        background-color: var(--colorBackgroundLogin);
+        box-shadow: inset 2px 2px 30px 1px var(--colorAnimatedBtn);
+        border-radius: 45px;
+        flex-direction: column;
+        margin: 5%;
+        width: 100%;
+        height: 50%;
+    }
+
+    .containerLeftLogin h1 {
+        font-size: 2rem;
+        margin-bottom: 10%;
+    }
+
+    .containerLeftLogin span {
+        font-size: 2rem;
+        margin-bottom: 10%;
+    }
+
+    .containerLeftLogin p {
+        font-size: 16px;
+        margin-bottom: 10%;
+        margin-left: 0%;
+    }
+
+    .containerLeftLogin input {
+        font-size: 24px;
+        margin-left: 0%;
+        width: 60%;
+        height: 70px;
+    }
+
+    .containerLeftLogin input::placeholder {
+        padding: 5%;
+        color: var(--colorWhite);
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .btnAccess {
+        margin-left: 0%;
+        width: 40%;
+        height: 60px;
+        font-size: 24px;
+        color: var(--colorWhite);
+        background-color: var(--btnColor);
+        border-radius: 10px;
+        border-color: transparent;
+    }
+
+    .containerRightLogin {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+        .containerLeftLogin {
+            padding: 10%;
+            background-color: var(--colorBackgroundLogin);
+            box-shadow: inset 2px 2px 30px 1px var(--colorAnimatedBtn);
+            border-radius: 45px;
+            flex-direction: column;
+            margin: 5%;
+            width: 100%;
+            height: 50%;
+        }
+    
+        .containerLeftLogin h1 {
+            font-size: 2rem;
+            margin-bottom: 10%;
+        }
+    
+        .containerLeftLogin span {
+            font-size: 2rem;
+            margin-bottom: 10%;
+        }
+    
+        .containerLeftLogin p {
+            font-size: 16px;
+            margin-bottom: 10%;
+            margin-left: 0%;
+        }
+    
+        .containerLeftLogin input {
+            font-size: 24px;
+            margin-left: 0%;
+            width: 60%;
+            height: 70px;
+        }
+    
+        .containerLeftLogin input::placeholder {
+            padding: 5%;
+            color: var(--colorWhite);
+            font-size: 24px;
+            font-weight: 400;
+        }
+    
+        .btnAccess {
+            margin-left: 0%;
+            width: 40%;
+            height: 60px;
+            font-size: 24px;
+            color: var(--colorWhite);
+            background-color: var(--btnColor);
+            border-radius: 10px;
+            border-color: transparent;
+        }
+    
+        .containerRightLogin {
+            display: none;
+        }
+}
+
+@media only screen and (max-width: 992px) {
+        
+            .containerLeftLogin {
+                padding: 10%;
+                background-color: var(--colorBackgroundLogin);
+                box-shadow: inset 2px 2px 30px 1px var(--colorAnimatedBtn);
+                border-radius: 45px;
+                flex-direction: column;
+                margin: 5%;
+                width: 100%;
+                height: 50%;
+            }
+        
+            .containerLeftLogin h1 {
+                font-size: 2rem;
+                margin-bottom: 10%;
+            }
+        
+            .containerLeftLogin span {
+                font-size: 2rem;
+                margin-bottom: 10%;
+            }
+        
+            .containerLeftLogin p {
+                font-size: 16px;
+                margin-bottom: 10%;
+                margin-left: 0%;
+            }
+        
+            .containerLeftLogin input {
+                font-size: 24px;
+                margin-left: 0%;
+                width: 60%;
+                height: 70px;
+            }
+        
+            .containerLeftLogin input::placeholder {
+                padding: 5%;
+                color: var(--colorWhite);
+                font-size: 24px;
+                font-weight: 400;
+            }
+        
+            .btnAccess {
+                margin-left: 0%;
+                width: 40%;
+                height: 60px;
+                font-size: 24px;
+                color: var(--colorWhite);
+                background-color: var(--btnColor);
+                border-radius: 10px;
+                border-color: transparent;
+            }
+        
+            .containerRightLogin {
+                display: none;
+            }
+}
+
+.loading-div img {
+    width: 10%;
+}
+
+.loading-div{
+    display: none
+}
+
+.campos{
+
+    justify-content: center;
+    align-items: center;
+
+}

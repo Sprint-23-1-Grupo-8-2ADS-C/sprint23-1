@@ -1,42 +1,57 @@
 var database = require("../database/config")
 
-function listar() {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
+
+function buscarUsuario() {
     var instrucao = `
-        SELECT * FROM usuario;
-    `;
+        SELECT * FROM funcionario
+        WHERE idFuncionario = ${id}
+    `
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
 
 function entrar(email, senha) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucao = `
         SELECT * FROM funcionario WHERE emailFunc = '${email}' AND senha = '${senha}';
     `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
 
+function salvarCodigo(email, codigo) {
+
+   
+        var instrucao = `
+    update funcionario set  codigoVerificacao =  '${codigo}' 
+	where emailFunc = '${email}';
+`;
 
 
-// Coloque os mesmos parâmetros aqui. Vá para a var instrucao
-function cadastrar(nome, logradouro, bairro, cep, cidade, estado, tel, email, senha, lat, lng) { 
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
-    
-    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
-    //  e na ordem de inserção dos dados.
-    var instrucao = `
-        INSERT INTO usuario (nome, logradouro, bairro, cep, cidade, estado, tel, email, senha, lat, lng) VALUES ('${nome}',
-         '${logradouro}', '${bairro}', '${cep}', '${cidade}', '${estado}', '${tel}', '${email}', '${senha}', '${lat}', '${lng}');
-    `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
+}
+
+function verificacaoCodigo(email, codigo){
+
+    var instrucao = `
+
+    select funcionario.codigoVerificacao from funcionario where emailFunc = '${email}' and codigoVerificacao = '${codigo}';
+
+`;
+
+    return database.executar(instrucao);
+}
+
+function updateSenha(senha, email){
+var instrucao = `
+    update funcionario set senha = '${senha}'
+    where emailFunc = '${email}';
+`;
+
 }
 
 module.exports = {
+    buscarUsuario,
     entrar,
-    cadastrar,
-    listar,
-
+    salvarCodigo,
+    verificacaoCodigo,
+    updateSenha
 };

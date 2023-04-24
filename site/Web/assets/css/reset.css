@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --backgroundColorBlueMidnight: #111b4f;
+    --colorScrollBar: #0783ad;
+    --colorWhite: #fff;
+    --colorAnimatedBtn: #0873AD;
+    --colorBackgroundIcons: #024A96;
+    --colorBlur: rgb(6, 82, 182);
+    
+    --backgroundColor: #000A18;
+    --colorBackgroundDashboard: #f8fcff;
+    --colorGray: #626262;
+    --colorRed: #EC2626;
+    --colorGreen: #ABEA95;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+    background-color: var(--backgroundColorBlueMidnight);
+}
+
+::-webkit-scrollbar-thumb {
+    width: 1rem;
+    background-color: var(--colorScrollBar);
+}
+
+body {
+    background-color: var(--backgroundColor);
+    display: flex;
+}
