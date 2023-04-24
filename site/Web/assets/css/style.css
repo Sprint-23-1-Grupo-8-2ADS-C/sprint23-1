@@ -59,20 +59,17 @@ body {
 }
 
 header {
-    margin-top: 2rem;
-    background-color: transparent;
     height: 40%;
-    width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 35px 30px 0 40px;
+    z-index: 9;
 }
 
 .imgLogo img{
-    width: 5rem;
-    height: 5rem;
-    margin-left: 4rem;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
 
@@ -82,7 +79,13 @@ nav ul {
     list-style: none;
     justify-content: space-around;
     align-items: center;
-    margin-right: 4rem;
+    color: var(--colorGray);
+}
+nav ul div{
+    margin-right: 5px;
+    width: 2px;
+    height: 25px;
+    background-color: white;
 }
 
 nav a {
@@ -120,20 +123,10 @@ a.animatedBorder:hover:after {
     border-top: solid 4px var(--backgroundColorBlueMidnight);
 }
 
-.containerFooter h1 {
-    display: flex;
-    font-size: 48px;
-    color: var(--colorWhite);
-    justify-content: center;
-    text-align: center;
-}
 
 .containerFooter p {
-    display: block;
     font-size: 24px;
     color: var(--colorWhite);
-    justify-content: center;
-    text-align: center;
 }
 
 .containerImgFooter {
@@ -145,7 +138,10 @@ a.animatedBorder:hover:after {
     align-items: center;
     justify-content: center;
 }
-
+.containerImgFooter h1{
+    color: white;
+    font-weight: normal;
+}
 .Icons {
     display: flex;
     flex-direction: row;

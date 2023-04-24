@@ -98,9 +98,8 @@
 
 .divGraphic{
     background-color: var(--backgroundColor);
-    height: 300px;
-    border-radius: 10px;
-    padding: 25px 25px 10px;
+    border-radius: 20px;
+    padding: 25px 25px;
 }
 .divGraphic h3{
     color: var(--colorBackgroundDashboard);
@@ -118,5 +117,14 @@
 }
 
 .divChart{
-    background-color: var(--backgroundColor);
+    border-radius: 10px;
+    background-color: var(--colorBackgroundDashboard);
+}
+
+.divChartComparacaoCpu .divChart{
+    height: 250px;
+}
+
+.divChartArmazenamento .divChart{
+    height: 200px;
 }

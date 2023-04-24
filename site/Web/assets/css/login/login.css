@@ -5,19 +5,21 @@
 }
 
 .containerLogin {
+    padding-top: 70px;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 15%;
+    gap: 150px;
 }
 
 .containerLeftLogin {
     width: 50%;
     height: 100%;
+    padding-left: 200px;
     display: flex;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -40,7 +42,6 @@
     color: var(--colorWhite);
     font-weight: 400;
     margin-bottom: 10%;
-    margin-left: -20%;
 }
 
 .containerLeftLogin p:hover {
@@ -49,7 +50,7 @@
     cursor: pointer;
 }
 
-.containerLeftLogin a:-webkit-any-link {
+.containerLeftLogin a {
     color: var(--colorWhite);
     cursor: pointer;
     text-decoration: underline;
@@ -57,37 +58,24 @@
 
 
 .containerLeftLogin input{
-    font-size: 24px;
-    margin-left: 15%;
-    width: 60%;
+    font-size: 1rem;
+    padding-left: 20px;
+    width: 350px;
     height: 70px;
     background: var(--colorInput);
     border-radius: 10px;
-    border-color: transparent;
-}
-
-.containerLeftLogin input[type="text" i] {
-    color: var(--colorWhite);
-    padding: 1px 2px;
-}
-
-.containerLeftLogin input[type="password" i] {
-    color: var(--colorWhite);
-    padding: 1px 2px;
+    border: none;
+    color: #fff;
 }
 
 .containerLeftLogin input::placeholder {
-    padding: 5%;
-    color: var(--colorWhite);
-    font-size: 24px;
-    font-weight: 400;
+    color: #d6d6d6;
 }
 
 .btnAccess {
-    margin-left: 6%;
     width: 50%;
-    height: 60px;
-    font-size: 24px;
+    height: 50px;
+    font-size: 1rem;
     color: var(--colorWhite);
     background-color: var(--btnColor);
     border-radius: 10px;
@@ -98,7 +86,6 @@
 
 .btnAccess:hover {
     background-color: var(--colorAnimatedBtn);
-    border-bottom: 5px solid var(--backgroundColorBlueMidnight);
 }
 
 .containerRightLogin {
@@ -108,14 +95,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.containerRightLogin h1 {
-    margin-top: 10%;
-    font-size: 120px;
-    text-align: center;
-    color: var(--colorWhite);
-    font-weight: 500;
+    padding-right: 100px;
 }
 
 .containerRightLogin span {
@@ -125,10 +105,20 @@
     font-weight: 900;
 }
 
+
+.containerRightLogin span {
+    font-size: 100px;
+    font-weight: normal;
+    color: var(--colorWhite);
+    display: flex;
+    flex-direction: column;
+}
+.bold{
+    font-weight: bold !important;
+    color: var(--colorBackgroundIcons) !important;
+}
 .imgLogin img{
-    margin-left: 10%;
-    width: 100%;
-    height: 310px;
+    width: 250px;
 }
 
 @media only screen and (max-width: 600px) {
