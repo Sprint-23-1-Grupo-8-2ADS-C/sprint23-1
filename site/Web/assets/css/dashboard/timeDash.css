@@ -24,29 +24,26 @@
 }
 
 .obrigatorios{
-    font-weight: bold;
     color: red; 
     font-size: 15px;
 }
-.button{
-    background-color: black;
-    color: #ffffff;
-    border-color: black;
+
+button{
+    background-color: var(--backgroundColor);
+    color: var(--colorBackgroundDashboard);
+    border: none;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button{
     width: 225px;
     height: 45px;
 }
 .buttonUpload{
-    background-color: black;
-    color: #ffffff;
-    border-color: black;
-    font-size: 15px;
-    border-radius: 5px;
     width: 180px;
     height: 45px;
     margin-left: 8.33%;
-
 }
 
 .divContainer {
@@ -79,6 +76,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    margin-left: 80px;
 }
 
 
@@ -92,7 +90,7 @@
     height: 60px;
     border: 3px solid #000A18;
     border-radius: 10px;
-    padding: 10px 10px 0 20px;
+    padding: 0 10px 0 20px;
 }
 
 .divBox {

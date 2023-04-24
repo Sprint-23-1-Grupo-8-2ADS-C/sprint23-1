@@ -1,0 +1,255 @@
+/* INFORMAÇÕES SOBRE A MÁQUINA */
+.divInformationTotem{
+    height: 100vh;
+    width: 300px;
+    background-color: var(--backgroundColor);
+    position: fixed;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.divTitleInformation{
+    color: var(--colorBackgroundDashboard);
+    font-size: 1.5rem;
+    display: flex;
+    gap: 10px;
+
+}
+.divPoints{
+    display: flex;
+    gap: 3px;
+    height: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.divPoints div{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--colorBackgroundDashboard);
+}
+.divDataTotem{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+.divData{
+    width: 70%;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+.line{
+    border-bottom: 1px solid var(--colorGray);
+}
+.divData span{
+    color: var(--colorGray);
+    font-size: 0.8rem;
+} 
+.divData h3{
+    color: var(--colorBackgroundDashboard);
+    font-size: 1.8rem;
+}
+.divDataTokem{
+    width: 80%;
+}
+.divTokemInformation{
+    color: var(--colorGray);
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#imgCopyToken{
+    cursor: pointer;
+}
+.divNumberToken span{
+    color: var(--colorBackgroundDashboard);
+    font-weight: bold;
+    font-size: 1.8rem;
+    border: 1px solid var(--colorBackgroundDashboard);
+    border-radius: 10px;
+    padding: 6px 8px;
+    margin-right: 8px;
+}
+
+/* TOPO DA PÁGINA */
+.divAtualizarAutomaticamente{
+    display: flex;
+    align-items: center;
+}
+.divAtualizarAutomaticamente p{
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* BOTÃO TOGGLE */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+.switch input { 
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--backgroundColor);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+/* SAÚDE DO TOTEM */
+.divInformationHealthTotem{
+    border-radius: 10px;
+    width: 70%;
+    padding: 25px 25px 10px;
+    background-color: var(--backgroundColor);
+    color: var(--colorBackgroundDashboard);
+    
+}
+
+.divTitleHealth{
+    display: flex;
+    justify-content: space-between;
+}
+.divTitleHealth h2{
+    font-size: 1.5rem;
+}
+
+.divMeters{
+    color: var(--colorGray);
+    font-size: 0.8rem;
+    display: flex;
+    gap: 30px;
+}
+
+.divMeter{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.divMeter div{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.green{background-color: #ABEA95;}
+.yellow{background-color: #F8E57F;}
+.red{background-color: #EC2626;}
+
+.divMeterComponentes{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 20px;
+}
+.spComponente, .spStatus{
+    color: var(--colorGray);
+    font-size: 0.9rem;
+    position: absolute;
+}
+.spComponente{
+    top: -15px;   
+}
+
+.spStatus{
+    bottom: 50px;
+}
+
+.divComponente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 35px;
+    margin-top: 5px;
+}
+.rightLine{
+    border-right: 1px solid var(--colorGray);
+}
+.divComponente h3{
+    font-size: 1.8rem;
+}
+.divComponente div{
+    color: var(--backgroundColor);
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 60px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/* GRÁFICOS */
+.divGraphic{
+    border-radius: 10px;
+    width: 70%;
+    padding: 25px 25px 10px;
+    background-color: var(--backgroundColor);
+    color: var(--colorBackgroundDashboard);
+    font-size: 1.5rem;
+    margin-top: 25px;
+}
+.divChart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorBackgroundDashboard);
+    height: 250px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.divRamDisco{
+    display: flex;
+    gap: 100px;
+}
+.graphicRam, .graphicDisco{
+    width: 30%;
+    height: 250px;
+}
+
+.graphicRam .divChart, .graphicDisco .divChart{
+    height: 75%;
+}
+
+

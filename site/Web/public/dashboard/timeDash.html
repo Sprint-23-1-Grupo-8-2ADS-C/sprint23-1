@@ -7,124 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/navbar.css">
-    <link rel="stylesheet" href="../../assets/css/dashboard/indexDash.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/timeDash.css">
     <title>Airplane Solutions</title>
 </head>
 
 <body>
-    <dialog>
-        <div class="divSelecionarTotem">
-            <h3>Selecionar Totem</h3>
-            <div class="divSearch">
-                <img src="../../assets/SVG/icons/search.svg">
-                <input type="text" placeholder="Encontrar máquina...">
-            </div>
-
-            <div class="divTable">
-                <table>
-                    <tr>
-                        <td></td>
-                        <td class="tdFirst">Máquina</td>
-                        <td class="tdFirst">Tokem</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" name="radio[]" onclick="selectRow()">
-                        </td>
-                        <td class="tdDefault">Totem 02</td>
-                        <td class="tdDefault">A002</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" name="radio[]">
-                        </td>
-                        <td class="tdDefault">Totem 03</td>
-                        <td class="tdDefault">A003</td>
-                    </tr>
-                </table>
-            </div>
-
-            <button>Selecionar</button>
-        </div>
-    </dialog>
-
-    <nav>
-        <div class="divLogo">
-            <img src="../../assets/SVG/logo.svg">
-            <h3>
-                <span>Airplane</span>
-                Solutions
-            </h3>
-        </div>
-
-        <div class="divItems">
-
-            <div class="divNavigationItems">
-                <div class="divItem itemNavigation itemSelect">
-                    <img src="../../assets/SVG/icons/dashboard.SVG">
-                    <span>Dashboard</span>
-                </div>
-                <div class="divItem itemNavigation" onclick="abrirModal()">
-                    <img src="../../assets/SVG/icons/graphic.SVG">
-                    <span>Totem</span>
-                </div>
-                <div class="divItem itemNavigation">
-                    <img src="../../assets/SVG/icons/add.SVG">
-                    <span>Add Totem</span>
-                </div>
-                <div class="divItem itemNavigation">
-                    <a href="timeDash.html"><img src="../../assets/SVG/icons/person.SVG"></a>
-                    <span>Time</span>
-                </div>
-            </div>
-
-            <div class="divNavigationUser">
-                <div class="divItem itemNavigation">
-                    <img src="../../assets/SVG/icons/conversation.svg">
-                    <span>Suporte</span>
-                </div>
-                <div class="divItem itemNavigation">
-                    <img src="../../assets/SVG/icons/config.svg">
-                    <span>Configuração</span>
-                </div>
-            </div>
-
-            <div class="divNaviagtionExit">
-                <div class="divItem logOut">
-                    <img src="../../assets/SVG/icons/exit.svg">
-                    <span>Log out</span>
-                </div>
-            </div>
-
-
-        </div>
-    </nav>
+    <dialog id="dialog"></dialog>
+    <nav id="navbar"></nav>
 
     <div class="divContent">
-
-
-
         <div class="divContainer">
             <div class="divTop">
                 <h2>Cadastrar Funcionário</h2>
             </div>
 
             <div class="divInfosMiddle">
-
                 <h3>
                     <span class="infoTitle">Informações Básicas</span>
                 </h3>
 
                 <span class="infodescription">Preencha todas as informações para criar um novo cadastro</span>
-
             </div>
 
             <div class="divCadastroFuncionario">
-
                 <div class="divFirstGroup">
-
                     <span class="spTitle">Nome <p id="obrigatorio"> *</p></span>
                     <input class="campos" id="nomeFuncionario" type="text" placeholder="User"><br>
 
@@ -133,22 +40,15 @@
 
                     <span class="spTitle">Confirmar Senha <p id="obrigatorio"> *</p></span>
                     <input class="campos" id="cfmSenha" type="password" placeholder="***********"><br>
-
                 </div>
-
                 <div class="divSecondGroupTime">
-
                     <span class="spTitle">E-mail <p id="obrigatorio"> *</p></span>
                     <input class="campos" id="emailFuncionario" type="text" placeholder="user@gmail.com"><br>
-
                     <span class="spTitle">Cargo <p id="obrigatorio"> *</p></span>
-
                     <select name="" id="selCargo" class="campos">
                         <option value="">Selecione o cargo</option>
                         <option value="">Analista</option>
-
                     </select>
-
                     <div class="divBox">
                        <img src="../../assets/PNG/icons/upload-de-arquivo.png" alt=""> <br>
                        <span class="titleUpload">Upload Foto</span> <br>
@@ -156,14 +56,10 @@
                         <input style="display: none;" id="uploadOculto" type="file">
                         
                     </div>
-
-
                 </div>
-
             </div>
 
             <div class="divEnd">
-
                 <span class="obrigatorios">Campos com * são obrigatórios</span> <br>
                 <button class="button">Cadastrar</button>
 
@@ -171,16 +67,12 @@
 
         </div>
     </div>
-
-
-
 </body>
-
 </html>
+<script src="../../assets/js/dashboard/navbar.js"></script>
+
 <script>
 function upload(){
 uploadOculto.style.display = "block";
 }
-
-
 </script>
