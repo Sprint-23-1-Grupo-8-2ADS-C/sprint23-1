@@ -178,7 +178,7 @@ input:checked + .slider:before {
 .divMeterComponentes{
     margin-top: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: relative;
     padding-bottom: 20px;
 }
@@ -186,6 +186,7 @@ input:checked + .slider:before {
     color: var(--colorGray);
     font-size: 0.9rem;
     position: absolute;
+    left: 0;
 }
 .spComponente{
     top: -15px;   
@@ -200,7 +201,7 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    padding: 0 35px;
+    padding-right: 35px;
     margin-top: 5px;
 }
 .rightLine{
