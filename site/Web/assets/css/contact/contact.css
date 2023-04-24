@@ -28,7 +28,7 @@ body{
 
 .containerRight input{
     width: 70%;
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
     margin-bottom: 25px;
     padding-left: 20px;
@@ -40,7 +40,7 @@ body{
 textarea{
     display: block;
     width: 70%;
-    height: 150px;
+    height: 120px;
     font-size: 1rem;
     padding-left: 20px;
     border-radius: 10px;
