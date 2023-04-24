@@ -52,6 +52,7 @@ const nav = document.getElementById('navbar')
 nav.innerHTML = navContent
 
 
+
 var dialogContent = `
     <div class="divSelecionarTotem">
         <h3>Selecionar Totem</h3>

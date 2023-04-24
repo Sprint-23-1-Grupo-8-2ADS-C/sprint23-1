@@ -15,7 +15,7 @@
 
 .titleUpload {
     font-weight: bold;
-    color: black;
+    color: var(--backgroundColor);
     margin-left: 30%;
 }
 
@@ -50,7 +50,6 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-left: 5%;
 }
 
 .divCadastroFuncionario {
