@@ -25,6 +25,10 @@
     margin-bottom: 5%;
 }
 
+.divInfosMiddle form {
+    display: flex;
+}
+
 .btnSignUpFunc {
     display: flex;
     align-items: center;
@@ -36,6 +40,12 @@
     font-size: 20px;
     align-self: flex-end;
     cursor: pointer;
+}
+
+.btnSignUpFunc:hover {
+    transition: all 0.5s ease;
+    background-color: var(--colorAnimatedBtn);
+    border-bottom: 3px solid var(--backgroundColorBlueMidnight);
 }
 
 .divListaFuncionario {
