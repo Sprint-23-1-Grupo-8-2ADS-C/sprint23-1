@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,14 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/home/home.css">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Airplane Solutions</title>
 </head>
+
 <body>
     <div class="efeito-blur">
         <div class="lado esquerdo">
-            <div class="blur"></div>
             <div class="blur"></div>
             <div class="blur"></div>
         </div>
@@ -32,10 +33,11 @@
         <nav>
             <a class="optionsNav"><i class="fa-solid fa-bars"></i></a>
             <ul>
-                <li style="display: block;"><a class="animatedBorder" href="index.html">Home</a></li>
-                <li style="display: block;"><a class="animatedBorder" href="index.html#containerImgPerformanceFlow1">Projetos</a></li>
-                <li style="display: block;"><a class="animatedBorder" href="contact.html">Contatos</a></li>
-                <li style="display: block;"><a class="animatedBorder" href="login.html">Login</a></li>
+                <li><a class="animatedBorder" href="index.html">Home</a></li>
+                <li><a class="animatedBorder" href="index.html#containerImgPerformanceFlow1">Projetos</a></li>
+                <li><a class="animatedBorder" href="contact.html">Contatos</a></li>
+                <div></div>
+                <li><a class="animatedBorder" href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -45,9 +47,10 @@
             <img src="../assets/PNG/imgHome.png" alt="">
         </div>
         <div class="containerTextHome">
-            <h1>Airplane<br> <span>Solutions</span></h1>
+            <span class="airplaneSolution">Airplane<br> <span class="bold">Solutions</span></span>
             <p>O monitoramento do desktop de seus<br> totens agora na palma da sua mão</p>
-            <button class="btnMore"><img src="../assets/SVG/ic_twotone-airplane-ticket.svg" class = "iconTicket" alt=""> Saiba mais</button>
+            <button class="btnMore"><img src="../assets/SVG/ic_twotone-airplane-ticket.svg" class="iconTicket" alt="">
+                Saiba mais</button>
         </div>
     </div>
 
@@ -104,64 +107,60 @@
         </div>
     </div>
 
-    <div class="containerPerformanceFlow">
+    <div class="divFluxoProjeto">
+        <h2>Fluxo do projeto</h2>
 
-    <div class="containerPerformanceFlow1" id="containerImgPerformanceFlow1">
-        <div class="containerTextPerformanceFlow1">
-            <h1>Passo 1</h1>
-            <p>O primeiro contato é feito por você por meio da página "Contato",
-                lá a sua empresa nos dá a categoria do problema, algumas informações 
-                e uma mensagem mais detalhada sobre o empecilho.</p>
-        </div>
-        <div class="containerImgPerformanceFlow1">
-            <img class = "effectFlutuant" src="../assets/PNG/imgPerformanceFlow1.png" alt="">
-        </div>
-    </div>
-
-    <div class="containerPerformanceFlow2">
-        <div class="containerImgPerformanceFlow2">
-            <img class = "effectFlutuant" src="../assets/PNG/imgPerformanceFlow2.png" alt="">
-        </div>
-        <div class="containerTextPerformanceFlow2">
-            <h1>Passo 2</h1>
-            <p>Entramos em contato após ser feita a análise do seu problema e mandamos uma proposta contratual,
-                para que você analise nosso serviço por completo,
-                descrevendo os nossos benefícios e premissas dos nossos serviços.</p>
-        </div>
-    </div>
-
-    <div class="containerPerformanceFlow3">
-        <div class="containerTextPerformanceFlow3">
-            <h1>Passo 3</h1>
-            <p>Por último e mais importante, vamos até o local onde os totens de check-in estão instalados e os nossos profissionais irão configurar e instalar nossa aplicação para o monitoramento dos mesmos, após isso você poderá ter acesso completo aos dados que estão sendo capturados no nosso site, dessa forma ser mais efetivo na resolução de DownTimes e no planejamento de soluções prévias.</p>
-        </div>
-        <div class="containerImgPerformanceFlow3">
-            <img class = "effectFlutuant" src="../assets/PNG/imgPerformanceFlow3.png" alt="">
-        </div>
-    </div>
-    
-    </div>
-
-    
-        <div class="containerFooter">
-            <div class="containerImgFooter">
-                <img src="../assets/SVG/logo.svg" alt="">
-            
-                <h1>Airplane Solutions</h1>
-                <p>© 2023 Airplane Solutions. Todos os direitos reservados.</p>
+        <div class="divPasso">
+            <div class="divTextPasso">
+                <h3>Passo 1</h3>
+                <p>
+                    Nossa aplicação faz uma análise detalhada no seu Toten’s de Check-in verificando a disponibilidade de seus componentes.
+                </p>
             </div>
+            <img src="../assets/PNG/imgPerformanceFlow1.png">
+        </div>
 
-            <div class="footerIcon">
-                <h4> Contacte-nos </h4>
-                <div class="Icons">
-                    <a href="#"> <i class="fa-solid fa-envelope"></i> </a>
-                    <a href="#"> <i class="fa-solid fa-phone-volume"></i> </a>
-                    <a href="#"> <i class="fab fa-instagram"></i> </a>
-                </div>
+        <div class="divPasso passo2">
+            <img src="../assets/PNG/imgPerformanceFlow2.png">
+            <div class="divTextPasso">
+                <h3>Passo 2</h3>
+                <p>
+                    Através dos dados coletados nós implementamos a nossa solução para resolver a sua necessidade.
+                </p>
             </div>
         </div>
+
+        <div class="divPasso">
+            <div class="divTextPasso">
+                <h3>Passo 3</h3>
+                <p>
+                    Com isso chegamos a nossa finalidade que é trazer uma solução prática e objetiva que ajude nossos clientes a terem melhor desempenho e controle.
+                </p>
+            </div>
+            <img src="../assets/PNG/imgPerformanceFlow3.png">
+        </div>
+
+
+    </div>
+
+    <div class="containerFooter">
+        <div class="containerImgFooter">
+            <img src="../assets/SVG/logo.svg" alt="">
+            <h1>Airplane Solutions</h1>
+        </div>
+
+        <div class="footerIcon">
+            <h4> Contacte-nos </h4>
+            <div class="Icons">
+                <a href="#"> <i class="fa-solid fa-envelope"></i> </a>
+                <a href="#"> <i class="fa-solid fa-phone-volume"></i> </a>
+                <a href="#"> <i class="fab fa-instagram"></i> </a>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>
 
 <script src="../assets/js/mode.js">
