@@ -48,6 +48,16 @@
     border-bottom: 3px solid var(--backgroundColorBlueMidnight);
 }
 
+#listaFuncionarios li {
+    display: none;
+  }
+  
+  #listaFuncionarios li.mostrando {
+    color: white;
+    display: flex;
+  }
+  
+
 .divListaFuncionario {
     display: flex;
     flex-direction: column;
@@ -61,12 +71,6 @@
 .divListaFuncionario h1 {
     color: white;
     margin-bottom: 5%;
-}
-
-.funcionario {
-    color: white;
-    display: flex;
-    flex-direction: row;
 }
 
 .divIcon a{
@@ -115,4 +119,17 @@
     justify-content: center;
 }
 
+#paginacao {
+    display: flex;
+    justify-content: center;
+}
 
+#paginacao input{
+    background-color: #F8FCFF;
+    margin: 5px;
+    border: none
+}
+
+#paginacao input[type="radio"]:checked {
+    color: red;
+  }
