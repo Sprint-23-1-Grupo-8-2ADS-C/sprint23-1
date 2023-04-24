@@ -125,8 +125,8 @@
             <div class="divListaFuncionario">
                 <h1>Lista de funcionários</h1>
 
-                <div class="listaFuncionarios">
-                    <div class="funcionario">
+                <ul class="listaFuncionarios" id="listaFuncionarios">
+                    <li class="funcionario">
                         <div class="divIcon">
                             <a href="#"><i class="fa-solid fa-user"></i> </a>
                         </div>
@@ -137,9 +137,9 @@
                         <div class="divCargo">
                             <p>Administrador</p>
                         </div>
-                    </div><br><br>
+                    </li><br><br>
 
-                    <div class="funcionario">
+                    <li class="funcionario">
                         <div class="divIcon">
                             <a href="#"><i class="fa-solid fa-user"></i> </a>
                         </div>
@@ -150,9 +150,9 @@
                         <div class="divCargo">
                             <p>Gerente</p>
                         </div>
-                    </div><br><br>
+                    </li><br><br>
 
-                    <div class="funcionario">
+                    <li class="funcionario">
                         <div class="divIcon">
                             <a href="#"><i class="fa-solid fa-user"></i> </a>
                         </div>
@@ -163,9 +163,9 @@
                         <div class="divCargo">
                             <p>Engenheiro</p>
                         </div>
-                    </div><br><br>
+                    </li><br><br>
 
-                    <div class="funcionario">
+                    <li class="funcionario">
                         <div class="divIcon">
                             <a href="#"><i class="fa-solid fa-user"></i> </a>
                         </div>
@@ -176,9 +176,63 @@
                         <div class="divCargo">
                             <p>Manutenção</p>
                         </div>
-                    </div><br><br>
+                    </li><br><br>
 
-                </div>
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>Gabriel</h3>
+                            <p>gabriel@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Administrador</p>
+                        </div>
+                    </li><br><br>
+
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>Matheus Prado</h3>
+                            <p>prado@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Gerente</p>
+                        </div>
+                    </li><br><br>
+
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>José Mota</h3>
+                            <p>josé@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Engenheiro</p>
+                        </div>
+                    </li><br><br>
+
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>Wilson Kanayama</h3>
+                            <p>kanayama@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Manutenção</p>
+                        </div>
+                    </li><br><br>
+
+                </ul>
+
+                <div id="paginacao"></div>
 
             </div>
 
@@ -190,3 +244,58 @@
 </body>
 
 </html>
+
+<script>
+// Configurações
+var li = document.getElementsByTagName('li')
+var itensPorPagina = 4;
+var paginaAtual = 1;
+
+// Seleciona os elementos da página
+var lista = document.getElementById("listaFuncionarios");
+var paginacao = document.getElementById("paginacao");
+
+// Calcula o número de páginas
+var numPaginas = (li.length / itensPorPagina);
+
+// Cria os botões de página
+for (var i = 1; i <= numPaginas; i++) {
+    var btn = document.createElement("input");
+  btn.type = "radio";
+  btn.name = "paginas";
+  btn.value = i;
+  btn.id = "pagina" + i;
+  btn.addEventListener("click", function () {
+    paginaAtual = parseInt(this.value);
+    mostrarItens();
+  });
+  var label = document.createElement("label");
+  label.innerHTML = i;
+  label.setAttribute("for", "pagina" + i);
+  
+  var div = document.createElement("div");
+  div.appendChild(btn);
+  div.appendChild(label);
+
+  paginacao.appendChild(btn);
+}
+
+// Mostra os itens da página atual
+function mostrarItens() {
+  // Oculta todos os itens
+  for (var i = 0; i < li.length; i++) {
+    li[i].classList.remove("mostrando");
+  }
+
+  // Mostra apenas os itens da página atual
+  var inicio = (paginaAtual - 1) * itensPorPagina;
+  var fim = inicio + itensPorPagina;
+  for (var i = inicio; i < fim && i < li.length; i++) {
+    li[i].classList.add("mostrando");
+  }
+}
+
+// Mostra a primeira página ao carregar a página
+mostrarItens();
+
+</script>
