@@ -55,6 +55,7 @@ li {
   #listaFuncionarios li.mostrando {
     color: white;
     display: flex;
+    margin-bottom: 50px;
   }
   
 
@@ -63,9 +64,8 @@ li {
     flex-direction: column;
     border: none;
     background-color: #000A18;
-    padding: 2%;
+    padding: 25px 25px 10px;
     border-radius: 10px;
-    margin-bottom: 5%;
 }
 
 .divListaFuncionario h1 {
