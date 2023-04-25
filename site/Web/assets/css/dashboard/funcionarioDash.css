@@ -48,9 +48,9 @@
     border-bottom: 3px solid var(--backgroundColorBlueMidnight);
 }
 
-#listaFuncionarios li {
+li {
     display: none;
-  }
+}
   
   #listaFuncionarios li.mostrando {
     color: white;

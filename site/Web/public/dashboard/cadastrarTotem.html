@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/timeDash.css">
+    <title>Airplane Solutions</title>
+</head>
+
+<body>
+    <dialog id="dialog"></dialog>
+    <nav id="navbar"></nav>
+
+    <div class="divContent">
+        <div class="divContainer">
+            <div class="divTop">
+                <h2>Cadastrar Totem</h2>
+            </div>
+
+            <div class="divInfosMiddle">
+                <h3>
+                    <span class="infoTitle">Informações Básicas</span>
+                </h3>
+
+                <span class="infodescription">Preencha todas as informações para criar um novo cadastro</span>
+            </div>
+
+            <div class="divCadastroFuncionario">
+                <div class="divFirstGroup">
+                    <span class="spTitle">Nome <p id="obrigatorio"> *</p></span>
+                    <input class="campos" id="nomeFuncionario" type="text" placeholder="User"><br>
+
+                    <span class="spTitle">Senha <p id="obrigatorio"> *</p></span>
+                    <input class="campos" id="senha" type="password" placeholder="***********"><br>
+
+                    <span class="spTitle">Confirmar Senha <p id="obrigatorio"> *</p></span>
+                    <input class="campos" id="cfmSenha" type="password" placeholder="***********"><br>
+                </div>
+                <div class="divSecondGroupTime">
+                    <span class="spTitle">E-mail <p id="obrigatorio"> *</p></span>
+                    <input class="campos" id="emailFuncionario" type="text" placeholder="user@gmail.com"><br>
+                    <span class="spTitle">Cargo <p id="obrigatorio"> *</p></span>
+                    <select name="" id="selCargo" class="campos">
+                        <option value="">Selecione o cargo</option>
+                        <option value="">Analista</option>
+                    </select>
+                    <div class="divBox">
+                       <img src="../../assets/PNG/icons/upload-de-arquivo.png" alt=""> <br>
+                       <span class="titleUpload">Upload Foto</span> <br>
+                        <button onclick="upload()" class="buttonUpload">Upload</button><br><br>
+                        <input style="display: none;" id="uploadOculto" type="file">
+                    </div>
+                </div>
+            </div>
+
+            <div class="divEnd">
+                <span class="obrigatorios">Campos com * são obrigatórios</span> <br>
+                <button class="button">Cadastrar</button>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+<script src="../../assets/js/dashboard/navbar.js"></script>
+
+<script>
+function upload(){
+uploadOculto.style.display = "block";
+}
+</script>

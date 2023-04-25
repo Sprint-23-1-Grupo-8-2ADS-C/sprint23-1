@@ -137,7 +137,7 @@
                         <div class="divCargo">
                             <p>Administrador</p>
                         </div>
-                    </li><br><br>
+                    </li>
 
                     <li class="funcionario">
                         <div class="divIcon">
@@ -150,7 +150,7 @@
                         <div class="divCargo">
                             <p>Gerente</p>
                         </div>
-                    </li><br><br>
+                    </li>
 
                     <li class="funcionario">
                         <div class="divIcon">
@@ -163,7 +163,7 @@
                         <div class="divCargo">
                             <p>Engenheiro</p>
                         </div>
-                    </li><br><br>
+                    </li>
 
                     <li class="funcionario">
                         <div class="divIcon">
@@ -176,7 +176,7 @@
                         <div class="divCargo">
                             <p>Manutenção</p>
                         </div>
-                    </li><br><br>
+                    </li>
 
                     <li class="funcionario">
                         <div class="divIcon">
@@ -189,7 +189,7 @@
                         <div class="divCargo">
                             <p>Administrador</p>
                         </div>
-                    </li><br><br>
+                    </li>
 
                     <li class="funcionario">
                         <div class="divIcon">
@@ -202,7 +202,7 @@
                         <div class="divCargo">
                             <p>Gerente</p>
                         </div>
-                    </li><br><br>
+                    </li>
 
                     <li class="funcionario">
                         <div class="divIcon">
@@ -215,7 +215,7 @@
                         <div class="divCargo">
                             <p>Engenheiro</p>
                         </div>
-                    </li><br><br>
+                    </li>
 
                     <li class="funcionario">
                         <div class="divIcon">
@@ -231,12 +231,8 @@
                     </li><br><br>
 
                 </ul>
-
                 <div id="paginacao"></div>
-
             </div>
-
-
         </div>
     </div>
 
@@ -261,23 +257,24 @@ var numPaginas = (li.length / itensPorPagina);
 // Cria os botões de página
 for (var i = 1; i <= numPaginas; i++) {
     var btn = document.createElement("input");
-  btn.type = "radio";
-  btn.name = "paginas";
-  btn.value = i;
-  btn.id = "pagina" + i;
-  btn.addEventListener("click", function () {
-    paginaAtual = parseInt(this.value);
-    mostrarItens();
-  });
-  var label = document.createElement("label");
-  label.innerHTML = i;
-  label.setAttribute("for", "pagina" + i);
-  
-  var div = document.createElement("div");
-  div.appendChild(btn);
-  div.appendChild(label);
+    btn.type = "radio";
+    btn.name = "paginas";
+    btn.value = i;
+    btn.id = "pagina" + i;
+    btn.addEventListener("click", function () {
+        paginaAtual = parseInt(this.value);
+        mostrarItens();
+    });
 
-  paginacao.appendChild(btn);
+    var label = document.createElement("label");
+    label.innerHTML = i;
+    label.setAttribute("for", "pagina" + i);
+    
+    var div = document.createElement("div");
+    div.appendChild(btn);
+    div.appendChild(label);
+
+    paginacao.appendChild(btn);
 }
 
 // Mostra os itens da página atual
