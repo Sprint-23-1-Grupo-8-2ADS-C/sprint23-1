@@ -1,0 +1,32 @@
+.divDadosFuncionario{
+    display: flex;
+    width: 450px;
+    height: 110px;
+    border: 3px solid #000A18;
+    border-radius: 10px;
+    padding: 10px 10px 0 20px;
+    margin-bottom: 4%;
+}
+.divDadosFuncionario img{
+    width: 25%;
+    padding: 10px;
+}
+.divInfo{
+margin-left: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 30%;
+}
+
+.divInfo h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.divInfo p {
+    color: gray;
+}
+.divAtualizarDados{
+    margin-left: 5%;
+}
