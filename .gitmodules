@@ -1,0 +1,3 @@
+[submodule "sub-repo"]
+	path = sub-repo
+	url = https://github.com/Nilton-SPTech/Airplane-Solutions.git
