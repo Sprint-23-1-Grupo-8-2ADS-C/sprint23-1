@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/timeDash.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/configDash.css">
+    <title>Airplane Solutions</title>
+</head>
+
+<body>
+    <dialog id="dialog"></dialog>
+    <nav id="navbar"></nav>
+
+    <div class="divContent">
+        <div class="divContainer">
+            <div class="divTop">
+                <h2>Configurações</h2>
+            </div>
+            <div class="divInfosMiddle">
+                <h3>
+                    <span class="infoTitle">Conta</span>
+                </h3>
+            </div>
+
+            <div class="divContaAdm">
+                <div class="divDadosConta">
+
+                    <div class="divDadosFuncionario">
+
+                        <img src="../../assets/PNG/icons/perfil-de-usuario.png" alt="">
+
+                        <div class="divInfo">
+                            <h3>Giovanna Miniguiti</h3>
+                            <p>gi@gmail.com</p>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="divNotificacoes">
+                    <div class="divToggle">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <div class="divInfoNotifica">
+                        <h3>Notificações Slack</h3>
+                        <p>Receber notificações dos totems pelo slack</p>
+                    </div>
+                    </div>
+                    <div class="divToggle">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <div class="divInfoNotifica">
+                            <h3>Notificações E-mail</h3>
+                            <p>Receber notificações dos totems pelo  email</p>
+                        </div>
+                        </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="divAtualizarDados">
+                <div class="divInfosMiddle">
+                    <h3>
+                        <span class="infoTitle">Atualizar informações</span>
+                    </h3>
+                </div>
+
+                <div class="divCadastroFuncionario">
+                    <div class="divFirstGroup">
+                        <span class="spTitle">Nome <p id="obrigatorio"> *</p></span>
+                        <input class="campos" id="nomeFuncionario" type="text" placeholder="User"><br>
+
+                        <span class="spTitle">Senha <p id="obrigatorio"> *</p></span>
+                        <input class="campos" id="senha" type="password" placeholder="***********"><br>
+
+                        <span class="spTitle">Confirmar Senha <p id="obrigatorio"> *</p></span>
+                        <input class="campos" id="cfmSenha" type="password" placeholder="***********"><br>
+                    </div>
+                    <div class="divSecondGroupTime">
+                        <span class="spTitle">E-mail <p id="obrigatorio"> *</p></span>
+                        <input class="campos" id="emailFuncionario" type="text" placeholder="user@gmail.com"><br>
+                        <span class="spTitle">Cargo <p id="obrigatorio"> *</p></span>
+                        <select name="" id="selCargo" class="campos">
+                            <option value="">Selecione o cargo</option>
+                            <option value="">Analista</option>
+                        </select>
+                        <div class="divBox">
+                            <img src="../../assets/PNG/icons/upload-de-arquivo.png" alt=""> <br>
+                            <span class="titleUpload">Upload Foto</span> <br>
+                            <button onclick="upload()" class="buttonUpload">Upload</button><br><br>
+                            <input style="display: none;" id="uploadOculto" type="file">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divEnd">
+                    <span class="obrigatorios">Campos com * são obrigatórios</span> <br>
+                    <button class="button">Cadastrar</button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../../assets/js/dashboard/navbar.js"></script>
+
+<script>
+    function upload() {
+        uploadOculto.style.display = "block";
+    }
+
+    var li = document.getElementsByTagName('li')
+    var itensPorPagina = 4;
+    var paginaAtual = 1;
+
+    // Seleciona os elementos da página
+    var lista = document.getElementById("listaFuncionarios");
+    var paginacao = document.getElementById("paginacao");
+</script>

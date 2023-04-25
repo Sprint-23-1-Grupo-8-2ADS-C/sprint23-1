@@ -89,21 +89,21 @@ nav{
 }
 
 .divNavigationUser{
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
 .divNaviagtionExit{
-    margin-top: 60px;
+    margin-top: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .logOut{
     width: 180px;
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
     background-color: var(--colorRed);
     transition: all .3s;
