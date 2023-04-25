@@ -16,93 +16,8 @@
 </head>
 
 <body>
-    <dialog>
-        <div class="divSelecionarTotem">
-            <h3>Selecionar Totem</h3>
-            <div class="divSearch">
-                <img src="../../assets/SVG/icons/search.svg">
-                <input type="text" placeholder="Encontrar máquina...">
-            </div>
-
-            <div class="divTable">
-                <table>
-                    <tr>
-                        <td></td>
-                        <td class="tdFirst">Máquina</td>
-                        <td class="tdFirst">Tokem</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" name="radio[]" onclick="selectRow()">
-                        </td>
-                        <td class="tdDefault">Totem 02</td>
-                        <td class="tdDefault">A002</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" name="radio[]">
-                        </td>
-                        <td class="tdDefault">Totem 03</td>
-                        <td class="tdDefault">A003</td>
-                    </tr>
-                </table>
-            </div>
-
-            <button>Selecionar</button>
-        </div>
-    </dialog>
-
-    <nav>
-        <div class="divLogo">
-            <img src="../../assets/SVG/logo.svg">
-            <h3>
-                <span>Airplane</span>
-                Solutions
-            </h3>
-        </div>
-
-        <div class="divItems">
-
-            <div class="divNavigationItems">
-                <div class="divItem itemNavigation itemSelect">
-                    <img src="../../assets/SVG/icons/dashboard.SVG">
-                    <span>Dashboard</span>
-                </div>
-                <div class="divItem itemNavigation" onclick="abrirModal()">
-                    <img src="../../assets/SVG/icons/graphic.SVG">
-                    <span>Totem</span>
-                </div>
-                <div class="divItem itemNavigation">
-                    <img src="../../assets/SVG/icons/add.SVG">
-                    <span>Add Totem</span>
-                </div>
-                <div class="divItem itemNavigation">
-                    <a href="funcionarioDash.html"><img src="../../assets/SVG/icons/person.SVG"></a>
-                    <span>Time</span>
-                </div>
-            </div>
-
-            <div class="divNavigationUser">
-                <div class="divItem itemNavigation">
-                    <img src="../../assets/SVG/icons/conversation.svg">
-                    <span>Suporte</span>
-                </div>
-                <div class="divItem itemNavigation">
-                    <img src="../../assets/SVG/icons/config.svg">
-                    <span>Configuração</span>
-                </div>
-            </div>
-
-            <div class="divNaviagtionExit">
-                <div class="divItem logOut">
-                    <img src="../../assets/SVG/icons/exit.svg">
-                    <span>Log out</span>
-                </div>
-            </div>
-
-
-        </div>
-    </nav>
+    <dialog id="dialog"></dialog>
+    <nav id="navbar"></nav>
 
     <div class="divContent">
 
@@ -118,15 +33,15 @@
                     <h1>10 pessoas</h1>
                 </div>
 
-                <button class="btnSignUpFunc">Cadastrar funcionário</button>
+                <form action="timeDash.html"><button class="btnSignUpFunc">Cadastrar funcionário</button></form>
 
             </div>
 
             <div class="divListaFuncionario">
                 <h1>Lista de funcionários</h1>
 
-                <div class="listaFuncionarios">
-                    <div class="funcionario">
+                <ul class="listaFuncionarios" id="listaFuncionarios">
+                    <li class="funcionario">
                         <div class="divIcon">
                             <a href="#"><i class="fa-solid fa-user"></i> </a>
                         </div>
@@ -137,9 +52,9 @@
                         <div class="divCargo">
                             <p>Administrador</p>
                         </div>
-                    </div><br><br>
+                    </li>
 
-                    <div class="funcionario">
+                    <li class="funcionario">
                         <div class="divIcon">
                             <a href="#"><i class="fa-solid fa-user"></i> </a>
                         </div>
@@ -150,9 +65,9 @@
                         <div class="divCargo">
                             <p>Gerente</p>
                         </div>
-                    </div><br><br>
+                    </li>
 
-                    <div class="funcionario">
+                    <li class="funcionario">
                         <div class="divIcon">
                             <a href="#"><i class="fa-solid fa-user"></i> </a>
                         </div>
@@ -163,9 +78,9 @@
                         <div class="divCargo">
                             <p>Engenheiro</p>
                         </div>
-                    </div><br><br>
+                    </li>
 
-                    <div class="funcionario">
+                    <li class="funcionario">
                         <div class="divIcon">
                             <a href="#"><i class="fa-solid fa-user"></i> </a>
                         </div>
@@ -176,13 +91,115 @@
                         <div class="divCargo">
                             <p>Manutenção</p>
                         </div>
-                    </div><br><br>
+                    </li>
 
-                </div>
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>Gabriel</h3>
+                            <p>gabriel@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Administrador</p>
+                        </div>
+                    </li>
 
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>Matheus Prado</h3>
+                            <p>prado@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Gerente</p>
+                        </div>
+                    </li>
+
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>José Mota</h3>
+                            <p>josé@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Engenheiro</p>
+                        </div>
+                    </li>
+
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>Wilson Kanayama</h3>
+                            <p>kanayama@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Manutenção</p>
+                        </div>
+                    </li>
+
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>Juliana Daiane</h3>
+                            <p>juliana@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Administrador</p>
+                        </div>
+                    </li>
+
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>André Mathias</h3>
+                            <p>mathias@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Gerente</p>
+                        </div>
+                    </li>
+
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>João Teodoro</h3>
+                            <p>joao@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Engenheiro</p>
+                        </div>
+                    </li>
+
+                    <li class="funcionario">
+                        <div class="divIcon">
+                            <a href="#"><i class="fa-solid fa-user"></i> </a>
+                        </div>
+                        <div class="divInfo">
+                            <h3>Fernanda Caramico</h3>
+                            <p>fernanda@gmail.com</p>
+                        </div>
+                        <div class="divCargo">
+                            <p>Manutenção</p>
+                        </div>
+                    </li>
+
+                </ul>
+                <div id="paginacao"></div>
             </div>
-
-
         </div>
     </div>
 
@@ -190,3 +207,59 @@
 </body>
 
 </html>
+<script src="../../assets/js/dashboard/navbar.js"></script>
+<script>
+// Configurações
+var li = document.getElementsByTagName('li')
+var itensPorPagina = 4;
+var paginaAtual = 1;
+
+// Seleciona os elementos da página
+var lista = document.getElementById("listaFuncionarios");
+var paginacao = document.getElementById("paginacao");
+
+// Calcula o número de páginas
+var numPaginas = (li.length / itensPorPagina);
+
+// Cria os botões de página
+for (var i = 1; i <= numPaginas; i++) {
+    var btn = document.createElement("input");
+    btn.type = "radio";
+    btn.name = "paginas";
+    btn.value = i;
+    btn.id = "pagina" + i;
+    btn.addEventListener("click", function () {
+        paginaAtual = parseInt(this.value);
+        mostrarItens();
+    });
+
+    var label = document.createElement("label");
+    label.innerHTML = i;
+    label.setAttribute("for", "pagina" + i);
+    
+    var div = document.createElement("div");
+    div.appendChild(btn);
+    div.appendChild(label);
+
+    paginacao.appendChild(btn);
+}
+
+// Mostra os itens da página atual
+function mostrarItens() {
+  // Oculta todos os itens
+  for (var i = 0; i < li.length; i++) {
+    li[i].classList.remove("mostrando");
+  }
+
+  // Mostra apenas os itens da página atual
+  var inicio = (paginaAtual - 1) * itensPorPagina;
+  var fim = inicio + itensPorPagina;
+  for (var i = inicio; i < fim && i < li.length; i++) {
+    li[i].classList.add("mostrando");
+  }
+}
+
+// Mostra a primeira página ao carregar a página
+mostrarItens();
+
+</script>
