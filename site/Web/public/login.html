@@ -64,7 +64,7 @@
 
             </div>
 
-            <button class="btnAccess" onclick="validar()">Acesse</button>
+            <button class="btnAccess" onclick="login()">Acesse</button>
         </div>
 
         <div class="containerRightLogin">
@@ -82,3 +82,16 @@
 </html>
 <script src="../assets/js/funcoes.js"></script>
 <script src="../assets/js/dashboard/rotaUsuario.js"></script>
+
+<script>
+
+    function login(){
+        var email = iptEmail.value;
+        var senha = iptSenha.value;
+
+        if(email == "teste@gmail.com" && senha == "123"){
+            window.location ="./dashboard/indexDash.html"
+        }
+    }
+
+</script>

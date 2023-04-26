@@ -1,3 +1,7 @@
+.divContent{
+    height: 100vh;
+}
+
 .infoTitle {
     font-size: 28px;
 }
@@ -100,9 +104,4 @@ button{
     border-radius: 10px;
     padding: 10px 10px 0 20px;
     align-items: center;
-}
-
-.divEnd {
-    padding-top: 4%;
-
 }

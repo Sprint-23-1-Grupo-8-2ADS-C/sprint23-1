@@ -12,19 +12,19 @@ var navContent = `
         <div class="divNavigationItems">
             <div class="divItem itemNavigation">
             <a href="indexDash.html"><img src="../../assets/SVG/icons/dashboard.SVG"></a>
-                <span>Dashboard</span>
+                <span onclick = "window.location = 'indexDash.html'">Dashboard</span>
             </div>
             <div class="divItem itemNavigation" onclick="abrirModal()">
                 <img src="../../assets/SVG/icons/graphic.SVG">
                 <span>Totem</span>
             </div>
             <div class="divItem itemNavigation">
-                <img src="../../assets/SVG/icons/add.SVG">
-                <span>Add Totem</span>
+            <a href="cadastrarTotem.html"><img src="../../assets/SVG/icons/add.SVG"></a>
+                <span onclick = "window.location = 'cadastrarTotem.html'">Add Totem</span>
             </div>
             <div class="divItem itemNavigation">
             <a href="funcionarioDash.html"><img src="../../assets/SVG/icons/person.SVG"></a>
-            <span>Time</span>
+            <span onclick = "window.location = 'funcionarioDash.html'">Time</span>
             </div>
         </div>
 
@@ -35,7 +35,7 @@ var navContent = `
             </div>
             <div class="divItem itemNavigation">
             <a href="configDash.html"><img src="../../assets/SVG/icons/config.svg"></a>
-                <span>Configuração</span>
+                <span onclick = "window.location = 'configDash.html'">Configuração</span>
             </div>
         </div>
 
