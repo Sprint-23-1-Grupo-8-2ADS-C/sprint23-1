@@ -19,7 +19,7 @@ var navContent = `
                 <span>Totem</span>
             </div>
             <div class="divItem itemNavigation">
-                <img src="../../assets/SVG/icons/add.SVG">
+            <a href="cadastrarTotem.html"><img src="../../assets/SVG/icons/add.SVG"></a>
                 <span>Add Totem</span>
             </div>
             <div class="divItem itemNavigation">
