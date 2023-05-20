@@ -20,7 +20,7 @@
 
     <div class="divContent">
         <div class="divTop">
-            <h2>Olá, Administrador</h2>
+            <h2>Olá, <span id="spNome"></span></h2>
         </div>
 
         <div class="divFirstGroup">
@@ -35,7 +35,7 @@
                 <div class="divKpi">
                     <span class="spTitle">Quantidade total de Totens</span>
                     <h3>
-                        <span class="spQuantidade">4</span>
+                        <span class="spQuantidade" id="spQuantidade">x</span>
                         unidades
                     </h3>
                 </div>
@@ -49,13 +49,13 @@
             </div>
             <div class="divAtividadeTotem">
                 <h3>Estado dos Totens</h3>
-                <table class="tableAtividadeTotem">
+                <table class="tableAtividadeTotem" id="divEstadoTotens">
                     <tr class="trFirstRow">
                         <td>Totem</td>
                         <td>Estado</td>
                         <td>Tempo</td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>Totem 01</td>
                         <td class="totemInativo">Inativo</td>
                         <td>1h</td>
@@ -74,7 +74,7 @@
                         <td>Totem 03</td>
                         <td class="totemAtivo">Ativo</td>
                         <td>20min</td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
         </div>
@@ -100,16 +100,15 @@
     </div>
 </body>
 </html>
-<script src="../../assets/js/dashboard/navbar.js"></script>
+<script src="../js/dashboard/navbar.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../../assets/js/dashboard/rotaTotem.js"></script>
-<script src="../../assets/js/dashboard/rotaUsuario.js"></script>
-<script src="../../assets/js/dashboard/chart.js"></script>
+<script src="../js/dashboard/rotaTotem.js"></script>
+<script src="../js/dashboard/rotaUsuario.js"></script>
+<script src="../js/dashboard/chart.js"></script>
 
 <script>
     
 </script>
 <script>
     mostrarUsuario();
-    buscarTotens();
 </script>

@@ -16,8 +16,8 @@ var totemRouter = require("./src/routes/totens");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "./web/public")));
-app.use("/assets" ,express.static(path.join(__dirname, "./web/assets")));
+app.use(express.static(path.join(__dirname, "./public")));
+app.use("/assets" ,express.static(path.join(__dirname, "./assets")));
 
 
 app.use(cors());

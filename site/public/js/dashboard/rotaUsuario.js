@@ -74,7 +74,7 @@ function validar() {
 
 //#region DASHBOARD
 function mostrarUsuario() {
-    const nome = document.getElementById("sp_nome");
+    const nome = document.getElementById("spNome");
 
     nome.innerHTML = sessionStorage.NOME_USUARIO;
     buscarTotens();
@@ -176,9 +176,8 @@ function validarSenha() {
     
         });
 
-    }else {
+    } else {
         exibirModal("Senhas diferentes")
-
     }
 
 

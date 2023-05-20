@@ -51,8 +51,6 @@ var navContent = `
 const nav = document.getElementById('navbar')
 nav.innerHTML = navContent
 
-
-
 var dialogContent = `
     <div class="divSelecionarTotem">
         <h3>Selecionar Totem</h3>
@@ -62,32 +60,11 @@ var dialogContent = `
         </div>
 
         <div class="divTable">
-            <table>
+            <table id="tableTotens">
                 <tr>
                     <td></td>
                     <td class="tdFirst">Máquina</td>
-                    <td class="tdFirst">Tokem</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="radio[]" onclick="selectRow()">
-                    </td>
-                    <td class="tdDefault">Totem 02</td>
-                    <td class="tdDefault">A002</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="radio[]" onclick="selectRow()">
-                    </td>
-                    <td class="tdDefault">Totem 03</td>
-                    <td class="tdDefault">A003</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="radio[]" onclick="selectRow()">
-                    </td>
-                    <td class="tdDefault">Totem 03</td>
-                    <td class="tdDefault">A003</td>
+                    <td class="tdFirst">Token</td>
                 </tr>
             </table>
         </div>
@@ -120,3 +97,25 @@ function abrirModal() {
     const modal = document.querySelector("dialog");
     modal.showModal();
 }
+
+{/* <tr>
+                    <td>
+                        <input type="radio" name="radio[]" onclick="selectRow()">
+                    </td>
+                    <td class="tdDefault">Totem 02</td>
+                    <td class="tdDefault">A002</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="radio[]" onclick="selectRow()">
+                    </td>
+                    <td class="tdDefault">Totem 03</td>
+                    <td class="tdDefault">A003</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="radio[]" onclick="selectRow()">
+                    </td>
+                    <td class="tdDefault">Totem 03</td>
+                    <td class="tdDefault">A003</td>
+                </tr> */}

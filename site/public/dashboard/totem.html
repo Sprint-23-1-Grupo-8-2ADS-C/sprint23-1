@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/totem.css">
 
-    <title>Document</title>
+    <title>Totem </title>
 </head>
 <body>
     <dialog id="dialog"></dialog>
@@ -17,7 +17,7 @@
     
     <div class="divInformationTotem">
         <div class="divTitleInformation">
-            <h2>Totem 02</h2>
+            <h2>Totem <span id="idTotemInformation">X</span></h2>
             <div class="divPoints">
                 <div></div>
                 <div></div>
@@ -29,9 +29,9 @@
                 <span>Estado</span>
                 <h3>Ativo</h3>
             </div>
-            <div class="divData line">
+            <div class="divData line" id="divProcessadorInformation">
                 <span>Processador</span>
-                <h3>i5-1000</h3>
+                <h3>XPTO</h3>
             </div>
             <div class="divData line">
                 <span>Sistema Operacional</span>
@@ -53,7 +53,7 @@
 
         <div class="divDataTokem">
             <div class="divTokemInformation">
-                <span>Tokem</span>
+                <span>Token</span>
                 <img src="../../assets/SVG/icons/copy.svg" id="imgCopyToken">
             </div>
             <div class="divNumberToken">
@@ -154,5 +154,10 @@
 </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../../assets/js/dashboard/chartTotem.js"></script>
-<script src="../../assets/js/dashboard/navbar.js"></script>
+<script src="../js/dashboard/totemIndividual.js"></script>
+<script src="../js/dashboard/chartTotem.js"></script>
+<script src="../js/dashboard/navbar.js"></script>
+
+<script>
+    setInfosTotemIndividual()
+</script>
