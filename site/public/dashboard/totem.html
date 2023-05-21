@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="../../assets/css/dashboard/navbar.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/totem.css">
+    <link rel="shortcut icon" href="../../assets/SVG/logo.svg" type="image/x-icon">
 
-    <title>Totem </title>
+    <title>Airplane Solutions - Totem</title>
 </head>
 <body>
     <dialog id="dialog"></dialog>
@@ -35,13 +36,15 @@
             </div>
             <div class="divData line">
                 <span>Sistema Operacional</span>
-                <h3>Linux</h3>
+                <span id="divSoInformation">
+                    <h3>Linux</h3>
+                </span>
             </div>
-            <div class="divData line">
+            <div class="divData line" id="divRamInformation">
                 <span>Total RAM</span>
                 <h3>16gb</h3>
             </div>
-            <div class="divData line">
+            <div class="divData line" id="divDiscoInformation">
                 <span>Total Disco</span>
                 <h3>128gb</h3>
             </div>
@@ -56,7 +59,7 @@
                 <span>Token</span>
                 <img src="../../assets/SVG/icons/copy.svg" id="imgCopyToken">
             </div>
-            <div class="divNumberToken">
+            <div class="divNumberToken" id="divNumberToken">
                 <span>A</span>
                 <span>0</span>
                 <span>0</span>
@@ -155,9 +158,13 @@
 </html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../js/dashboard/totemIndividual.js"></script>
+<script src="../js/dashboard/indexDash.js"></script>
 <script src="../js/dashboard/chartTotem.js"></script>
 <script src="../js/dashboard/navbar.js"></script>
+<script src="../js/funcoes.js"></script>
+
 
 <script>
+    getTotensForModal()
     setInfosTotemIndividual()
 </script>

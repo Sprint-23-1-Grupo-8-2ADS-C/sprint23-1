@@ -8,7 +8,7 @@ router.get("/buscarTotens/:fkCompanhia", function (req, res) {
     totemController.buscarTotens(req, res);
 });
 
-router.get("/buscaIndividual", (req, res) => {
+router.get("/buscaIndividual/:idTotem/:fkCompanhia", (req, res) => {
     totemController.buscaIndividual(req, res)
 });
 

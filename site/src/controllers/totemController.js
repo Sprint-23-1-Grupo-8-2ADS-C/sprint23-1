@@ -16,13 +16,18 @@ function buscarTotens(req, res) {
 }
 
 function buscaIndividual(req, res) {
-  totemModel.buscaIndividual()
+  const idTotem = req.params.idTotem;
+  const fkCompanhia = req.params.fkCompanhia;
+  
+  totemModel
+    .buscaIndividual(idTotem, fkCompanhia)
     .then((result) => {
       res.status(200).json(result);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.error("Não foi possível completar a requisição", err);
       res.status(500).json(err.sqlMessage);
-    })
+    });
 }
 
 function countTotens(req, res) {
@@ -42,5 +47,5 @@ function countTotens(req, res) {
 module.exports = {
   buscarTotens,
   buscaIndividual,
-  countTotens
+  countTotens,
 };

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/timeDash.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/configDash.css">
-    <title>Airplane Solutions</title>
+    <title>Airplane Solutions - Configurações</title>
 </head>
 
 <body>
@@ -35,9 +35,9 @@
 
                         <img src="../../assets/PNG/icons/perfil-de-usuario.png" alt="">
 
-                        <div class="divInfo">
-                            <h3>Giovanna Miniguiti</h3>
-                            <p>gi@gmail.com</p>
+                        <div class="divInfo" id="divInfo">
+                            <!-- <h3>Giovanna Miniguiti</h3>
+                            <p>gi@gmail.com</p> -->
                         </div>
 
 
@@ -125,11 +125,23 @@
 </body>
 
 </html>
-<script src="../../assets/js/dashboard/navbar.js"></script>
+<script src="../js/dashboard/navbar.js"></script>
+<script src="../js/funcoes.js"></script>
 
 <script>
+    getTotensForModal()
+
+    document.getElementById('divInfo').innerHTML = `
+        <h3>${sessionStorage.NOME_USUARIO}</h3>
+        <p>${sessionStorage.EMAIL_USUARIO}</p>
+    `
+
     function upload() {
-        uploadOculto.style.display = "block";
+        if (uploadOculto.style.display == "block") {
+            uploadOculto.style.display = "none";    
+        } else {
+            uploadOculto.style.display = "block";
+        }
     }
 
     var li = document.getElementsByTagName('li')

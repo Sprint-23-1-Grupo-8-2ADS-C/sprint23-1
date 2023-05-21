@@ -1,3 +1,5 @@
+const fkCompanhia = sessionStorage.ID_COMPANHIA;
+
 var navContent = `
     <div class="divLogo">
         <img src="../../assets/SVG/logo.svg">
@@ -39,17 +41,17 @@ var navContent = `
             </div>
         </div>
 
-        <div class="divNaviagtionExit">
-            <div class="divItem logOut">
+        <div class="divNavigationExit">
+            <div class="divItem logOut" onclick="limparSessao()">
                 <img src="../../assets/SVG/icons/exit.svg">
                 <span>Log out</span>
             </div>
         </div>
     </div>
-`
+`;
 
-const nav = document.getElementById('navbar')
-nav.innerHTML = navContent
+const nav = document.getElementById("navbar");
+nav.innerHTML = navContent;
 
 var dialogContent = `
     <div class="divSelecionarTotem">
@@ -71,51 +73,66 @@ var dialogContent = `
 
         <button onclick="window.location = 'totem.html'">Selecionar</button>
     </div>
-`
+`;
 
-const dialog = document.getElementById('dialog');
-dialog.innerHTML = dialogContent
-function selectRow(){
-    const radioButtons = document.querySelectorAll('input[type="radio"]');
-    radioButtons.forEach((radioButton) => {
-        radioButton.addEventListener('click', () => {
-            const tr = radioButton.closest('tr');
-            const table = tr.closest('table');
-            tr.classList.add('selected');
-            
-            table.querySelectorAll('tr').forEach((row) => {
-                if (row !== tr) {
-                    row.classList.remove('selected');
-                }
-            });
-        });
+const dialog = document.getElementById("dialog");
+dialog.innerHTML = dialogContent;
+
+
+async function getTotensForModal() {
+  const tableTotens = document.getElementById("tableTotens");
+  tableTotens.innerHTML = `
+        <tr> 
+            <td></td>
+            <td class="tdFirst">Máquina</td>
+            <td class="tdFirst">Token</td>
+        </tr>
+    `;
+
+  try {
+    const res = await fetch(`/totens/buscarTotens/${fkCompanhia}`);
+    const totens = await res.json();
+
+    totens.map((totem) => {
+      tableTotens.innerHTML += `
+                <tr>
+                    <td>
+                        <input type="radio" name="radio[]" value=${totem.idTotem} onclick="selectRow(${totem.idTotem})">
+                    </td>
+                    <td class="tdDefault">Totem ${totem.idTotem}</td>
+                    <td class="tdDefault">${totem.token}</td>
+                </tr>
+            `;
     });
-    console.log(radioButtons);
+    
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+function selectRow(idTotem) {
+  const radioButtons = document.querySelectorAll('input[type="radio"]');
+  const id = idTotem;
+  
+  sessionStorage.ID_TOTEM = id
+
+  radioButtons.forEach((radioButton) => {
+    radioButton.addEventListener("click", () => {
+      const tr = radioButton.closest("tr");
+      const table = tr.closest("table");
+      tr.classList.add("selected");
+
+      table.querySelectorAll("tr").forEach((row) => {
+        if (row !== tr) {
+          row.classList.remove("selected");
+        }
+      });
+    });
+  });
+  console.log(radioButtons);
 }
 
 function abrirModal() {
-    const modal = document.querySelector("dialog");
-    modal.showModal();
+  const modal = document.querySelector("dialog");
+  modal.showModal();
 }
-
-{/* <tr>
-                    <td>
-                        <input type="radio" name="radio[]" onclick="selectRow()">
-                    </td>
-                    <td class="tdDefault">Totem 02</td>
-                    <td class="tdDefault">A002</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="radio[]" onclick="selectRow()">
-                    </td>
-                    <td class="tdDefault">Totem 03</td>
-                    <td class="tdDefault">A003</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="radio[]" onclick="selectRow()">
-                    </td>
-                    <td class="tdDefault">Totem 03</td>
-                    <td class="tdDefault">A003</td>
-                </tr> */}

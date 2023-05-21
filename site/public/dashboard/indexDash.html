@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/funcionarioDash.css">
     
-    <title>Airplane Solutions</title>
+    <title>Airplane Solutions - Dashboard</title>
 </head>
 <body>
 
@@ -28,21 +28,21 @@
                 <div class="divKpi">
                     <span class="spTitle">Totens Ativos</span>
                     <h3>
-                        <span class="spQuantidade">2</span>
+                        <span class="spQuantidade">0</span>
                         unidades
                     </h3>
                 </div>
                 <div class="divKpi">
                     <span class="spTitle">Quantidade total de Totens</span>
                     <h3>
-                        <span class="spQuantidade" id="spQuantidade">x</span>
+                        <span class="spQuantidade" id="spQuantidade">0</span>
                         unidades
                     </h3>
                 </div>
                 <div class="divKpi">
                     <span class="spTitle">Totens Inativos</span>
                     <h3>
-                        <span class="spQuantidade">2</span>
+                        <span class="spQuantidade">0</span>
                         unidades
                     </h3>
                 </div>
@@ -55,26 +55,7 @@
                         <td>Estado</td>
                         <td>Tempo</td>
                     </tr>
-                    <!-- <tr>
-                        <td>Totem 01</td>
-                        <td class="totemInativo">Inativo</td>
-                        <td>1h</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 04</td>
-                        <td class="totemInativo">Inativo</td>
-                        <td>1min</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 02</td>
-                        <td class="totemAtivo">Ativo</td>
-                        <td>1h</td>
-                    </tr>
-                    <tr>
-                        <td>Totem 03</td>
-                        <td class="totemAtivo">Ativo</td>
-                        <td>20min</td>
-                    </tr> -->
+
                 </table>
             </div>
         </div>
@@ -102,13 +83,12 @@
 </html>
 <script src="../js/dashboard/navbar.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../js/dashboard/rotaTotem.js"></script>
+<script src="../js/dashboard/indexDash.js"></script>
 <script src="../js/dashboard/rotaUsuario.js"></script>
 <script src="../js/dashboard/chart.js"></script>
+<script src="../js/funcoes.js"></script>
 
 <script>
-    
-</script>
-<script>
     mostrarUsuario();
+    getTotensForModal();
 </script>

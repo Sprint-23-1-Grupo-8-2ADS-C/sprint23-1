@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../assets/css/dashboard/configDash.css">
     <link rel="stylesheet" href="../../assets/css/dashboard/cadastroTotem.css">
 
-    <title>Airplane Solutions</title>
+    <title>Airplane Solutions - Cadastrar Totem</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
                 <span class="infodescription">Preencher as informações do totem automaticamente</span>
 
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" onclick="hideObrigatorio()">
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -108,4 +108,9 @@
 </body>
 
 </html>
-<script src="../../assets/js/dashboard/navbar.js"></script>
+<script src="../js/dashboard/navbar.js"></script>
+<script src="../js/funcoes.js"></script>
+
+<script>
+    getTotensForModal()
+</script>
