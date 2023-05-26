@@ -27,9 +27,48 @@ function countTotens(fk) {
     return database.executar(instrucao)
 }
 
+function cadastrarTotem(fk, infosTotem) {
+    let query;
+    const idTotemQuery = `(SELECT TOP 1 idTotem + 1 FROM totem WHERE fkCompanhia = ${fk} ORDER BY idTotem DESC)`;
+  
+    if (infosTotem.boolCaptura) {
+      query = `
+        INSERT INTO totem(
+            idTotem, fkCompanhia, localizacaoTotem, boolCaptura
+        )
+        VALUES(
+            ${idTotemQuery}, 
+            ${fk}, 
+            '${infosTotem.localizacao}',
+            1
+        );
+      `;
+    } else {
+      query = `
+        INSERT INTO totem(
+            idTotem, fkCompanhia, fabricante, arquitetura, 
+            sistemaOperacional, processador, localizacaoTotem, boolCaptura
+        )
+        VALUES(
+            ${idTotemQuery}, 
+            ${fk},
+            '${infosTotem.fabricante}',
+            '${infosTotem.arquitetura}',
+            '${infosTotem.sistemaOperacional}',
+            '${infosTotem.processador}',
+            '${infosTotem.localizacao}',
+            0
+        );
+      `;
+    }
+  
+    return database.executar(query);
+  }
+
 
 module.exports = {
     buscarTotens,
     buscaIndividual,
-    countTotens
+    countTotens,
+    cadastrarTotem
 }

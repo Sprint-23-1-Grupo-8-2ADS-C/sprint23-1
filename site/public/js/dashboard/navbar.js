@@ -1,4 +1,3 @@
-const fkCompanhia = sessionStorage.ID_COMPANHIA;
 
 var navContent = `
     <div class="divLogo">
@@ -80,7 +79,9 @@ dialog.innerHTML = dialogContent;
 
 
 async function getTotensForModal() {
+  const fkCompanhia = sessionStorage.ID_COMPANHIA;
   const tableTotens = document.getElementById("tableTotens");
+  
   tableTotens.innerHTML = `
         <tr> 
             <td></td>

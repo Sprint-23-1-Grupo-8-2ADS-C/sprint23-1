@@ -12,7 +12,7 @@
 
     <title>Airplane Solutions - Totem</title>
 </head>
-<body>
+<body onload="getTotensForModal(),setInfosTotemIndividual()">
     <dialog id="dialog"></dialog>
     <nav id="navbar"></nav>
     
@@ -156,15 +156,9 @@
     
 </body>
 </html>
+<!-- Imports Javascript -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../js/dashboard/totemIndividual.js"></script>
-<script src="../js/dashboard/indexDash.js"></script>
+<script src="../js/dashboard/totemFunc.js"></script>
 <script src="../js/dashboard/chartTotem.js"></script>
 <script src="../js/dashboard/navbar.js"></script>
 <script src="../js/funcoes.js"></script>
-
-
-<script>
-    getTotensForModal()
-    setInfosTotemIndividual()
-</script>

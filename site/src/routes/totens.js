@@ -16,4 +16,8 @@ router.get("/count/:fkCompanhia", (req, res) => {
     totemController.countTotens(req,res)
 });
 
+router.post("/cadastrarTotem/:fkCompanhia", (req, res) => {
+    totemController.cadastrarTotem(req,res)
+})
+
 module.exports = router;

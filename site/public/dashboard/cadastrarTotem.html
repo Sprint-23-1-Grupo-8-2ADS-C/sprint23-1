@@ -33,7 +33,7 @@
                 <span class="infodescription">Preencher as informações do totem automaticamente</span>
 
                 <label class="switch">
-                    <input type="checkbox" onclick="hideObrigatorio()">
+                    <input type="checkbox" id="checkboxCaptura" onclick="">
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="divfirstInside">
                 <span class="spTitle">Fabricante <p id="obrigatorio"> *</p></span>
-                <input class="campos" id="fabricante" type="text" placeholder="Fabricante"><br>
+                <input class="campos" id="iptFabricante" type="text" placeholder="Fabricante"><br>
 
                 </div>
             </div>
@@ -73,7 +73,7 @@
 
                 <div class="divfirstInside">
                 <span class="spTitle">Processador <p id="obrigatorio"> *</p></span>
-                <input class="campos" id="processador" type="text" placeholder="i5-9433"><br>    
+                <input class="campos" id="iptProcessador" type="text" placeholder="i5-9433"><br>    
                 </div>
             </div>
 
@@ -81,17 +81,17 @@
             <div class="divThirdGroup">
                 <div class="divfirstInside">
                 <span class="spTitle">Localização <p id="obrigatorio"> *</p></span>
-                <input class="campos" id="localizacao" type="text" placeholder="Alameda Ribeiro da Silva"><br>
+                <input class="campos" id="iptLocalizacao" type="text" placeholder="Alameda Ribeiro da Silva"><br>
                 </div>
 
                 <div class="divfirstInside">
                 <span class="spTitle">Total Disco <p id="obrigatorio"> *</p></span>
-                <input class="camposTotem" id="totalDisco" type="text" placeholder="15422"><br>
+                <input class="camposTotem" id="iptTotalDisco" type="text" placeholder="15422"><br>
                 </div>
 
                 <div class="divfirstInside"> 
                 <span class="spTitle">Total RAM <p id="obrigatorio"> *</p></span>
-                <input class="camposTotem" id="totalRam" type="text" placeholder="15422"><br>
+                <input class="camposTotem" id="iptTotalRam" type="text" placeholder="15422"><br>
             </div>
 
             </div>
@@ -99,7 +99,7 @@
 
             <div class="divEnd">
                 <span class="obrigatorios">Campos com * são obrigatórios</span> <br>
-                <button class="button">Cadastrar</button>
+                <button class="button" onclick="cadastrarTotem()">Cadastrar</button>
 
             </div>
 
@@ -110,7 +110,9 @@
 </html>
 <script src="../js/dashboard/navbar.js"></script>
 <script src="../js/funcoes.js"></script>
+<script src="../js/dashboard/totemFunc.js"></script>
 
 <script>
+
     getTotensForModal()
 </script>
