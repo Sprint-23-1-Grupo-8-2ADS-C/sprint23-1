@@ -58,7 +58,7 @@ async function cadastrarTotem(req, res) {
     };
 
     const result = await totemModel.cadastrarTotem(fkCompanhia, infosTotem);
-    res.status(202).json(result);
+    res.status(201).json(result);
   } catch (err) {
     console.error(err);
     console.log("Erro ao tentar cadastrar totem! \n\n Erro:", err.sqlMessage);

@@ -4,4 +4,4 @@ site/node_modules
 #IGNORANDO O ARQUIVO package-lock.json
 site/package-lock.json
 
-
+.DS_Store

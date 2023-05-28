@@ -8,6 +8,10 @@ router.get("/buscarUsuario/:idUsuario", function (req, res) {
     usuarioController.buscarUsuario(req, res);
 });
 
+router.get('/usersByCompany/:fkCompanhia', (req, res) => {
+    usuarioController.getUsersByCompany(req,res)
+})
+
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });

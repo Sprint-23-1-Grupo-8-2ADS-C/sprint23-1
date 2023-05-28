@@ -41,11 +41,23 @@ function verificacaoCodigo(email, codigo){
 }
 
 function updateSenha(senha, email){
-var instrucao = `
-    update funcionario set senha = '${senha}'
-    where emailFunc = '${email}';
-`;
+    let instrucao = `
+        update funcionario set senha = '${senha}'
+        where emailFunc = '${email}';
+    `;
+    return database.executar(instrucao);
+}
 
+function getUsersByCompany(fk) {
+    let query = `
+        SELECT f.nome as nome, 
+        f.email as email, 
+        c.descricao as cargo
+        FROM funcionario as f 
+        JOIN cargo as c ON f.fkCargo = c.idCargo 
+        WHERE f.fkCompanhia = ${fk};
+    `
+    return database.executar(query);
 }
 
 module.exports = {
@@ -53,5 +65,6 @@ module.exports = {
     entrar,
     salvarCodigo,
     verificacaoCodigo,
-    updateSenha
+    updateSenha,
+    getUsersByCompany
 };

@@ -129,8 +129,19 @@ function salvarCodigo(req, res) {
             console.log("Houve um erro ao enviar o codigo: ", erro.sqlMessage);
             res.status(500).json(erro.sqlMessage);
         })
+}
 
+async function getUsersByCompany(req, res) {
+    const fkCompanhia = req.params.fkCompanhia;
 
+    try {
+        const modelResult = await usuarioModel.getUsersByCompany(fkCompanhia)
+        res.status(200).json(modelResult)
+    } catch (err) {
+        console.error(err);
+        console.log("Erro ao executar a requisição: ", err.sqlMessage);
+        res.status(500).json(err.sqlMessage);
+    }
 }
 
 module.exports = {
@@ -138,5 +149,6 @@ module.exports = {
     entrar,
     salvarCodigo,
     verificacaoCodigo,
-    updateSenha
+    updateSenha,
+    getUsersByCompany
 }
