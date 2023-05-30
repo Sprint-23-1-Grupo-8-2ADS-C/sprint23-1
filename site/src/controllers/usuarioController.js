@@ -144,11 +144,33 @@ async function getUsersByCompany(req, res) {
     }
 }
 
+async function cadastrarUsuario(req, res) {
+   try {
+    const fkCompanhia = req.params.fkCompanhia;
+    const { nome, senha, email, cargo } = req.body;
+
+    const infosUser = { 
+        nome,
+        senha,
+        email,
+        cargo
+    }
+
+    const result = await usuarioModel.cadastrarUsuario(fkCompanhia, infosUser)
+    res.status(201).json(result);
+   } catch (err) {
+    console.error(err);
+    console.log("Erro ao tentar cadastrar usuario! \n\n Erro:", err.sqlMessage);
+    res.status(500).json(err.sqlMessage);
+   }
+}
+
 module.exports = {
     buscarUsuario,
     entrar,
     salvarCodigo,
     verificacaoCodigo,
     updateSenha,
-    getUsersByCompany
+    getUsersByCompany,
+    cadastrarUsuario
 }

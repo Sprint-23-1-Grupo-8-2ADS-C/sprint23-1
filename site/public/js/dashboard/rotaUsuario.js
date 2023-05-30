@@ -245,3 +245,41 @@ function mostrarItens() {
       li[i].classList.add("mostrando");
     }
   }
+
+async function cadastrarUsuario() {
+  const fkCompanhia = sessionStorage.ID_COMPANHIA;
+  const nome = iptNome.value;
+  const email = iptEmail.value;
+  const senha = iptSenha.value;
+  const confirmaSenha = iptCfmSenha.value;
+  const cargo = selCargo.value;
+
+  if (senha === confirmaSenha) {
+    console.log("senha confirmada");
+  } else {
+    console.log("senha diferente");
+  }
+
+  try {
+    const req = await fetch(`/usuarios/cadastrarUsuario/${fkCompanhia}`, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        nome,
+        email,
+        senha,
+        cargo
+      })
+    }) 
+
+    if (req.ok) {
+      console.log("Requisição feita");
+    } else {
+      console.log("Erro ao fazer a requisição");
+    }
+  } catch (err) {
+    console.error(err);
+  }
+}

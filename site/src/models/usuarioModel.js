@@ -60,11 +60,29 @@ function getUsersByCompany(fk) {
     return database.executar(query);
 }
 
+function cadastrarUsuario(fk, infosUser) {
+    let subQuery = `(SELECT TOP 1 idFuncionario + 1 FROM funcionario WHERE fkCompanhia = ${fk} ORDER BY idFuncionario DESC)`
+    let query = `
+        INSERT INTO funcionario(
+            idFuncionario, fkCompanhia, nome, email, senha, fkCargo
+        ) VALUES (
+            ${subQuery},
+            ${fk},
+            '${infosUser.nome}',
+            '${infosUser.email}',
+            '${infosUser.senha}',
+            ${infosUser.cargo}
+        );
+    `
+    return database.executar(query)
+}
+
 module.exports = {
     buscarUsuario,
     entrar,
     salvarCodigo,
     verificacaoCodigo,
     updateSenha,
-    getUsersByCompany
+    getUsersByCompany,
+    cadastrarUsuario
 };
