@@ -33,21 +33,21 @@
             <div class="divCadastroFuncionario">
                 <div class="divFirstGroup">
                     <span class="spTitle">Nome <p id="obrigatorio"> *</p></span>
-                    <input class="campos" id="iptNome" type="text" placeholder="Nome"><br>
+                    <input class="campos" id="nomeFuncionario" type="text" placeholder="Nome"><br>
 
                     <span class="spTitle">Senha <p id="obrigatorio"> *</p></span>
-                    <input class="campos" id="iptSenha" type="password" placeholder="***********"><br>
+                    <input class="campos" id="senha" type="password" placeholder="***********"><br>
 
                     <span class="spTitle">Confirmar Senha <p id="obrigatorio"> *</p></span>
-                    <input class="campos" id="iptCfmSenha" type="password" placeholder="***********"><br>
+                    <input class="campos" id="cfmSenha" type="password" placeholder="***********"><br>
                 </div>
                 <div class="divSecondGroupTime">
                     <span class="spTitle">E-mail <p id="obrigatorio"> *</p></span>
-                    <input class="campos" id="iptEmail" type="text" placeholder="user@gmail.com"><br>
+                    <input class="campos" id="emailFuncionario" type="text" placeholder="user@gmail.com"><br>
                     <span class="spTitle">Cargo <p id="obrigatorio"> *</p></span>
                     <select name="" id="selCargo" class="campos">
                         <option value="">Selecione o cargo</option>
-                        <option value="1">Analista</option>
+                        <option value="">Analista</option>
                     </select>
                     <div class="divBox">
                        <img src="../../assets/PNG/icons/upload-de-arquivo.png" alt=""> <br>
@@ -61,7 +61,7 @@
 
             <div class="divEnd">
                 <span class="obrigatorios">Campos com * são obrigatórios</span> <br>
-                <button class="button" onclick="cadastrarUsuario()">Cadastrar</button>
+                <button class="button">Cadastrar</button>
 
             </div>
 
@@ -71,7 +71,6 @@
 </html>
 <script src="../js/dashboard/navbar.js"></script>
 <script src="../js/funcoes.js"></script>
-<script src="../js/dashboard/rotaUsuario.js"></script>
 
 <script>
     getTotensForModal()

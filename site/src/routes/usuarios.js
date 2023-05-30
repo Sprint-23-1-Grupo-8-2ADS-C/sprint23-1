@@ -28,8 +28,4 @@ router.post("/updateSenha", function (req, res) {
     usuarioController.updateSenha(req, res);
 });
 
-router.post("/cadastrarUsuario/:fkCompanhia", (req, res) => {
-    usuarioController.cadastrarUsuario(req, res);
-})
-
 module.exports = router;
