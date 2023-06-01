@@ -32,4 +32,8 @@ router.post("/cadastrarUsuario/:fkCompanhia", (req, res) => {
     usuarioController.cadastrarUsuario(req, res);
 })
 
+router.put("/atualizarInfosUsuario/:fkCompanhia", (req, res) => {
+    usuarioController.atualizarInfosUsuario(req, res);
+})
+
 module.exports = router;

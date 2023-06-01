@@ -13,7 +13,8 @@
     <title>Airplane Solutions - Configurações</title>
 </head>
 
-<body>
+<body onload="getTotensForModal()">
+
     <dialog id="dialog"></dialog>
     <nav id="navbar"></nav>
 
@@ -30,20 +31,13 @@
 
             <div class="divContaAdm">
                 <div class="divDadosConta">
-
                     <div class="divDadosFuncionario">
-
                         <img src="../../assets/PNG/icons/perfil-de-usuario.png" alt="">
 
                         <div class="divInfo" id="divInfo">
-                            <!-- <h3>Giovanna Miniguiti</h3>
-                            <p>gi@gmail.com</p> -->
+                            <!-- Os dados inseridos aqui estão vindo na tag Script -->
                         </div>
-
-
                     </div>
-
-
                 </div>
 
 
@@ -68,13 +62,10 @@
                             <h3>Notificações E-mail</h3>
                             <p>Receber notificações dos totems pelo  email</p>
                         </div>
-                        </div>
-
-
+                    </div>
                 </div>
-
-
             </div>
+
             <div class="divAtualizarDados">
                 <div class="divInfosMiddle">
                     <h3>
@@ -85,17 +76,17 @@
                 <div class="divCadastroFuncionario">
                     <div class="divFirstGroup">
                         <span class="spTitle">Nome <p id="obrigatorio"> *</p></span>
-                        <input class="campos" id="nomeFuncionario" type="text" placeholder="User"><br>
+                        <input class="campos" id="iptNome" type="text" placeholder="Nome"><br>
 
                         <span class="spTitle">Senha <p id="obrigatorio"> *</p></span>
-                        <input class="campos" id="senha" type="password" placeholder="***********"><br>
+                        <input class="campos" id="iptSenha" type="password" placeholder="***********"><br>
 
                         <span class="spTitle">Confirmar Senha <p id="obrigatorio"> *</p></span>
-                        <input class="campos" id="cfmSenha" type="password" placeholder="***********"><br>
+                        <input class="campos" id="iptCfmSenha" type="password" placeholder="***********"><br>
                     </div>
                     <div class="divSecondGroupTime">
                         <span class="spTitle">E-mail <p id="obrigatorio"> *</p></span>
-                        <input class="campos" id="emailFuncionario" type="text" placeholder="user@gmail.com"><br>
+                        <input class="campos" id="iptEmail" type="text" placeholder="user@gmail.com"><br>
                         <span class="spTitle">Cargo <p id="obrigatorio"> *</p></span>
                         <select name="" id="selCargo" class="campos">
                             <option value="">Selecione o cargo</option>
@@ -106,17 +97,14 @@
                             <span class="titleUpload">Upload Foto</span> <br>
                             <button onclick="upload()" class="buttonUpload">Upload</button><br><br>
                             <input style="display: none;" id="uploadOculto" type="file">
-
                         </div>
                     </div>
                 </div>
 
                 <div class="divEnd">
                     <span class="obrigatorios">Campos com * são obrigatórios</span> <br>
-                    <button class="button">Cadastrar</button>
-
+                    <button class="button" onclick="atualizarInfosUsuario()">Atualizar</button>
                 </div>
-
             </div>
 
 
@@ -127,10 +115,9 @@
 </html>
 <script src="../js/dashboard/navbar.js"></script>
 <script src="../js/funcoes.js"></script>
+<script src="../js/dashboard/rotaUsuario.js"></script>
 
 <script>
-    getTotensForModal()
-
     document.getElementById('divInfo').innerHTML = `
         <h3>${sessionStorage.NOME_USUARIO}</h3>
         <p>${sessionStorage.EMAIL_USUARIO}</p>
@@ -143,12 +130,4 @@
             uploadOculto.style.display = "block";
         }
     }
-
-    var li = document.getElementsByTagName('li')
-    var itensPorPagina = 4;
-    var paginaAtual = 1;
-
-    // Seleciona os elementos da página
-    var lista = document.getElementById("listaFuncionarios");
-    var paginacao = document.getElementById("paginacao");
 </script>

@@ -228,7 +228,8 @@ async function getUsersByCompany() {
     console.log(err);
   }
 }
-    // Mostra os itens da página atual
+
+// Mostra os itens da página atual
 function mostrarItens() {
     const li = document.getElementsByTagName('li')
 
@@ -246,13 +247,13 @@ function mostrarItens() {
     }
   }
 
-  async function cadastrarUsuario() {
-    const fkCompanhia = sessionStorage.ID_COMPANHIA;
-    const nome = iptNome.value;
-    const email = iptEmail.value;
-    const senha = iptSenha.value;
-    const confirmaSenha = iptCfmSenha.value;
-    const cargo = selCargo.value;
+async function cadastrarUsuario() {
+  const fkCompanhia = sessionStorage.ID_COMPANHIA;
+  const nome = iptNome.value;
+  const email = iptEmail.value;
+  const senha = iptSenha.value;
+  const confirmaSenha = iptCfmSenha.value;
+  const cargo = selCargo.value;
   
     if (senha === confirmaSenha) {
       console.log("senha confirmada");
@@ -282,4 +283,42 @@ function mostrarItens() {
     } catch (err) {
       console.error(err);
     }
+}
+
+async function atualizarInfosUsuario() {
+  const fkCompanhia = sessionStorage.ID_COMPANHIA;
+  const idUsuario = sessionStorage.ID_USUARIO;
+  const nome = iptNome.value;
+  const email = iptEmail.value;
+  const senha = iptSenha.value;
+  const confirmaSenha = iptCfmSenha.value;
+
+  if (senha === confirmaSenha) {
+    console.log("Senhas iguais");
+  } else {
+    console.log("Senhas diferentes");
   }
+
+  try {
+    const res = await fetch(`/usuarios/atualizarInfosUsuario/${fkCompanhia}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        idUsuario,
+        nome,
+        email,
+        senha,
+      })
+    })
+
+    if (res.ok) {
+      console.log("informações atualizadas");
+    } else {
+      console.log("não foi possível atualizar");
+    }
+  } catch (err) {
+    console.error("Erro ao tentar realizar a requisição \n\n", err);
+  }
+}

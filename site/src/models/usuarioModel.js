@@ -18,25 +18,18 @@ function entrar(email, senha) {
 }
 
 function salvarCodigo(email, codigo) {
-
-   
-        var instrucao = `
-    update funcionario set  codigoVerificacao =  '${codigo}' 
-	where emailFunc = '${email}';
-`;
-
-
+    var instrucao = `
+        update funcionario set  codigoVerificacao =  '${codigo}' 
+	    where emailFunc = '${email}';
+    `;
     return database.executar(instrucao);
 }
 
 function verificacaoCodigo(email, codigo){
-
     var instrucao = `
-
-    select funcionario.codigoVerificacao from funcionario where emailFunc = '${email}' and codigoVerificacao = '${codigo}';
-
-`;
-
+        select funcionario.codigoVerificacao from funcionario 
+        where emailFunc = '${email}' and codigoVerificacao = '${codigo}';
+    `;
     return database.executar(instrucao);
 }
 
@@ -77,6 +70,18 @@ function cadastrarUsuario(fk, infosUser) {
     return database.executar(query)
 }
 
+function atualizarInfosUsuario(fk, newInfos) {
+    console.log(newInfos);
+    let query = `
+        UPDATE funcionario
+        SET nome='${newInfos.nome}', 
+        email='${newInfos.email}', 
+        senha='${newInfos.senha}'
+        WHERE idFuncionario=${newInfos.idUsuario} AND fkCompanhia=${fk};
+    `;
+    return database.executar(query);
+}
+
 module.exports = {
     buscarUsuario,
     entrar,
@@ -84,5 +89,6 @@ module.exports = {
     verificacaoCodigo,
     updateSenha,
     getUsersByCompany,
-    cadastrarUsuario
+    cadastrarUsuario,
+    atualizarInfosUsuario
 };
