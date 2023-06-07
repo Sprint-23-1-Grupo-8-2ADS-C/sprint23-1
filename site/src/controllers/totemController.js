@@ -1,10 +1,10 @@
 const totemModel = require("../models/totemModel");
 
 function buscarTotens(req, res) {
-  const fk = req.params.fkCompanhia;
+  const idCompanhia = req.params.idCompanhia;
 
   totemModel
-    .buscarTotens(fk)
+    .buscarTotens(idCompanhia)
     .then((resultado) => {
       res.status(200).json(resultado);
     })
@@ -17,10 +17,10 @@ function buscarTotens(req, res) {
 
 function buscaIndividual(req, res) {
   const idTotem = req.params.idTotem;
-  const fkCompanhia = req.params.fkCompanhia;
+  const idCompanhia = req.params.idCompanhia;
   
   totemModel
-    .buscaIndividual(idTotem, fkCompanhia)
+    .buscaIndividual(idTotem, idCompanhia)
     .then((result) => {
       const cpu = result[0].processador
       const cpuFormatado = cpu.replace(/(\d+th Gen\s|\(R\)|\(TM\)|\sCPU|\s@|\s\d\.\d{2}GHz)/gm, "").trim();
@@ -43,10 +43,38 @@ function buscaIndividual(req, res) {
 }
 
 function countTotens(req, res) {
-  const fk = req.params.fkCompanhia;
+  const idCompanhia = req.params.idCompanhia;
 
   totemModel
-    .countTotens(fk)
+    .countTotens(idCompanhia)
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      console.error("Não foi possível completar a requisição", err);
+      res.status(500).json(err.sqlMessage);
+    });
+}
+
+function countAtivos(req, res) {
+  const idCompanhia = req.params.idCompanhia;
+
+  totemModel
+    .countAtivos(idCompanhia)
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      console.error("Não foi possível completar a requisição", err);
+      res.status(500).json(err.sqlMessage);
+    });
+}
+
+function countInativos(req, res) {
+  const idCompanhia = req.params.idCompanhia;
+
+  totemModel
+    .countInativos(idCompanhia)
     .then((result) => {
       res.status(200).json(result);
     })
@@ -58,7 +86,7 @@ function countTotens(req, res) {
 
 async function cadastrarTotem(req, res) {
   try {
-    const { fkCompanhia } = req.params;
+    const { idCompanhia } = req.params;
     const {
       sistemaOperacional, fabricante, arquitetura, processador, localizacao,
       totalDisco, totalRam, boolCaptura
@@ -69,7 +97,7 @@ async function cadastrarTotem(req, res) {
       localizacao, totalDisco, totalRam, boolCaptura
     };
 
-    const result = await totemModel.cadastrarTotem(fkCompanhia, infosTotem);
+    const result = await totemModel.cadastrarTotem(idCompanhia, infosTotem);
     res.status(201).json(result);
   } catch (err) {
     console.error(err);
@@ -82,5 +110,7 @@ module.exports = {
   buscarTotens,
   buscaIndividual,
   countTotens,
+  countAtivos,
+  countInativos,
   cadastrarTotem
 };

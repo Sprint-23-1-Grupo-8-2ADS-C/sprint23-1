@@ -1,9 +1,9 @@
 var database = require("../database/config")
 
-function buscarTotens(fkCompanhia) {
+function buscarTotens(idCompanhia) {
     let instrucao = `
         SELECT * FROM totem 
-        WHERE fkCompanhia = ${fkCompanhia}
+        WHERE fkCompanhia = ${idCompanhia}
     `
     return database.executar(instrucao);
 }
@@ -20,17 +20,33 @@ function buscaIndividual(idTotem, fkCompanhia) {
     return database.executar(instrucao)
 }
 
-function countTotens(fk) {
+function countTotens(idCompanhia) {
     let instrucao = `
         SELECT count(idTotem) as quantidadeTotens FROM totem
-        WHERE fkCompanhia = ${fk}
+        WHERE fkCompanhia = ${idCompanhia}
     `
     return database.executar(instrucao)
 }
 
-function cadastrarTotem(fk, infosTotem) {
+function countAtivos(idCompanhia) {
+    let instrucao = `
+        SELECT count(idTotem) as quantidadeTotens FROM totem
+        WHERE fkCompanhia = ${idCompanhia} AND boolCaptura = 1
+    `
+    return database.executar(instrucao)
+}
+
+function countInativos(idCompanhia) {
+    let instrucao = `
+        SELECT count(idTotem) as quantidadeTotens FROM totem
+        WHERE fkCompanhia = ${idCompanhia} AND boolCaptura = 0
+    `
+    return database.executar(instrucao)
+}
+
+function cadastrarTotem(idCompanhia, infosTotem) {
     let query;
-    const idTotemQuery = `(SELECT TOP 1 idTotem + 1 FROM totem WHERE fkCompanhia = ${fk} ORDER BY idTotem DESC)`;
+    const idTotemQuery = `(SELECT TOP 1 idTotem + 1 FROM totem WHERE fkCompanhia = ${idCompanhia} ORDER BY idTotem DESC)`;
   
     if (infosTotem.boolCaptura) {
       query = `
@@ -39,7 +55,7 @@ function cadastrarTotem(fk, infosTotem) {
         )
         VALUES(
             ${idTotemQuery}, 
-            ${fk}, 
+            ${idCompanhia}, 
             '${infosTotem.localizacao}',
             1
         );
@@ -52,7 +68,7 @@ function cadastrarTotem(fk, infosTotem) {
         )
         VALUES(
             ${idTotemQuery}, 
-            ${fk},
+            ${idCompanhia},
             '${infosTotem.fabricante}',
             '${infosTotem.arquitetura}',
             '${infosTotem.sistemaOperacional}',
@@ -71,5 +87,7 @@ module.exports = {
     buscarTotens,
     buscaIndividual,
     countTotens,
+    countAtivos,
+    countInativos,
     cadastrarTotem
 }

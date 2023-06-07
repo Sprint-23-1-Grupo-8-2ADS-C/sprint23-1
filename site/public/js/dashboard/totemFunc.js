@@ -1,10 +1,11 @@
 function mostrarEstadoTotens(totens) {
     const divEstadoTotens = document.getElementById('divEstadoTotens')
         totens.forEach((totem) => {
+          console.log(totem);
             divEstadoTotens.innerHTML += `
                 <tr>
                     <td>Totem ${totem.idTotem}</td>
-                    <td class="totemInativo">Inativo</td>
+                    <td class=${totem.boolCaptura ? "totemAtivo" : "totemInativo"}>${totem.boolCaptura ? "Ativo" : "Inativo"}</td>
                     <td>1h</td>
                 </tr>
             `
@@ -23,6 +24,36 @@ async function getQtdTotalTotens() {
     }
 }
 
+async function getQtdTotensAtivo() {
+  const idCompanhia = sessionStorage.ID_COMPANHIA;
+
+  await fetch(`/totens/countAtivos/${idCompanhia}`)
+    .then((result) => {
+      result.json()
+        .then((res) => {
+          document.getElementById("spQuantidadeAtivos").innerHTML = `${res[0].quantidadeTotens}`
+        })
+    })
+    .catch((err) => {
+      console.error(err);
+    })
+}
+
+async function getQtdTotensInativo() {
+  const idCompanhia = sessionStorage.ID_COMPANHIA;
+
+  await fetch(`/totens/countInativos/${idCompanhia}`)
+    .then((result) => {
+      result.json()
+        .then((res) => {
+          document.getElementById("spQuantidadeInativos").innerHTML = `${res[0].quantidadeTotens}`
+        })
+    })
+    .catch((err) => {
+      console.error(err);
+    })
+}
+
 async function buscarTotens() {
   const fkCompanhia = sessionStorage.ID_COMPANHIA;
 
@@ -31,6 +62,8 @@ async function buscarTotens() {
     const totens = await res.json();
     mostrarEstadoTotens(totens);
     getQtdTotalTotens();
+    getQtdTotensAtivo();
+    getQtdTotensInativo()
   } catch (err) {
     console.error(err);
   }

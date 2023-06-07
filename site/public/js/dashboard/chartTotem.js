@@ -25,9 +25,9 @@ new Chart(chartCpuTotem, {
             '13:35', '13:40', '13:45', '13:50', '13:55', '14:00'
         ],
         datasets: [{
-        label: '% de uso',
-        data: [40,70,55,100,10,47,65,15,99,45,69,23,01],
-        borderWidth: 1
+            label: '% de uso',
+            data: [40,70,55,100,10,47,65,15,99,45,69,23,01],
+            borderWidth: 1
         }]
     }, 
     options: genericOptions, 
@@ -44,8 +44,8 @@ new Chart(chartRamTotem, {
     data: {
         labels: ['Livre', 'Ocupado'],
         datasets: [{
-        label: '% de uso',
-        data: [30,70],
+            label: '% de uso',
+            data: [30,70],
         }]
     }
 });
@@ -60,8 +60,8 @@ new Chart(chartDiscoTotem, {
     data: {
         labels: ['Livre', 'Ocupado'],
         datasets: [{
-        label: '% de uso',
-        data: [30,70],
+            label: '% de uso',
+            data: [30,70],
         }]
     }
 });

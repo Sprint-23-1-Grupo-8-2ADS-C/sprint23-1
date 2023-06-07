@@ -12,7 +12,7 @@
 
     <title>Airplane Solutions - Totem</title>
 </head>
-<body onload="getTotensForModal(),setInfosTotemIndividual()">
+<body onload="getTotensForModal(), setInfosTotemIndividual(), setInfosRam(), setInfosDisco(), setInfosCpu()">
     <dialog id="dialog"></dialog>
     <nav id="navbar"></nav>
     
@@ -106,20 +106,20 @@
 
                 <div class="divComponente rightLine">
                     <h3>CPU</h3>
-                    <div class="green">
-                        <span>50%</span>
+                    <div id="divUsoCpu" class="green">
+                        <span id="spnUsoCpu">50%</span>
                     </div>
                 </div>
                 <div class="divComponente rightLine">
                     <h3>Memória</h3>
-                    <div class="red">
-                        <span>100%</span>
+                    <div id="divUsoRam" class="red">
+                        <span id="spnUsoRam">100%</span>
                     </div>
                 </div>
                 <div class="divComponente rightLine">
                     <h3>Disco</h3>
-                    <div class="yellow">
-                        <span>60%</span>
+                    <div id="divUsoDisco" class="yellow">
+                        <span id="spnUsoDisco">60%</span>
                     </div>
                 </div>
                 <div class="divComponente">
@@ -162,3 +162,77 @@
 <script src="../js/dashboard/chartTotem.js"></script>
 <script src="../js/dashboard/navbar.js"></script>
 <script src="../js/funcoes.js"></script>
+
+<script>
+    function setInfosRam() {
+        const idCompanhia = sessionStorage.ID_COMPANHIA;
+        const idTotem = sessionStorage.ID_TOTEM;
+        const usoRam = document.getElementById("spnUsoRam")
+        const divUsoRam = document.getElementById("divUsoRam")
+
+        fetch(`/medidas/usoRamAtual/${idTotem}/${idCompanhia}`)
+        .then((result) => {
+            result.json().then((data) => {
+                console.log(data);
+                if (data[0].valorEmUso >= 0 && data[0].valorEmUso <= 50) {
+                    divUsoRam.className = "green"
+                } else if (data[0].valorEmUso > 50 && data[0].valorEmUso < 80) {
+                    divUsoRam.className = "yellow"
+                } else {
+                    divUsoRam.className = "red"
+                }
+                usoRam.innerText = `${data[0].valorEmUso}%`;
+            })
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+
+    function setInfosDisco() {
+        const idCompanhia = sessionStorage.ID_COMPANHIA;
+        const idTotem = sessionStorage.ID_TOTEM;
+        const usoDisco = document.getElementById("spnUsoDisco")
+        const divUsoDisco = document.getElementById("divUsoDisco")
+
+        fetch(`/medidas/usoDiscoAtual/${idTotem}/${idCompanhia}`)
+        .then((result) => {
+            result.json().then((data) => {
+                console.log(data);
+                if (data[0].valorEmUso >= 0 && data[0].valorEmUso <= 50) {
+                    divUsoDisco.className = "green"
+                } else if (data[0].valorEmUso > 50 && data[0].valorEmUso < 80) {
+                    divUsoDisco.className = "yellow"
+                } else {
+                    divUsoDisco.className = "red"
+                }
+                usoDisco.innerText = `${data[0].valorEmUso}%`;
+            })
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+
+    function setInfosCpu() {
+        const idCompanhia = sessionStorage.ID_COMPANHIA;
+        const idTotem = sessionStorage.ID_TOTEM;
+        const usoCpu = document.getElementById("spnUsoCpu")
+        const divUsoCpu = document.getElementById("divUsoCpu")
+
+        fetch(`/medidas/usoCpuAtual/${idTotem}/${idCompanhia}`)
+        .then((result) => {
+            result.json().then((data) => {
+                console.log(data);
+                if (data[0].valorEmUso >= 0 && data[0].valorEmUso <= 50) {
+                    divUsoCpu.className = "green"
+                } else if (data[0].valorEmUso > 50 && data[0].valorEmUso < 80) {
+                    divUsoCpu.className = "yellow"
+                } else {
+                    divUsoCpu.className = "red"
+                }
+                usoCpu.innerText = `${data[0].valorEmUso}%`;
+            })
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+</script>
