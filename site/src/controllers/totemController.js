@@ -22,6 +22,18 @@ function buscaIndividual(req, res) {
   totemModel
     .buscaIndividual(idTotem, fkCompanhia)
     .then((result) => {
+      const cpu = result[0].processador
+      const cpuFormatado = cpu.replace(/(\d+th Gen\s|\(R\)|\(TM\)|\sCPU|\s@|\s\d\.\d{2}GHz)/gm, "").trim();
+
+      const totalDisco = (result[1].total / (1024 * 1024 * 1024)).toFixed(2)
+      result[1].total = totalDisco
+
+      const totalRam = (result[0].total / (1024 * 1024 * 1024)).toFixed(0)
+      result[0].total = totalRam
+
+      result.forEach(componente => {
+        componente.processador = cpuFormatado
+      });
       res.status(200).json(result);
     })
     .catch((err) => {
