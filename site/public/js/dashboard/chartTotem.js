@@ -8,60 +8,156 @@ var genericOptions = {
 
 // GRÁFICOS TOTEM
 const chartCpuTotem = document.getElementById('chartCpuTotem');
-
 chartCpuTotem.width = chartCpuTotem.parentNode.clientWidth;
 chartCpuTotem.height = chartCpuTotem.parentNode.clientHeight;
 
-new Chart(chartCpuTotem, {
-    type: 'line',
-    data: {
-        /* 
-        * Opção de 10 em 10 minutos:
-        * labels: ['13:00', '13:10', '13:20', '13:30', '13:40', '13:50', '14:00'],
-        * data: [40,70,55,100,10,47,65],
-        */
-        labels: [
-            '13:00', '13:05', '13:10', '13:15', '13:20', '13:25', '13:30', 
-            '13:35', '13:40', '13:45', '13:50', '13:55', '14:00'
-        ],
-        datasets: [{
-            label: '% de uso',
-            data: [40,70,55,100,10,47,65,15,99,45,69,23,01],
-            borderWidth: 1
-        }]
-    }, 
-    options: genericOptions, 
-    responsive: false
-});
+async function obterDadosGraficoCpuHora() {
+    const idCompanhia = sessionStorage.ID_COMPANHIA;
+    const idTotem = sessionStorage.ID_TOTEM;
 
+    await fetch(`/medidas/usoCpuPorHora/${idTotem}/${idCompanhia}`, { cache: "no-store" })
+        .then((result) => {
+        if (result.ok) {
+            result.json().then((res) => {
+                plotarGraficoCpuHora(res)
+            })
+        } else {
+            console.error("Nenhum dado encontrado ou erro na API");
+        }
+        })
+        .catch((err) => {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${err.message}`);
+        })
+}
+
+function plotarGraficoCpuHora(res) {
+    let labels = []
+  
+    let dados = {
+      labels: labels,
+      datasets: [{
+        label: "% de uso",
+        data: [],
+        borderWidth: 1
+      }]
+    }
+  
+    console.log("Registros coletados:", res);
+  
+    res.forEach(registro => {
+        labels.push(registro.dataFormatada)
+        dados.datasets.forEach(dataset => {
+            dataset.data.push(registro.valorUso)
+        });
+    });
+  
+    const config = {
+      type: "line",
+      data: dados,
+      options: genericOptions
+    }
+  
+    let grafico = new Chart(chartCpuTotem, config)
+  
+    // setTimeout(() => atualizarGraficoCpu(grafico, dataCpu))
+  }
 
 const chartRamTotem = document.getElementById('chartRamTotem');
 chartRamTotem.width = chartRamTotem.parentNode.clientWidth;
 chartRamTotem.height = chartRamTotem.parentNode.clientHeight;
 
-new Chart(chartRamTotem, {
-    type: 'doughnut',
-    data: {
-        labels: ['Livre', 'Ocupado'],
-        datasets: [{
-            label: '% de uso',
-            data: [30,70],
-        }]
-    }
-});
+async function obterDadosGraficoRam() {
+    const idCompanhia = sessionStorage.ID_COMPANHIA;
+    const idTotem = sessionStorage.ID_TOTEM;
 
+    await fetch(`/medidas/usoRamAtual/${idTotem}/${idCompanhia}`, { cache: "no-store" })
+        .then((result) => {
+        if (result.ok) {
+            result.json().then((res) => {
+                plotarGraficoRam(res)
+            })
+        } else {
+            console.error("Nenhum dado encontrado ou erro na API");
+        }
+        })
+        .catch((err) => {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${err.message}`);
+        })
+}
+
+function plotarGraficoRam(res) {
+    let dados = {
+      labels: ["Livre", "Ocupado"],
+      datasets: [{
+        label: "% de uso",
+        data: [],
+      }]
+    }
+  
+    console.log("Registros coletados:", res);
+
+    const qtdDisponivel = 100 - res[0].valorEmUso 
+
+    dados.datasets.forEach(registro => {
+        registro.data.push(qtdDisponivel, res[0].valorEmUso)
+    })
+
+    const config = {
+      type: "doughnut",
+      data: dados,
+    }
+  
+    let grafico = new Chart(chartRamTotem, config)
+  
+    // setTimeout(() => atualizarGraficoCpu(grafico, dataCpu))
+}
 
 const chartDiscoTotem = document.getElementById('chartDiscoTotem');
 chartDiscoTotem.width = chartDiscoTotem.parentNode.clientWidth;
 chartDiscoTotem.height = chartDiscoTotem.parentNode.clientHeight;
 
-new Chart(chartDiscoTotem, {
-    type: 'doughnut',
-    data: {
-        labels: ['Livre', 'Ocupado'],
-        datasets: [{
-            label: '% de uso',
-            data: [30,70],
-        }]
+async function obterDadosGraficoDisco() {
+    const idCompanhia = sessionStorage.ID_COMPANHIA;
+    const idTotem = sessionStorage.ID_TOTEM;
+
+    await fetch(`/medidas/usoDiscoAtual/${idTotem}/${idCompanhia}`, { cache: "no-store" })
+        .then((result) => {
+        if (result.ok) {
+            result.json().then((res) => {
+                plotarGraficoDisco(res)
+            })
+        } else {
+            console.error("Nenhum dado encontrado ou erro na API");
+        }
+        })
+        .catch((err) => {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${err.message}`);
+        })
+}
+
+function plotarGraficoDisco(res) {
+    let dados = {
+      labels: ["Livre", "Ocupado"],
+      datasets: [{
+        label: "% de uso",
+        data: [],
+      }]
     }
-});
+  
+    console.log("Registros coletados:", res);
+
+    const qtdDisponivel = 100 - res[0].valorEmUso 
+
+    dados.datasets.forEach(registro => {
+        registro.data.push(qtdDisponivel, res[0].valorEmUso)
+    })
+
+    const config = {
+      type: "doughnut",
+      data: dados,
+    }
+  
+    let grafico = new Chart(chartDiscoTotem, config)
+  
+    // setTimeout(() => atualizarGraficoCpu(grafico, dataCpu))
+}

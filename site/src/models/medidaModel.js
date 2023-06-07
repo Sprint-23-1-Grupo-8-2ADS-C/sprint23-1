@@ -17,12 +17,12 @@ function buscarUltimoUsoCpu(idCompanhia) {
 
 function buscarUsoDisco(idCompanhia) {
   const query = `
-    SELECT fkCompanhia, fkComponente, fkTotem, valorUso as valorUsoDisco, dataHoraCaptura
+    SELECT fkCompanhia, fkComponente, fkTotem, valorUso as valorUsoDisco, dataHoraCaptura, total
     FROM (
-        SELECT fkCompanhia, fkComponente, fkTotem, valorUso, dataHoraCaptura,
-              ROW_NUMBER() OVER (PARTITION BY fkTotem ORDER BY idRegistroComponente DESC) AS rn
-        FROM RegistroComponente
-        WHERE fkComponente = 2 AND fkCompanhia = ${idCompanhia}
+        SELECT rc.fkCompanhia, rc.fkComponente, rc.fkTotem, rc.valorUso, rc.dataHoraCaptura, ct.total,
+              ROW_NUMBER() OVER (PARTITION BY rc.fkTotem ORDER BY rc.idRegistroComponente DESC) AS rn
+        FROM RegistroComponente as rc JOIN componenteTotem as ct ON rc.fkComponente = ct.fkComponente
+        WHERE rc.fkComponente = 2 AND rc.fkCompanhia = ${idCompanhia}
     ) AS subquery
     WHERE rn = 1;
   `;
@@ -31,8 +31,8 @@ function buscarUsoDisco(idCompanhia) {
 
 function buscarUsoCpuPorHora(idCompanhia, idTotem) {
   const query = `
-    SELECT TOP 13 
-    dataHoraCaptura, valorUso
+    SELECT TOP 13
+    dataHoraCaptura, valorUso, CONVERT(varchar(16), dataHoraCaptura, 120) as dataFormatada
     FROM RegistroComponente 
     WHERE fkTotem = ${idTotem} AND fkCompanhia = ${idCompanhia} AND fkComponente = 3
     ORDER BY idRegistroComponente DESC;

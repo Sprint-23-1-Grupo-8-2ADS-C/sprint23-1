@@ -79,6 +79,11 @@ async function setInfosTotemIndividual() {
 
     document.getElementById('idTotemInformation').innerHTML = idTotem;
 
+    document.getElementById('statusTotemInformation').innerHTML = `
+      <span>Estado</span>
+      <h3>${totem[0].boolCaptura ? "Ativo" : "Inativo"}</h3>
+    `
+
     document.getElementById('divProcessadorInformation').innerHTML = `
       <span>Processador</span>
       <h3>${totem[0].processador}</h3>
@@ -98,9 +103,15 @@ async function setInfosTotemIndividual() {
       <h3>${totem[1].total}gb</h3>
     `;
 
+    document.getElementById('divIpv4Information').innerHTML = `
+      <span>IPv4</span>
+      <h3>${totem[3].enderecoIPv4Rede}</h3>
+    `
+
     document.getElementById('divNumberToken').innerHTML = `
       <span>${totem[0].token}</span>
     `;
+    
   } catch (error) {
     console.error(error);
   }

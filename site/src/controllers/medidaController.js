@@ -26,6 +26,15 @@ async function buscarUsoDisco(req, res) {
     .buscarUsoDisco(idCompanhia)
     .then((resultado) => {
       if (resultado.length > 0) {
+        console.log(resultado);
+        
+        resultado.forEach(registro => {
+          let valorTotalEmGB = (registro.total / (1024 * 1024 * 1024))
+          let valorEmUso = registro.valorUsoDisco;
+
+          const porcentagemEmUso = Math.trunc((valorEmUso / valorTotalEmGB) * 100)
+          registro.valorUsoDisco = porcentagemEmUso
+        });
         res.status(200).json(resultado);
       } else {
         res.status(204).send("Nenhum resultado encontrado!");

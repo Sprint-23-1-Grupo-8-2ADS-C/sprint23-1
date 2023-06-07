@@ -12,7 +12,7 @@
 
     <title>Airplane Solutions - Totem</title>
 </head>
-<body onload="getTotensForModal(), setInfosTotemIndividual(), setInfosRam(), setInfosDisco(), setInfosCpu()">
+<body onload="getTotensForModal(), setInfosTotemIndividual(), setInfosRam(), setInfosDisco(), setInfosCpu(), obterDadosGraficoCpuHora(), obterDadosGraficoRam(), obterDadosGraficoDisco()">
     <dialog id="dialog"></dialog>
     <nav id="navbar"></nav>
     
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="divDataTotem">
-            <div class="divData line">
+            <div id="statusTotemInformation" class="divData line">
                 <span>Estado</span>
                 <h3>Ativo</h3>
             </div>
@@ -48,7 +48,7 @@
                 <span>Total Disco</span>
                 <h3>128gb</h3>
             </div>
-            <div class="divData">
+            <div class="divData" id="divIpv4Information">
                 <span>IPv4</span>
                 <h3>00.000.000.00</h3>
             </div>
@@ -164,13 +164,13 @@
 <script src="../js/funcoes.js"></script>
 
 <script>
-    function setInfosRam() {
+    async function setInfosRam() {
         const idCompanhia = sessionStorage.ID_COMPANHIA;
         const idTotem = sessionStorage.ID_TOTEM;
         const usoRam = document.getElementById("spnUsoRam")
         const divUsoRam = document.getElementById("divUsoRam")
 
-        fetch(`/medidas/usoRamAtual/${idTotem}/${idCompanhia}`)
+        await fetch(`/medidas/usoRamAtual/${idTotem}/${idCompanhia}`)
         .then((result) => {
             result.json().then((data) => {
                 console.log(data);
