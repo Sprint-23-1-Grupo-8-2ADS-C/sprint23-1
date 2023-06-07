@@ -8,6 +8,11 @@ var genericOptions = {
   radius: 0,
 }
 
+
+const chartCpu = document.getElementById('chartCpu');
+chartCpu.width = chartCpu.parentNode.clientWidth;
+chartCpu.height = chartCpu.parentNode.clientHeight;
+
 async function obterDadosGraficoCpu() {
   const idCompanhia = sessionStorage.ID_COMPANHIA
 
@@ -55,12 +60,12 @@ function plotarGraficoCpu(res) {
 
   let grafico = new Chart(chartCpu, config)
 
-  // setTimeout(() => atualizarGraficoCpu(grafico, dataCpu))
+  // setTimeout(() => atualizarGraficoCpu(grafico, dados), 5000)
 }
 
-const chartCpu = document.getElementById('chartCpu');
-chartCpu.width = chartCpu.parentNode.clientWidth;
-chartCpu.height = chartCpu.parentNode.clientHeight;
+const chartArmazenamento = document.getElementById("chartArmazenamento");
+chartArmazenamento.width = chartArmazenamento.parentNode.clientWidth;
+chartArmazenamento.height = chartArmazenamento.parentNode.clientHeight;
 
 async function obterDadosGraficoDisco() {
   const idCompanhia = sessionStorage.ID_COMPANHIA
@@ -120,7 +125,3 @@ function plotarGraficoDisco(res) {
 
   // setTimeout(() => atualizarGraficoCpu(grafico, dataCpu))
 }
-
-const chartArmazenamento = document.getElementById("chartArmazenamento");
-chartArmazenamento.width = chartArmazenamento.parentNode.clientWidth;
-chartArmazenamento.height = chartArmazenamento.parentNode.clientHeight;
